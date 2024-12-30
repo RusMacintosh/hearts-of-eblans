@@ -1,0 +1,33 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_decision_drake_empire"
+		texturefile = "gfx/interface/decisions/decision_form_drake_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_dvorets"
+		texturefile = "gfx/interface/decisions/category_dvorets.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_acf_gon"
+		texturefile = "gfx/interface/decisions/category_acf_gon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_eblan_empire"
+		texturefile = "gfx/interface/decisions/decision_form_eblan_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_category_image_template"
+		texturefile = "gfx/interface/decisions/category_image_template.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_category_sdo"
+		texturefile = "gfx/interface/decisions/decision_sdo.dds"
+	}
+	
+}

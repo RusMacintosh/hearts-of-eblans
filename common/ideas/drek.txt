@@ -1,0 +1,315 @@
+ideas = {
+
+	country = {
+	
+		DRE_blizkrieg_zabuksoval = {
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				war_support_factor = -0.15
+				army_speed_factor = -0.07
+			}
+		}
+		
+		DRE_real_blitzkrieg = {
+			picture = generic_acquire_tanks
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+
+			modifier = {
+				war_support_factor = 0.15
+				army_speed_factor = 0.07
+				stability_factor = 0.1
+			}
+		}
+
+		DRE_treaty_of_triannon = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+		
+		DRE_domestic_arms_industry = {
+			picture = NORDIC_industry_communist
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.08
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		DRE_operation_sprengungberge = {
+			picture = gre_schachtplan3
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			targeted_modifier = {
+				tag = NEK    # this can also take a variable that stores a scope
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		DRE_treaty_of_triannon_aat = {
+			name = DRE_treaty_of_triannon
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			available = {
+				has_war = no
+			}
+
+			rule = {
+  				can_access_market = no
+  			}
+
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.5
+			}
+		}
+		DRE_treaty_of_triannon_2 = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = generic_constitutional_guarantees
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = -0.15	
+			}
+		}
+
+		DRE_treaty_of_triannon_3 = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = generic_constitutional_guarantees
+
+			available = {
+				has_war = no
+			}
+
+			modifier = {
+				
+			}
+		}
+
+		DRE_war_preparation = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = generic_war_preparation
+
+			modifier = {
+				justify_war_goal_time = -0.5
+				planning_speed = 0.2
+				generate_wargoal_tension = -0.5
+			}
+		}
+
+		DRE_clamp_down_on_hypecratia = {
+			allowed = {
+				always = no
+			}
+			picture = ARG_anti_soviet
+
+			modifier = {
+				hypecratia_drift = -0.05
+			}
+		}
+
+		DRE_reviving_monarchism = {
+			allowed = {
+				always = no
+			}
+			picture = generic_monarchist_uprising
+
+			modifier = {
+				neutrality_drift = 0.1
+				drift_defence_factor = 0.1
+				lend_lease_tension = -0.2
+				join_faction_tension = -0.2
+			}
+		}
+
+		DRE_empire_returning = {
+			allowed = {
+				always = no
+			}
+
+			picture = ITA_new_roman_empire_ns
+
+			modifier = {
+				generate_wargoal_tension = -0.2
+				enemy_justify_war_goal_time = 0.15
+			}
+		}
+
+		DRE_ready_general_staff = {
+			allowed = {
+				always = no
+			}
+
+			picture = general_staff
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				dig_in_speed_factor = 0.35
+				max_planning_factor = 0.15
+			}
+		}
+
+		DRE_economic_blockade_from_drake = {
+			allowed = {
+				always = no
+			}
+
+			picture = closed_economy
+
+			modifier = {
+				army_attack_factor = -0.1
+				max_planning_factor = -0.15
+				base_fuel_gain_factor = -0.01
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		DRE_false_flag_operations = {
+			allowed = {
+				always = no
+			}
+
+			picture = officers_purged
+
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.1
+				production_speed_buildings_factor = -0.05
+				repair_speed_arms_factory_factor = -0.1
+			}
+		}
+
+		DRE_SSO = {
+			allowed = {
+				always = no
+			}
+
+			picture = CZE_planning_bonus
+
+			modifier = {
+				surrender_limit = 0.15
+				max_planning_factor = 0.1
+				land_doctrine_cost_factor = -0.20
+			}
+		}
+
+		DRE_Army_on_alert = {
+			allowed = {
+				always = no
+			}
+
+			picture = air_war_plans_division_focus
+
+			modifier = {
+				surrender_limit = 0.10
+				army_attack_speed_factor = 0.15
+				army_speed_factor = 0.21
+			}
+		}
+
+		DRE_army_completed = {
+			allowed = {
+				always = no
+			}
+
+			picture = FRA_motorized_focus
+
+			modifier = {
+				army_attack_speed_factor = 0.15
+				army_speed_factor = 0.21
+				army_defence_factor = 0.15
+			}
+		}
+
+		DRE_central_railroad = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = generic_railroads
+
+			modifier = {
+				stability_factor = 0.05
+                training_time_factor = 0.1
+				army_speed_factor = 0.2
+			}
+		}
+		
+		DRE_low_taxes = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = low_taxes
+
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.15
+				stability_weekly = 0.01
+			}
+		}
+		
+		DRE_high_taxes = {
+			allowed = {
+				original_tag = DRE
+				always = no
+			}
+			picture = high_taxes
+
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_factor = -0.15
+				stability_weekly = -0.01
+			}
+		}
+	}
+}

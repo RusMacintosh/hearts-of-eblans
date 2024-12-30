@@ -1,0 +1,11 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_animated_toha"
+		texturefile = "gfx/leaders/SVI/anton_gif.dds"
+		noOfFrames = 32
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+}
+

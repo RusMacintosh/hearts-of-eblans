@@ -1,0 +1,28 @@
+characters = {
+	universal_hype_rab = {
+		name = "Лаврентий Хейтия"
+		portraits={
+			civilian={
+				large=GFX_unknown_char_small
+				small=GFX_unknown_char_small
+			}
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = universal_hype_rab
+			allowed = {
+				always = yes
+			}	
+			traits  = {
+				hypecratia_booster
+			}	
+			cost = 100
+			do_effect = {
+				NOT = {
+					has_government = hypecratia # You can only select it if your current ideology isn't your new one
+				}
+			}
+		}
+	}
+	}

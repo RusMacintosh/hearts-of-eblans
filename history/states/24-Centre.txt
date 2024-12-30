@@ -1,0 +1,23 @@
+state={
+	id=24
+	name="STATE_24"
+	provinces={
+		3493 3671 6688 11611 11631 
+	}
+	history={
+		owner = NEL
+		victory_points = {
+			6688 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 10
+		}
+		add_core_of = NEL
+	}
+	manpower=1546300
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=15.000
+}

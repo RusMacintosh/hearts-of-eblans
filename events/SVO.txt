@@ -1,0 +1,78 @@
+add_namespace = svo
+
+news_event = {
+	id = svo.1
+	title = svo.1.t
+	desc = svo.1.d
+	picture = GFX_report_event_svo_preparing_begin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svo.1.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+news_event = {
+	id = svo.2
+	title = svo.2.t
+	desc = svo.2.d
+	picture = GFX_report_event_svo_start
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svo.2.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#DRE Chicken Crisis
+news_event = {
+	id = svo.4
+	title = svo.4.t
+	desc = svo.4.d
+	picture = GFX_news_event_051
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svo.4.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+country_event = {
+	id = svo.3
+	title = svo.3.t
+	desc = svo.3.d
+	picture = GFX_report_event_svo_for_chb
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svo.3.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}

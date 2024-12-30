@@ -1,0 +1,45 @@
+form_DRE_EMPIRE_cat = {
+
+	icon = GFX_decision_category_border_conflicts
+	picture = GFX_decision_drake_empire
+
+	allowed = {
+		original_tag = DRE
+	}
+
+	visible = {
+		original_tag = DRE
+	}
+}
+
+drekovia_integrations_cat = {
+
+	icon = GFX_decision_category_generic_political_actions
+	priority = 29
+
+	allowed = {
+		original_tag = DRE
+	}
+
+	visible = {
+	#	has_completed_focus = DRE_own_way
+	}
+}
+
+drekovia_sdo_cat = {
+	priority = 30
+	icon = GFX_decision_category_border_conflicts
+	picture = GFX_category_sdo
+
+	allowed = {
+		original_tag = DRE
+	}
+
+	visible = {
+		original_tag = DRE
+		OR = {
+			has_country_flag = SDO_started_chb
+			has_country_flag = SDO_started_btk
+		}
+	}
+}

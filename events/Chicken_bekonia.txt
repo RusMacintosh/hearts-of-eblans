@@ -1,0 +1,363 @@
+add_namespace = chicken
+
+#Invite BTK to faction
+country_event = {
+	id = chicken.1
+	title = chicken.1.t
+	desc = chicken.1.d
+	picture = GFX_report_event_baltic_entente_one
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.1.a #yes
+		ai_chance = {
+			factor = 30
+		}
+		CHB = {
+			country_event = { id = chicken.2 hours = 6 }
+		}
+		BTK = { create_faction = "BTK_chb_allies" }
+		BTK = { add_to_faction = CHB }
+		hidden_effect = {
+		
+		}
+	}
+	
+	option = {
+		name = chicken.1.b
+		ai_chance = {
+			factor = 65
+			modifier = {
+				CHB = {
+					fascism < 0.75
+				}
+				factor = 70
+			}
+		}
+		CHB = {
+			country_event = { id = chicken.3 hours = 6 }
+		}
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+# BTK says yes
+country_event = {
+	id = chicken.2
+	title = chicken.23.t
+	desc = chicken.2.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		hidden_effect = {
+
+		}
+	}
+}
+# YUG says no
+country_event = {
+	id = chicken.3
+	title = chicken.23.t
+	desc = chicken.3.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.unfor
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#HAM Gvinland nezavisimos
+country_event = {
+	id = chicken.4
+	title = chicken.4.t
+	desc = chicken.4.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.4.a #yes
+		ai_chance = {
+			factor = 10
+		}
+		news_event = { id = squad_news.1 hours = 4 }
+		
+		release_on_controlled = GVI
+		
+		hidden_effect = {
+		
+		}
+	}
+	
+	option = {
+		name = chicken.4.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				CHB = {
+					hypecratia < 0.3
+				}
+				factor = 15
+			}
+		}
+		CHB = {
+			country_event = { id = chicken.6 hours = 4 }
+		}
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {
+	id = chicken.5
+	title = chicken.56.t
+	desc = chicken.5.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+country_event = {
+	id = chicken.6
+	title = chicken.56.t
+	desc = chicken.6.d
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.6.a
+		
+		hidden_effect = {
+		
+		}
+	}
+	
+	option = {
+		name = chicken.6.b
+		declare_war_on = {
+			target = HAM
+			type = independence_wargoal
+		}
+		hidden_effect = {
+		
+		}
+	}
+}
+
+country_event = {
+	id = chicken.7
+	title = chicken.7.t
+	desc = chicken.7.d
+	picture = GFX_report_event_baltic_entente_one
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.7.a #yes
+		ai_chance = {
+			factor = 60
+		}
+		CHB = {
+			country_event = { id = chicken.8 hours = 3 }
+		}
+		
+		CHB = {
+			add_to_faction = ARA
+		}
+		hidden_effect = {
+		
+		}
+	}
+	
+	option = {
+		name = chicken.7.b
+		ai_chance = {
+			factor = 45
+			modifier = {
+				CHB = {
+					fascism < 0.5
+				}
+				factor = 50
+			}
+		}
+		CHB = {
+			country_event = { id = chicken.9 hours = 3 }
+		}
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#ARA says yes
+country_event = {
+	id = chicken.8
+	title = chicken.89.t
+	desc = chicken.8.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		hidden_effect = {
+
+		}
+	}
+}
+# ARA says no
+country_event = {
+	id = chicken.9
+	title = chicken.89.t
+	desc = chicken.9.d
+	picture = GFX_report_event_iww_demonstration
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.unfor
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+country_event = {
+	id = chicken.10
+	title = chicken.10.t
+	desc = chicken.10.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.10.a #yes
+		ai_chance = {
+			factor = 60
+		}
+		CHB = {
+			country_event = { id = chicken.11 hours = 3 }
+		}
+		
+		CHB = {
+			add_to_faction = SVI
+		}
+		hidden_effect = {
+		
+		}
+	}
+	
+	option = {
+		name = chicken.10.b
+		ai_chance = {
+			factor = 45
+			modifier = {
+				CHB = {
+					fascism < 0.5
+				}
+				factor = 50
+			}
+		}
+		CHB = {
+			country_event = { id = chicken.12 hours = 3 }
+		}
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#SVI says yes
+country_event = {
+	id = chicken.11
+	title = chicken.1112.t
+	desc = chicken.11.d
+	picture = GFX_report_event_carol_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		hidden_effect = {
+
+		}
+	}
+}
+# SVI says no
+country_event = {
+	id = chicken.12
+	title = chicken.1112.t
+	desc = chicken.12.d
+	picture = GFX_report_event_spr_franco_generals
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.unfor
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+country_event = {
+	id = chicken.13
+	title = chicken.13.t
+	desc = chicken.13.d
+	
+	picture = GFX_report_event_anschlus_drake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.13.a
+		
+		CHB = { annex_country = { target = DRE transfer_troops = yes }}
+	}
+	
+	option = {
+		name = chicken.13.b
+		
+		add_ideas = DRE_sila_duha
+		CHB = {
+			diplomatic_relation = {
+				country = DRE
+				relation = non_aggression_pact
+				active = no
+		}
+		}
+		CHB = {
+			create_wargoal = {
+				type = independence_wargoal
+				target = DRE
+			}
+		}
+	}
+}

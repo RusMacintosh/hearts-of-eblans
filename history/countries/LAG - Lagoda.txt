@@ -1,0 +1,86 @@
+capital = 10
+set_research_slots = 3
+
+
+
+oob = "LAG_1936"
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	elections_allowed = no
+}
+
+recruit_character = universal_hype_lag
+
+set_popularities = {
+	hypecratia = 10
+	democratic = 2
+	neutrality = 78
+	communism = 8
+	fascism = 2
+}
+
+create_country_leader = {
+	name = "Лагода"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "lagoda.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Лагода"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "lagoda.dds"
+	expire = "2000.1.1"
+	ideology = rexism
+	traits = {
+		#
+	}
+}
+	
+create_country_leader = {
+	name = "Лагода"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "lagoda.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+	
+create_country_leader = {
+	name = "Лагода"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "lagoda.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+	
+create_country_leader = {
+	name = "Лагода"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "lagoda.dds"
+	expire = "2000.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}

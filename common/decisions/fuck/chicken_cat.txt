@@ -1,0 +1,13 @@
+form_CHB_EBLAN_cat = {
+
+	icon = GFX_decision_category_border_conflicts
+	picture = GFX_decision_eblan_empire
+
+	allowed = {
+		original_tag = CHB
+	}
+
+	visible = {
+		original_tag = CHB
+	}
+}

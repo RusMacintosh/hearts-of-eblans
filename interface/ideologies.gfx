@@ -1,0 +1,17 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_ideology_hypelikee"
+		texturefile = "gfx/interface/ideologies/ideology_hypelikee.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_hypetiktok"
+		texturefile = "gfx/interface/ideologies/ideology_hypetiktok.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_hypeclown"
+		texturefile = "gfx/interface/ideologies/ideology_hypeclown.dds"
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=810
+	name="STATE_810"
+	provinces={
+		222 310 319 3298 6459 7482 9275 11222 
+	}
+	
+	history={
+		owner = SVI
+		victory_points = {
+			6459 1 #Valmiera
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+		}
+		add_core_of = SVI
+	}
+	manpower=600250
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

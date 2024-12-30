@@ -1,0 +1,153 @@
+capital = 41
+
+oob = "SPR_1936"
+
+set_research_slots = 4
+
+add_ideas = { 
+	closed_economy
+	GON_kotel_shabanova
+	GON_legends_of_stintler
+	demografic_problems
+}
+
+recruit_character = universal_hype_gon
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+
+
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_light_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+	}
+}
+
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 34
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Максим Стинтлерьев"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "stint_comm.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Стинтлер"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "stintler.dds"
+	expire = "2000.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Стинт"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "stint_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Макс Стинт"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "stint_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Стинтик"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "stint_hype.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		#
+	}
+}
+
+set_popularities = {
+	hypecratia = 9
+	democratic = 17
+	fascism = 14
+	communism = 8
+	neutrality = 52
+}
+
+

@@ -1,0 +1,20 @@
+ideas = {
+
+	country = {
+		zabitiy_chel = {
+			allowed = {
+				always = no
+			}
+			
+			picture = raj_risk_of_famine
+
+			modifier = {
+				production_speed_buildings_factor = -0.65
+				consumer_goods_factor = 0.7
+				industry_air_damage_factor = 0.65
+				trade_opinion_factor = -1
+			}
+		}
+	}
+	
+}

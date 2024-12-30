@@ -1,0 +1,158 @@
+add_namespace = gonduras
+
+#Annex nelya
+country_event = {
+	id = gonduras.1
+	title = gonduras.1.t
+	desc = gonduras.1.d
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.7.a #yes
+		ai_chance = {
+			factor = 20
+		}
+		
+		hidden_effect = {
+			GON = {
+				annex_country = {
+					target = NEL
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = chicken.7.b #no
+		ai_chance = {
+			factor = 100
+		}
+		
+		hidden_effect = {
+			GON = {
+				create_wargoal = {
+					target = NEL
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gonduras.2
+	title = gonduras.2.t
+	desc = gonduras.2.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gonduras.2.a #madrid
+		ai_chance = {
+			factor = 55
+		}
+		
+		hidden_effect = {
+		set_variable = { is_palace_selected = 1 }
+		}
+	}
+	
+	option = {
+		name = gonduras.2.b #lissabon
+		ai_chance = {
+			factor = 45
+		}
+		
+		hidden_effect = {
+		set_variable = { is_palace_selected = 1 }
+		}
+	}
+	
+	option = {
+		name = gonduras.2.c #gibraltar
+		ai_chance = {
+			factor = 45
+		}
+		
+		hidden_effect = {
+		set_variable = { is_palace_selected = 1 }
+		}
+	}
+	
+	option = {
+		name = gonduras.2.e #islands
+		ai_chance = {
+			factor = 45
+		}
+		
+		hidden_effect = {
+		set_variable = { is_palace_selected = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = gonduras.3
+	title = gonduras.3.t
+	desc = gonduras.3.d
+	picture = GFX_report_event_acf_gon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.7.a #yes
+		
+		hidden_effect = {
+			add_to_variable = { anti_palace_oposition = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = gonduras.4
+	title = gonduras.4.t
+	desc = gonduras.4.d
+	picture = GFX_report_event_acf_gon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chicken.7.a #yes
+		
+		hidden_effect = {
+			add_to_variable = { anti_palace_oposition = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = gonduras.5
+	title = gonduras.5.t
+	desc = gonduras.5.d
+	picture = GFX_report_event_acf_gon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gonduras.5.a #pofig
+		add_ideas = GON_acf
+		hidden_effect = {
+			#add_to_variable = { pofig_na_opozitsiyu = 1 }
+		}
+	}
+	
+	#option = {
+	#	name = gonduras.5.b #sleshka za alekseem
+	#	
+	#	add_ideas = GON_acf
+	#	
+	#	hidden_effect = {
+	#		add_to_variable = { aleksey_eblanov = 1 }
+	#	}
+	#}
+}
+

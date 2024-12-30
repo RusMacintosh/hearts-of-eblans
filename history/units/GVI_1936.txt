@@ -1,0 +1,118 @@
+division_template = {
+	name = "Войска Гвина"		# Same for "Active" and "Reserve" Infantry Divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6682
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3649
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3639
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}	
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11597
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11588
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 660
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 3694
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 9619
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 11636
+		division_template = "Войска Гвина"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+}

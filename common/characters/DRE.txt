@@ -1,0 +1,28 @@
+characters = {
+	universal_hype_dre = {
+		name = "Виталий Джуниор"
+		portraits={
+			civilian={
+				large=GFX_vitaliy_jr_small
+				small=GFX_vitaliy_jr_small
+			}
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = universal_hype_dre
+			allowed = {
+				always = yes
+			}	
+			traits  = {
+				hypecratia_booster
+			}	
+			cost = 100
+			do_effect = {
+				NOT = {
+					has_government = hypecratia # You can only select it if your current ideology isn't your new one
+				}
+			}
+		}
+	}
+}

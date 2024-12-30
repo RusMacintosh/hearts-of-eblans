@@ -1,0 +1,230 @@
+form_DRE_EMPIRE_cat = {
+	form_DRE_EMPIRE = {
+	
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 50
+	
+		allowed = {
+			original_tag = DRE
+		}
+	
+		available = {
+			is_subject = no
+			# Chicken-Bekonia
+				controls_state = 155
+				controls_state = 43
+				controls_state = 154
+				controls_state = 973
+				controls_state = 974
+				
+			# Reich
+				controls_state = 52
+				controls_state = 53
+
+			#Drekovia
+				controls_state = 848
+				controls_state = 153
+				controls_state = 152
+				controls_state = 4
+				controls_state = 70
+				controls_state = 664
+				controls_state = 72
+				controls_state = 71
+				controls_state = 73
+				controls_state = 975
+				controls_state = 976
+				
+
+			#Kruglistan
+				controls_state = 69
+				controls_state = 9
+				controls_state = 75
+				controls_state = 74
+				controls_state = 972
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 155
+				state = 43
+				state = 154
+				state = 973
+				state = 974
+				
+				state = 52
+				state = 53
+
+				state = 848
+				state = 153
+				state = 152
+				state = 4
+				state = 70
+				state = 664
+				state = 72
+				state = 71
+				state = 73
+				state = 975
+				state = 976
+				
+
+				state = 69
+				state = 9
+				state = 75
+				state = 74
+				state = 972
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		visible = {
+			original_tag = DRE
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = DRE_EMPIRE
+			# Chicken-Bekonia
+			155 = { add_core_of = ROOT }
+			43 = { add_core_of = ROOT }
+			154 = { add_core_of = ROOT }
+			973 = { add_core_of = ROOT }
+			974 = { add_core_of = ROOT }
+			
+			# Reich
+			52 = { add_core_of = ROOT }
+			53 = { add_core_of = ROOT }
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+drekovia_integrations_cat = {
+	integrate_lagoda = {
+		icon = GFX_decision_eng_blackshirt_speech
+		
+		fire_only_once = yes
+		cost = 50
+		
+		available = {
+			controls_state = 88
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 88
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		
+		complete_effect = {
+			88 = { add_core_of = ROOT }
+		}
+		
+	}
+	
+	#integrate_vapers = {
+	#	icon = GFX_decision_eng_blackshirt_speech
+	#	
+	#	fire_only_once = yes
+	#	cost = 50
+	#	
+	#	available = {
+	#		OR = {
+	#		controls_state = 39
+	#		controls_state = 160
+	#		controls_state = 850
+	#		controls_state = 159
+	#		}
+	#	}
+	#	
+	#	highlight_states = {
+	#		highlight_state_targets = {
+	#			
+	#			state = 39
+	#			state = 160		
+	#			state = 850
+	#			state = 159
+	#		
+	#		}
+	#		highlight_color_while_active = 3
+	#		highlight_color_before_active = 2
+	#	}
+	#	
+	#	complete_effect = {
+	#	
+	#		if = {
+	#			limit = {
+	#				controls_state = 39
+	#			}
+	#			
+	#			39 = { add_core_of = ROOT }
+	#		}
+	#		
+	#		if = {
+	#			limit = {
+	#				controls_state = 160
+	#			}
+	#			
+	#			160 = { add_core_of = ROOT }
+	#		}			
+	#		if = {
+	#			limit = {
+	#				controls_state = 850
+	#			}
+	#			
+	#			850 = { add_core_of = ROOT }
+	#		}			
+	#		if = {
+	#			limit = {
+	#				controls_state = 159
+	#			}
+	#			
+	#			159 = { add_core_of = ROOT }
+	#		}
+	#	}
+	#	
+	#}
+	
+}
+
+drekovia_sdo_cat = { 
+
+	blitzkrieg_stopped = {
+		activation = {
+			DRE = { has_war_with = CHB }
+		}
+	
+		icon = GFX_decision_generic_tank
+		
+		days_mission_timeout = 90
+		fire_only_once = yes
+		is_good = no
+		
+		available = {
+			NOT = { country_exists = CHB }
+		}
+		
+		timeout_effect = {
+			add_ideas = DRE_blizkrieg_zabuksoval
+			set_global_flag = DRE_blitzkrieg_zabuksoval
+			set_global_flag = Super_Event_Visible
+			play_song = "blitzkrieg_zabuksoval"
+		}
+		
+		complete_effect = {
+			add_ideas = DRE_real_blitzkrieg
+		}
+		
+	}
+}

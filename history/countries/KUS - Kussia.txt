@@ -1,0 +1,133 @@
+capital = 246
+
+set_research_slots = 3
+
+set_oob = KUS_1936
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+
+
+	early_fighter = 1
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+
+recruit_character = universal_hype_kus
+
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = hypecratia
+	last_election = "1936.1.1"
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Иосиф Каша"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "kussia.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Великий Фюрер Каша"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "kussia.dds"
+	expire = "2000.1.1"
+	ideology = gen_nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Каша"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "kussia.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Куссия"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "kussia.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+	
+create_country_leader = {
+	name = "Куссия"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "kussia.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		#
+	}
+}
+
+set_popularities = {
+	democratic = 3
+	fascism = 10
+	communism = 7
+	neutrality = 11
+	hypecratia = 69
+}
+
+

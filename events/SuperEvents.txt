@@ -1,0 +1,117 @@
+add_namespace = super
+
+country_event = {
+	id = super.1
+	title = super.1.t
+	desc = super.1.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+
+	immediate = {
+		name = super.1.a
+		log = "[GetDateText]: [This.GetName]: super.1.a executed"
+		
+        set_global_flag = DRE_start_SDO
+		set_global_flag = Super_Event_Visible
+		
+		play_song = "SDO_POCHALOS"
+	}
+}
+
+country_event = {
+	id = super.2
+	title = super.2.t
+	desc = super.2.d
+	picture = GFX_report_event_diplomatic_message
+
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		CHB = {
+		    has_war_with = DRE
+			NOT = {
+				controls_province = 9599
+			}
+		}
+	}
+
+	immediate = {
+		name = super.2.a
+		log = "[GetDateText]: [This.GetName]: super.2.a executed"
+		
+        set_global_flag = DRE_mazokgrad_fall
+		set_global_flag = Super_Event_Visible
+		
+		play_song = "mazokgrad_fall"
+	}
+}
+
+country_event = {
+	id = super.3
+	title = super.3.t
+	desc = super.3.d
+	picture = GFX_report_event_diplomatic_message
+
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		DRE = {
+		    has_war_with = CHB
+			NOT = {
+				controls_province = 11666
+			}
+		}
+	}
+
+	immediate = {
+		name = super.3.a
+		log = "[GetDateText]: [This.GetName]: super.3.a executed"
+		
+        set_global_flag = DRE_dayraid_fall
+		set_global_flag = Super_Event_Visible
+		
+		play_song = "dayraid_fall"
+	}
+}
+
+country_event = {
+	id = super.4
+	title = super.4.t
+	desc = super.4.d
+	picture = GFX_report_event_diplomatic_message
+
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		AND = {
+			DRE = {
+				has_war_with = LAG
+			}
+			SVI = {
+				has_war_with = LAG
+			}
+		}
+	}
+
+	immediate = {
+		name = super.4.a
+		log = "[GetDateText]: [This.GetName]: super.3.a executed"
+		
+        set_global_flag = DRE_lagoda_raspil
+		set_global_flag = Super_Event_Visible
+		
+		play_song = "lagoda_raspil"
+	}
+}

@@ -1,0 +1,41 @@
+focus_tree = {
+	id = pbu_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PBU
+		}
+	}
+	default = no
+	
+	focus = {
+		id = pbu_slay
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 100
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			news_event = squad_news.7
+			
+			hidden_effect = {
+				PYA = {
+					add_ideas = slay_2024_mem_goda
+				}
+				BTK = {
+					add_ideas = slay_2024_king
+				}
+				MOY = {
+					add_ideas = slay_2024_queen
+				}
+				
+				add_ideas = PBU_slay_2024
+			}
+		}
+		
+	}
+}

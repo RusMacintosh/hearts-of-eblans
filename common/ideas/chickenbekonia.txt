@@ -1,0 +1,178 @@
+ideas = {
+
+	country = {
+	
+		CHB_appease_democrats = {
+			picture = prc_low_popular_support3
+
+			allowed = {
+				original_tag = CHB
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.01
+				fascism_drift = -0.01
+			}
+		}
+	
+		YUG_bezmoderov = {
+			
+			picture = bezmoderov
+
+			allowed = {
+				original_tag = CHB
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+                training_time_factor = -0.1
+			}
+			
+		}
+		CHB_hungary_problem = {
+			
+			picture = HUN_promoted_hungarianism
+
+			allowed = {
+				original_tag = CHB
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				resistance_activity = 0.5
+				non_core_manpower = -0.2
+			}
+			
+		}
+		CHB_NationalTerra = {
+			
+			picture = chb_nat_ter
+
+			allowed = {
+				original_tag = CHB
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+                training_time_factor = -0.1
+			}
+			
+		}
+		
+		CHB_national_front = {
+			picture = ast_naval_auxiliary_patrol
+			
+			allowed = {
+				original_tag = CHB
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.05
+				stability_factor = 0.12
+			}
+		}
+		
+		chicken_collective = {
+			
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = por_iberian_workers_united
+
+			modifier = {
+				democratic_drift = -0.02
+				communism_drift = 0.1
+			}
+		}
+		
+		iam_chicken_bekon = {
+			
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = MEX_revolutionary_army
+
+			modifier = {
+				weekly_manpower = 2000
+				political_power_gain = 5
+				army_speed_factor = 0.5
+				dig_in_speed_factor = 0.5
+				training_time_factor = -0.2
+			}
+		}
+		
+		chb_cult_zavertina = {
+		
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = cult_zavertina
+
+			modifier = {
+				democratic_drift = -0.01
+				fascism_drift = -0.01
+				neutrality_drift = -0.01
+				hypecratia_drift = -0.01
+				stability_factor = 0.03
+				training_time_factor = 0.15
+			}
+		}
+		
+		
+		
+		YUG_kotikyvlasti = {
+			
+			picture = kotyvlasti
+			
+			#on_add = {
+            #    add_popularity = {
+            #        ideology = communism
+            #        popularity = 0.05
+            #    }
+            #}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				join_faction_tension = -0.20
+				#political_power_gain = 0.06
+				communism_drift = 0.005
+			}
+		}
+	}
+}

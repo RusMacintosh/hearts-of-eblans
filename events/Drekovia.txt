@@ -1,0 +1,524 @@
+add_namespace = drek
+
+country_event = {
+	id = drek.1
+	title = drek.1.t
+	desc = drek.1.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.1.a #yes
+		ai_chance = {
+			factor = 30
+		}
+		
+		CHB = {
+			remove_ideas = CHB_hungary_problem
+		}
+		
+			
+		DRE = {
+			transfer_state = 43
+			transfer_state = 155
+			transfer_state = 154
+			transfer_state = 974
+			transfer_state = 973
+		}
+	}
+
+	option = {
+		name = drek.1.b #no
+		ai_chance = {
+			factor = 70
+		}
+		
+		DRE = {
+			country_event = drek.2
+		}
+	}
+}
+
+country_event = {
+	id = drek.2
+	title = drek.2.t
+	desc = drek.2.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	#option = {
+	#	name = drek.2.a #terpim
+	#	ai_chance = {
+	#		
+	#	}
+	#	
+	#	
+	#	add_stability = 0.1
+	#}
+
+	option = {
+		name = drek.2.b #voyna!
+		ai_chance = {
+			
+		}
+		
+		add_war_support = 0.1
+	}
+}
+
+#vapers und hungary
+country_event = {
+	id = drek.12
+	title = drek.12.t
+	desc = drek.12.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.12.a #okay
+		ai_chance = {
+			factor = 60
+		}
+		
+		DRE = {
+			transfer_state = 43
+			transfer_state = 155
+			transfer_state = 154
+			transfer_state = 974
+			transfer_state = 973
+		}
+
+		CHB = {
+			transfer_state = 39
+			transfer_state = 850
+			transfer_state = 160
+			transfer_state = 159
+			remove_ideas = CHB_hungary_problem
+		}
+	}
+
+	option = {
+		name = drek.12.b #no
+		ai_chance = {
+			factor = 40
+		}
+		
+		DRE = {
+			country_event = drek.2
+		}
+	}
+}
+
+country_event = {
+	id = drek.3
+	title = drek.3.t
+	desc = drek.3.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.3.a #yes
+		ai_chance = {
+			factor = 90
+		}
+		
+		DRE = {
+			annex_country = {
+    			target = KRU
+    			transfer_troops = yes
+			}
+			news_event = squad_news.3
+		}
+	}
+
+	option = {
+		name = drek.3.b #no
+		ai_chance = {
+			factor = 10
+		}
+		
+		DRE = {
+			country_event = drek.4
+		}
+	}
+}
+
+country_event = {
+	id = drek.4
+	title = drek.4.t
+	desc = drek.4.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.4.a #yes
+		ai_chance = {
+			
+		}
+		
+		DRE = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = KRU
+			}
+		}
+	}
+}
+
+#National BTK
+country_event = {
+	id = drek.5
+	title = drek.5.t
+	desc = drek.5.d
+	picture = GFX_report_event_generic_battle
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.5.a #yes
+		ai_chance = {
+			factor = 60
+		}
+		
+		DRE = {
+			transfer_state = 52
+			transfer_state = 53
+		}
+	}
+	option = {
+		name = drek.5.b #no
+
+		ai_chance = {
+			factor = 30
+		}
+		
+	}
+
+}
+
+#demand alto-adidshe
+country_event = {
+	id = drek.6
+	title = drek.6.t
+	desc = drek.6.d
+	picture = GFX_report_event_SOV_demands
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.21.c #yes
+		ai_chance = {
+			factor = 90
+		}
+		
+		39 = {
+				transfer_state_to = DRE
+		}
+	}
+	option = {
+		name = germany.200.b #no
+
+		ai_chance = {
+			factor = 10
+		}
+
+		DRE = { country_event = { id = drek.7 days = 3 } }
+		
+	}
+}
+
+#vapers otkazali alto-adidshe
+country_event = {
+	id = drek.7
+	title = drek.7.t
+	desc = drek.7.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.5.c #yes
+		ai_chance = {
+
+		}
+		
+		DRE = {
+			create_wargoal = {
+				target = SLA
+				type = annex_everything
+			}
+		}
+	}
+}
+
+#fate of vapers
+country_event = {
+	id = drek.8
+	title = drek.8.t
+	desc = drek.8.d
+	picture = GFX_report_event_german_polish_border
+	
+	is_triggered_only = yes
+
+	option = {
+		name = drek.10.c #allfordrake
+
+		ai_chance = {
+			factor = 60
+		}
+
+		DRE = { annex_country = { target = SLA } }
+		
+	}
+	
+	option = {
+		name = germany.200.b #no
+
+		ai_chance = {
+			factor = 10
+		}
+
+		DRE = { country_event = { id = drek.7 days = 3 } }
+		
+	}
+}
+
+#fate of vapers otkaz
+country_event = {
+	id = drek.9
+	title = drek.9.t
+	desc = drek.9.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.5.c #yes
+		ai_chance = {
+
+		}
+		
+		create_wargoal = {
+				target = SLA
+				type = annex_everything
+		}
+	}
+}
+
+#fate of lagoda
+country_event = {
+	id = drek.10
+	title = drek.10.t
+	desc = drek.10.d
+	picture = GFX_report_event_poland_funeral
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.999.b #no
+		ai_chance = {
+			factor = 60
+		}
+		
+		DRE = {
+			country_event = { id = drek.11 days = 3 }
+		}
+
+		SVI = {
+			country_event = { id = drek.11 days = 3 }
+		}
+	}
+
+	option = {
+		name =  greece.2.a #yes
+		ai_chance = {
+			factor = 40
+		}
+		
+		88 = {
+			transfer_state_to = DRE
+		}
+		72 = {
+			transfer_state_to = DRE
+		}
+
+		784 = {
+			transfer_state_to = SVI
+		}
+
+		96 = {
+			transfer_state_to = SVI
+		}
+	}
+}
+
+#lagoda otkaz
+country_event = {
+	id = drek.11
+	title = drek.11.t
+	desc = drek.11.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.320.a #ok
+		ai_chance = {
+
+		}
+		
+		create_wargoal = {
+			target = LAG
+			type = annex_everything
+		}
+	}
+}
+
+
+country_event = {
+	id = drek.13
+	title = drek.13.t
+	desc = drek.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.13.a #yes
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+##Vapers for hungary
+#country_event = {
+#	id = drek.12
+#	title = drek.12.t
+#	desc = drek.12.d
+#	picture = GFX_report_event_chinese_soldiers_fighting
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = greece.2.a #yes
+#		ai_chance = {
+#			factor = 60
+#		}
+#		
+#		if = {
+#		limit = {
+#			39 = {
+#			is_owned_by = DRE
+#			} 
+#		}
+#
+#		39 = {
+#			transfer_state_to = CHB
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			160 = {
+#			is_owned_by = DRE
+#			} 
+#		}
+#
+#		160 = {
+#			transfer_state_to = CHB
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			850 = {
+#			is_owned_by = DRE
+#			} 
+#		}
+#
+#		850 = {
+#			transfer_state_to = CHB
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			159 = {
+#			is_owned_by = DRE
+#			} 
+#		}
+#
+#		159 = {
+#			transfer_state_to = CHB
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			43 = {
+#			is_owned_by = CHB
+#			} 
+#		}
+#
+#		43 = {
+#			transfer_state_to = DRE
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			154 = {
+#			is_owned_by = CHB
+#			} 
+#		}
+#
+#		154 = {
+#			transfer_state_to = DRE
+#		}
+#
+#		}
+#
+#		if = {
+#		limit = {
+#			155 = {
+#			is_owned_by = CHB
+#			} 
+#		}
+#
+#		155 = {
+#			transfer_state_to = DRE
+#		}
+#
+#		}
+#	}
+#
+#	option = {
+#		name =  germany.999.b #no
+#		ai_chance = {
+#			factor = 40
+#		}
+#		
+#		88 = {
+#			transfer_state_to = DRE
+#		}
+#
+#		784 = {
+#			transfer_state_to = SVI
+#		}
+#
+#		96 = {
+#			transfer_state_to = SVI
+#		}
+#	}
+#}

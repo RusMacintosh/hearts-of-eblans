@@ -1,0 +1,21 @@
+music_station = "events_music_bruh"
+
+music = {
+song = "SDO_POCHALOS"
+chance = { factor = 0 }}
+
+music = {
+song = "mazokgrad_fall"
+chance = { factor = 0 }}
+
+music = {
+song = "dayraid_fall"
+chance = { factor = 0 }}
+
+music = {
+song = "blitzkrieg_zabuksoval"
+chance = { factor = 0 }}
+
+music = {
+song = "lagoda_raspil"
+chance = { factor = 0 }}

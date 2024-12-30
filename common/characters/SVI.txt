@@ -1,0 +1,56 @@
+characters = {
+
+	SVI_laki={
+		name="Лаки"
+		portraits={
+			civilian={
+				large=GFX_portrait_laki
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="2000.1.1"
+			id=-1
+		}
+	}
+	
+	SVI_bigpig={
+		name="Биг Пиг"
+		portraits={
+			civilian={
+				large=GFX_portrait_bigpig
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			expire="2599.1.1"
+			id=-1
+		}
+	}
+	universal_hype_svi = {
+		name = "Емеля Жирни"
+		portraits={
+			civilian={
+				large=GFX_unknown_char_small
+				small=GFX_unknown_char_small
+			}
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = universal_hype_svi
+			allowed = {
+				always = yes
+			}	
+			traits  = {
+				hypecratia_booster
+			}	
+			cost = 100
+			do_effect = {
+				NOT = {
+					has_government = hypecratia # You can only select it if your current ideology isn't your new one
+				}
+			}
+		}
+	}
+}

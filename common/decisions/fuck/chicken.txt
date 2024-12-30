@@ -1,0 +1,178 @@
+form_CHB_EBLAN_cat = {
+	form_CHB_EBLAN = {
+	
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 100
+	
+		allowed = {
+			original_tag = CHB
+		}
+	
+		available = {
+			is_subject = no
+			#CHB
+			
+			#DRE
+			custom_trigger_tooltip = {
+				tooltip = form_country_DRE_required_states_tt
+				controls_state = 848
+				controls_state = 153
+				controls_state = 152
+				controls_state = 4
+				controls_state = 70
+				controls_state = 664
+				controls_state = 72
+				controls_state = 71
+				controls_state = 73
+			}
+			
+			#GVI
+			custom_trigger_tooltip = {
+			tooltip = form_country_GVI_required_states_tt
+			controls_state = 82
+			controls_state = 81
+			controls_state = 83
+			controls_state = 84
+			controls_state = 76
+			}
+			#HAM
+			controls_state = 46
+			controls_state = 79
+			controls_state = 78
+			controls_state = 766
+			
+			#SLA
+			custom_trigger_tooltip = {
+			tooltip = form_country_SLA_required_states_tt
+			controls_state = 160
+			controls_state = 39
+			controls_state = 850
+			controls_state = 159
+			}
+			
+			#ZOL
+			custom_trigger_tooltip = {
+			tooltip = form_country_ZOL_required_states_tt
+			controls_state = 21
+			controls_state = 851
+			controls_state = 735
+			controls_state = 158
+			controls_state = 161
+			controls_state = 162
+			controls_state = 157
+			controls_state = 2
+			controls_state = 117
+			controls_state = 849
+			controls_state = 156
+			}
+			
+			#LOM
+			custom_trigger_tooltip = {
+			tooltip = form_country_LOM_required_states_tt
+			controls_state = 48
+			controls_state = 212
+			controls_state = 801
+			controls_state = 211
+			controls_state = 77
+			}
+			
+			#FLA
+			custom_trigger_tooltip = {
+			tooltip = form_country_FLA_required_states_tt
+			controls_state = 184
+			controls_state = 341
+			controls_state = 797
+			controls_state = 347
+			controls_state = 49
+			controls_state = 340
+			controls_state = 343
+			controls_state = 339
+			}
+		}
+		
+	
+		visible = {
+			original_tag = CHB
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = CHB_EBLAN
+			# Chicken-Bekonia
+			custom_effect_tooltip = form_country_estonia_coring_states_tt
+			
+			#DRE
+			155 = { add_core_of = ROOT }
+			43 = { add_core_of = ROOT }
+			154 = { add_core_of = ROOT }
+			848 = { add_core_of = ROOT }
+			153 = { add_core_of = ROOT }
+			152 = { add_core_of = ROOT }
+			4 = { add_core_of = ROOT }
+			70 = { add_core_of = ROOT }
+			664 = { add_core_of = ROOT }
+			72 = { add_core_of = ROOT }
+			71 = { add_core_of = ROOT }
+			73 = { add_core_of = ROOT }
+			
+			#GVI
+			82 = { add_core_of = ROOT }
+			81 = { add_core_of = ROOT }
+			83 = { add_core_of = ROOT }
+			84 = { add_core_of = ROOT }
+			76 = { add_core_of = ROOT }
+			
+			#HAM
+			46 = { add_core_of = ROOT }
+			79 = { add_core_of = ROOT }
+			78 = { add_core_of = ROOT }
+			766 = { add_core_of = ROOT }
+			
+			#SLA
+			160 = { add_core_of = ROOT }
+			39 = { add_core_of = ROOT }
+			850 = { add_core_of = ROOT }
+			159 = { add_core_of = ROOT }
+			
+			#ZOL
+			21 = { add_core_of = ROOT }
+			851 = { add_core_of = ROOT }
+			735 = { add_core_of = ROOT }
+			158 = { add_core_of = ROOT }
+			161 = { add_core_of = ROOT }
+			162 = { add_core_of = ROOT }
+			157 = { add_core_of = ROOT }
+			2 = { add_core_of = ROOT }
+			117 = { add_core_of = ROOT }
+			849 = { add_core_of = ROOT }
+			156 = { add_core_of = ROOT }
+			
+			#LOM
+			48 = { add_core_of = ROOT }
+			212 = { add_core_of = ROOT }
+			801 = { add_core_of = ROOT }
+			211 = { add_core_of = ROOT }
+			77 = { add_core_of = ROOT }
+			
+			#FLA
+			184 = { add_core_of = ROOT }
+			341 = { add_core_of = ROOT }
+			797 = { add_core_of = ROOT }
+			347 = { add_core_of = ROOT }
+			49 = { add_core_of = ROOT }
+			340 = { add_core_of = ROOT }
+			343 = { add_core_of = ROOT }
+			339 = { add_core_of = ROOT }
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

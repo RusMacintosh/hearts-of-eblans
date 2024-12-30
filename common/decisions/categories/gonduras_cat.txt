@@ -1,0 +1,27 @@
+dvorets_building_cat = {
+	priority = 30
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_decision_dvorets
+
+	allowed = {
+		original_tag = GON
+	}
+
+	visible = {
+		original_tag = GON
+	}
+}
+
+afc_gon_cat = {
+	priority = 29
+	icon = GFX_decision_category_spr_the_inevitable_civil_war
+	picture = GFX_decision_acf_gon
+
+	allowed = {
+		original_tag = GON
+	}
+
+	visible = {
+		original_tag = GON
+	}
+}

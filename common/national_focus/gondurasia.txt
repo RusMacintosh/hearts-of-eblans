@@ -1,0 +1,1713 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = gondurasia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GON
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = GON_politics_effort
+		available = {
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_GON_politics
+		x = 5
+		y = 0
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_great_gondurasia
+            add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GON_great_gondurasia_freedom
+        mutually_exclusive = { focus = GON_kill_monarchy}
+		prerequisite = { focus = GON_politics_effort}
+		relative_position_id = GON_politics_effort
+		available = {
+			always = no
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_GON_great_gondurasia
+		x = -5
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_great_gondurasia
+            add_political_power = 100
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = {
+		id = GON_democratic_ethos
+        mutually_exclusive = { focus = GON_absolute_neutrality}
+        relative_position_id = GON_great_gondurasia_freedom
+        prerequisite = { focus = GON_great_gondurasia_freedom}
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = democratic_influence
+            add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GON_absolute_neutrality
+        mutually_exclusive = { focus = GON_democratic_ethos}
+        prerequisite = { focus = GON_great_gondurasia_freedom }
+        relative_position_id = GON_great_gondurasia_freedom
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_generic_neutrality_focus
+		x = 2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = neutrality_influence
+            add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GON_europe_defense_council
+        prerequisite = { focus = GON_absolute_neutrality }
+        relative_position_id = GON_absolute_neutrality
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_political_power = 50
+			add_ideas = GON_europe_defense_council
+		}
+	}
+
+	focus = {
+		id = GON_reinforce_king_power
+        prerequisite = { focus = GON_europe_defense_council }
+        relative_position_id = GON_europe_defense_council
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_NOR_empower_sivorg
+		x = -1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GON_army_trains
+        prerequisite = { focus = GON_europe_defense_council }
+        relative_position_id = GON_europe_defense_council
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_chi_army_reform
+		x = 1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GON_confine_people_rights
+        prerequisite = { focus = GON_reinforce_king_power }
+        relative_position_id = GON_reinforce_king_power
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GON_dvorets_building
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_goal_generic_build_tank
+		x = 17
+		y = 0
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_stint_palace_1
+		}
+	}
+
+	focus = {
+		id = GON_svorovat_dengi_from_mo
+        prerequisite = { focus = GON_dvorets_building }
+        relative_position_id = GON_dvorets_building
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_army_tanks2
+		x = 1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			random_list = {
+     			60 = {  }
+     			40 = { country_event = { id = gonduras.3 hours = 5 } }
+			}
+		}
+	}
+
+	focus = {
+		id = GON_svorovat_dengi_u_naseleniya
+        prerequisite = { focus = GON_dvorets_building }
+        relative_position_id = GON_dvorets_building
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = -1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			random_list = {
+     			60 = {  }
+     			40 = { country_event = { id = gonduras.3 hours = 5 } }
+			}
+		}
+	}
+
+	focus = {
+		id = GON_scrit_vse_uliki
+        prerequisite = { focus = GON_svorovat_dengi_from_mo }
+	prerequisite = { focus = GON_svorovat_dengi_u_naseleniya }
+        relative_position_id = GON_dvorets_building
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 2
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_secrets_from_narod
+		}
+	}
+
+	focus = {
+		id = GON_nachat_stroitelstvo
+        prerequisite = { focus = GON_scrit_vse_uliki }
+        relative_position_id = GON_scrit_vse_uliki
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			country_event = {
+                    id = gonduras.2
+                    hours = 5
+                }
+		}
+	}
+
+	focus = {
+		id = GON_kill_monarchy
+        mutually_exclusive = { focus = GON_great_gondurasia_freedom}
+		prerequisite = { focus = GON_politics_effort}
+		relative_position_id = GON_politics_effort
+		available = {
+			GON = {
+                exists = yes
+                is_subject = no
+                OR = {
+                    has_government = neutrality
+                    has_government = democratic
+                }
+            }
+		}
+
+		bypass = {
+            OR = {
+                has_government = hypecratia
+                has_government = communism
+                has_government = fascism
+            }
+		}
+
+		icon = GFX_focus_GON_destroy_king
+		x = 5
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_destroy_crown
+            add_political_power = 100
+		}
+		
+		ai_will_do = {
+			factor = 35
+		}
+	}
+
+	focus = {
+		id = GON_expand_industry
+        relative_position_id = GON_kill_monarchy
+        prerequisite = { focus = GON_kill_monarchy }
+		mutually_exclusive = { focus = GON_internet_in_gondurasia focus = GON_anti_capitalist }
+		available = {
+            41 = {
+                is_owned_by = GON
+            }
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_full_employment
+		x = -2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			random_owned_controlled_state = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+
+			41 = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+            }
+		}
+	}
+
+	focus = {
+		id = GON_anti_capitalist
+        relative_position_id = GON_kill_monarchy
+        prerequisite = { focus = GON_kill_monarchy }
+		mutually_exclusive = { focus = GON_internet_in_gondurasia focus = GON_expand_industry }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = neutrality
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = democratic
+                popularity = -0.2
+            }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+		}
+	}
+
+	focus = {
+		id = GON_international
+        relative_position_id = GON_expand_industry
+        prerequisite = { focus = GON_expand_industry }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_soviet_politics
+		x = -2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+
+            add_ideas = GON_international_idea
+		}
+	}
+
+	focus = {
+		id = GON_fascism_government
+        relative_position_id = GON_anti_capitalist
+        prerequisite = { focus = GON_anti_capitalist } 
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_ICE_state_corporatism
+		x = 2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_ideas = GON_fascist_government_idea
+		}
+	}
+
+	focus = {
+		id = GON_in_the_name_of_the_dictator
+        relative_position_id = GON_fascism_government
+        prerequisite = { focus = GON_fascism_government }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
+		x = -2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+            set_politics = {
+                ruling_party = fascism
+            }
+            add_stability = 0.20
+            add_war_support = 0.4
+            set_rule = {
+                can_create_factions = yes
+            }
+		}
+	}
+
+	focus = {
+		id = GON_natification_industry
+        relative_position_id = GON_in_the_name_of_the_dictator
+        prerequisite = { focus = GON_in_the_name_of_the_dictator }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+
+            add_resource = {
+                type = oil
+                amount = 10
+                state = 41
+            }
+
+            add_resource = {
+                type = steel
+                amount = 5
+                state = 118
+            }
+
+            add_resource = {
+                type = aluminium
+                amount = 5
+                state = 112
+            }
+
+            add_resource = {
+                type = rubber
+                amount = 5
+                state = 167
+            }
+		}
+	}
+
+	focus = {
+		id = GON_organize_greyshirts
+        relative_position_id = GON_natification_industry
+        prerequisite = { focus = GON_natification_industry }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_fascist_troops
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_ideas = GON_greyshirts
+		}
+	}
+
+	focus = {
+		id = GON_gonduras_spirit_focus
+        relative_position_id = GON_organize_greyshirts
+        prerequisite = { focus = GON_organize_greyshirts }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_ideas = GON_gonduras_spirit
+		}
+	}
+
+	focus = {
+		id = GON_destroy_neighbours
+        relative_position_id = GON_annex_nelya_reysk
+        prerequisite = { focus = GON_annex_nelya_reysk focus = GON_gonduras_spirit_focus focus = GON_red_laboratories }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_GON_totalen_war
+		x = 0
+		y = 3
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = GON_total_war
+			add_command_power = 45
+			add_political_power = 100
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_manpower = 15000
+		}
+	}
+
+
+	focus = {
+		id = GON_peasants_and_workers
+        relative_position_id = GON_international
+        prerequisite = { focus = GON_international }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_SWE_organize_a_putsch
+		x = 2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.1
+            }
+            set_politics = {
+                ruling_party = communism
+            }
+            add_stability = -0.1
+            add_war_support = 0.05
+            set_rule = {
+                can_create_factions = yes
+            }
+		}
+	}
+
+	focus = {
+		id = GON_international_brigades_focus
+        relative_position_id = GON_peasants_and_workers
+        prerequisite = { focus = GON_peasants_and_workers }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = -2
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_ideas = GON_international_brigades
+		}
+	}
+
+	#focus = {
+	#	id = GON_international_brigades_focus
+    #    relative_position_id = GON_peasants_and_workers
+    #    prerequisite = { focus = GON_peasants_and_workers }
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	icon = GFX_focus_SOV_builder_of_the_red_army
+	#	x = -2
+	#	y = 1
+	#
+	#	cost = 10
+	#	search_filters = {FOCUS_FILTER_MANPOWER}
+	#	completion_reward = {
+    #        add_ideas = GON_international_brigades
+	#	}
+	#}
+
+	focus = {
+		id = GON_develop_states
+        relative_position_id = GON_peasants_and_workers
+        prerequisite = { focus = GON_peasants_and_workers }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_communist_industry
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+            }
+
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+            }
+		}
+	}
+
+	focus = {
+		id = GON_red_laboratories
+        relative_position_id = GON_peasants_and_workers
+        prerequisite = { focus = GON_international_brigades_focus focus = GON_develop_states }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_generic_socialist_science
+		x = -1
+		y = 2
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = GON_internet_in_gondurasia
+        relative_position_id = GON_kill_monarchy
+        prerequisite = { focus = GON_kill_monarchy }
+		mutually_exclusive = { focus = GON_expand_industry focus = GON_anti_capitalist }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_goal_hypecratia_effort
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = hypecratia
+                popularity = 0.2
+            }
+            add_timed_idea = { idea = hypecratia_ethos days = 720}
+		}
+	}
+
+	focus = {
+		id = GON_hypecrat
+        relative_position_id = GON_internet_in_gondurasia
+        prerequisite = { focus = GON_internet_in_gondurasia }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = hypecratia
+                popularity = 0.1
+            }
+
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+            }
+
+            random_owned_controlled_state = {
+                add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+                add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+            }
+		}
+	}
+
+	focus = {
+		id = GON_hypecratia_celebration
+        relative_position_id = GON_hypecrat
+        prerequisite = { focus = GON_hypecrat }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_goal_hypecratia_celebration
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            add_popularity = {
+                ideology = hypecratia
+                popularity = 0.1
+            }
+            set_politics = {
+                ruling_party = hypecratia
+            }
+            add_stability = 0.25
+            add_war_support = 0.3
+            set_rule = {
+                can_create_factions = yes
+            }
+		}
+	}
+
+	focus = {
+		id = GON_annex_nelya_reysk
+        relative_position_id = GON_hypecratia_celebration
+        prerequisite = { focus = GON_hypecrat focus = GON_in_the_name_of_the_dictator focus = GON_peasants_and_workers }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_GON_annex_NEL
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            NEL = {
+                country_event = {
+                    id = gonduras.1
+                    hours = 3
+                }
+            }
+		}
+	}
+
+
+
+    focus = {
+		id = GON_army_forces
+        relative_position_id = GON_kill_monarchy
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_form_alliance
+		x = 16
+		y = 0
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            army_experience = 25
+            navy_experience = 25
+            air_experience = 25
+		}
+	}
+
+    focus = {
+		id = GON_army_effort
+        relative_position_id = GON_army_forces
+        prerequisite = { focus = GON_army_forces}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = -4
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            army_experience = 15
+            add_doctrine_cost_reduction = {
+	            cost_reduction = 0.5
+	            uses = 2
+	            category = land_doctrine
+            }
+		}
+	}
+
+    focus = {
+		id = GON_motorization_effort
+        relative_position_id = GON_army_effort
+        prerequisite = { focus = GON_army_effort}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_materiel
+		x = -1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+    focus = {
+		id = GON_equipment_effort
+        relative_position_id = GON_army_effort
+        prerequisite = { focus = GON_army_effort}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_army
+		x = 1
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+    focus = {
+		id = GON_armor_effort
+        relative_position_id = GON_motorization_effort
+        prerequisite = { focus = GON_motorization_effort}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_dem_materiel
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = GON_equipment_effort_2
+		icon = GFX_focus_NORDIC_dem_army
+		prerequisite = { focus = GON_equipment_effort }
+		x = 0
+		y = 1
+		relative_position_id = GON_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GON_special_forces
+		icon = GFX_focus_NORDIC_dem_form_alliance
+		prerequisite = { focus = GON_equipment_effort_2 focus = GON_armor_effort }
+		x = -1
+		y = 1
+		relative_position_id = GON_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+    focus = {
+		id = GON_naval_effort
+        relative_position_id = GON_army_forces
+        prerequisite = { focus = GON_army_forces}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_navy
+		x = 4
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            navy_experience = 15
+            add_doctrine_cost_reduction = {
+	            cost_reduction = 0.5
+	            uses = 2
+	            category = naval_doctrine
+            }
+		}
+	}
+
+    focus = {
+		id = GON_flexible_navy
+		icon = GFX_focus_NORDIC_dem_navy
+		prerequisite = { focus = GON_naval_effort }
+		mutually_exclusive = { focus = GON_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = GON_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = GON_large_navy
+		icon = GFX_focus_NORDIC_dem_selector_navy
+		prerequisite = { focus = GON_naval_effort }
+		mutually_exclusive = { focus = GON_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = GON_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+    focus = {   
+		id = GON_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = GON_flexible_navy focus = GON_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = GON_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GON_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = GON_large_navy focus = GON_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = GON_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GON_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = GON_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = GON_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GON_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GON_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = GON_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+
+    focus = {
+		id = GON_air_effort
+        relative_position_id = GON_army_forces
+        prerequisite = { focus = GON_army_forces}
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_airforce
+		x = 0
+		y = 1
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            air_experience = 15
+            add_doctrine_cost_reduction = {
+	            cost_reduction = 0.5
+	            uses = 2
+	            category = air_doctrine
+            }
+		}
+	}
+
+    focus = {
+		id = GON_fighter_focus
+		icon = GFX_focus_NORDIC_dem_airforce
+		prerequisite = { focus = GON_air_effort }
+        mutually_exclusive = { focus = GON_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = GON_air_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+    focus = {
+		id = GON_bomber_focus
+		icon = GFX_focus_NORDIC_dem_capstone_airforce
+		prerequisite = { focus = GON_air_effort }
+        mutually_exclusive = { focus = GON_fighter_focus}
+		x = 1
+		y = 1
+		relative_position_id = GON_air_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+    focus = {
+		id = GON_air_effort_2
+        relative_position_id = GON_air_effort
+        prerequisite = { focus = GON_fighter_focus focus = GON_bomber_focus }
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		icon = GFX_focus_NORDIC_com_selector_material
+		x = 0
+		y = 2
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+            air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+		}
+	}
+
+    focus = {
+		id = GON_cas_effort
+		icon = GFX_focus_NORDIC_dem_selector_airforce
+		prerequisite = { focus = GON_air_effort_2 }
+		x = -1
+		y = 3
+		relative_position_id = GON_air_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+    focus = {
+		id = GON_NAV_effort
+		icon = GFX_focus_NORDIC_dem_institution_2
+		prerequisite = { focus = GON_air_effort_2 }
+		x = 1
+		y = 3
+		relative_position_id = GON_air_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = GON_nuclear_effort
+		icon = GFX_focus_NORDIC_com_selector_research
+		prerequisite = { focus = GON_cas_effort focus = GON_NAV_effort focus = GON_special_forces focus = GON_destroyer_effort focus = GON_capital_ships_effort }
+		x = 0
+		y = 2
+		relative_position_id = GON_air_effort_2
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+            add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+
+}

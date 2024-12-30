@@ -1,0 +1,368 @@
+ideas = {
+
+	country = {
+
+		GON_kotel_shabanova = {
+			picture = kotel_shabanova
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+			
+			modifier = {
+				army_speed_factor = 0.15
+				surrender_limit = 0.1
+				enemy_army_speed_factor = -0.1
+			}
+		}
+		
+		GON_secrets_from_narod = {
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		GON_europe_defense_council = {
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+			
+			modifier = {
+				army_attack_against_major_factor = 0.15
+				surrender_limit = 0.15
+				planning_speed = 0.3
+			}
+		}
+
+		GON_international_idea = {
+						
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				supply_factor = 0.05
+				communism_acceptance = 50
+				justify_war_goal_time = -0.15
+			}
+		}
+		
+		GON_stint_palace_1 = {
+			picture = stint_palace
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				supply_factor = -0.05
+				justify_war_goal_time = -0.15
+				political_power_gain = -0.15
+			}
+		}
+		
+		GON_stint_palace_2 = {
+			picture = stint_palace
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+				justify_war_goal_time = -0.05
+				political_power_gain = -0.09
+			}
+		}
+		
+		GON_stint_palace_3 = {
+			picture = stint_palace
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.35
+			}
+		}
+		
+		GON_stint_palace_4 = {
+			picture = stint_palace
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				justify_war_goal_time = 0.05
+				political_power_gain = 0.15
+				army_attack_factor = 0.05
+			}
+		}
+		
+		GON_acf = {
+			picture = GON_acf
+			
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = -0.15
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+		
+		GON_legends_of_stintler = {
+						
+			picture = saf_history_of_segregation_2
+
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.05
+				political_power_gain = -0.15
+			}
+		}
+
+		GON_fascist_government_idea = {
+			picture = generic_fascism_drift_2
+
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				supply_factor = 0.1
+				fascism_acceptance = 35
+				justify_war_goal_time = -0.25
+				conscription = 0.04
+				fascism_drift = 0.01
+			}
+		}
+
+		GON_conscription_idea = {
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				mobilization_speed = 0.1
+				training_time_factor = 0.2
+			}
+		}
+
+
+		GON_professional_army_idea = {
+			picture = MEX_politicised_army_2
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.15
+				training_time_factor = 0.2
+			}
+		}
+
+		GON_gonduras_spirit = {
+			picture = ICE_the_viking_spirit
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.1
+				war_support_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		GON_total_war = {
+			picture = totalen_war
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.15
+				training_time_army_factor = -0.2
+				army_attack_factor = 0.15
+				army_core_attack_factor = 0.25
+				army_defence_factor = 0.15
+				army_speed_factor = 0.15
+				army_strength_factor = 0.2
+			}
+		}
+
+		GON_greyshirts = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		GON_international_brigades = {
+			allowed = {
+				always = no
+			}
+			picture = MEX_revolutionary_army
+
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				
+			}
+			rule = {
+				can_send_volunteers = yes 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 100 #This is still 10% the size of a military spirit they can get as communist anyway...
+				send_volunteer_divisions_required = -2
+				send_volunteer_size = 4
+			}
+		}
+
+		GON_great_gondurasia = {
+			picture = HUN_hungarian_monarchy_democratic
+
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				party_popularity_stability_factor = 0.3
+				drift_defence_factor = 0.15
+				communism_drift = -0.02
+				fascism_drift = -0.02
+			}
+		}
+
+		GON_destroy_crown = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = GON
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = -0.15
+				democratic_drift = -0.01
+				neutrality_drift = -0.02
+			}
+		}
+	}
+}

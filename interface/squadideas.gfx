@@ -1,0 +1,167 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_idea_bezmoderov"
+        texturefile = "gfx/interface/ideas/bezmoderov.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_vitaliy_jr_small"
+        texturefile = "gfx/interface/ideas/vitaliy_jr_small.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_slay_2023"
+        texturefile = "gfx/interface/ideas/slay_2023.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_slay_2024"
+        texturefile = "gfx/interface/ideas/slay_2024.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_slay_2023_award"
+        texturefile = "gfx/interface/ideas/slay_2023_award.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_stint_palace"
+        texturefile = "gfx/interface/ideas/stintler_palace.dds"
+    }
+	
+    spriteType = {
+        name = "GFX_idea_GON_acf"
+        texturefile = "gfx/interface/ideas/acf_gon.dds"
+    }
+	
+    spriteType = {
+        name = "GFX_idea_slay_2024_award"
+        texturefile = "gfx/interface/ideas/slay_2024_award.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_dva_disa"
+        texturefile = "gfx/interface/ideas/dva_disa.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_borets_s_pafosom"
+        texturefile = "gfx/interface/ideas/against_pafos.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_svinland_ru"
+        texturefile = "gfx/interface/ideas/svinland_ru.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_sp_crisis"
+        texturefile = "gfx/interface/ideas/sp_crisis.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_bad_government"
+        texturefile = "gfx/interface/ideas/bad_government.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_unknown_char_small"
+        texturefile = "gfx/interface/ideas/unknown_character_small.dds"
+    }  
+	
+    spriteType = {
+        name = "GFX_idea_kotel_shabanova"
+        texturefile = "gfx/interface/ideas/idea_kotel_shabanova.dds"
+    }  
+	
+	spriteType = {
+        name = "GFX_idea_detiyvlasti"
+        texturefile = "gfx/interface/ideas/detiyvlasti.dds"
+    }  
+	
+	spriteType = {
+        name = "GFX_idea_kotyvlasti"
+        texturefile = "gfx/interface/ideas/kotyvlasti.dds"
+    } 
+	
+	spriteType = {
+        name = "GFX_idea_totalen_war"
+        texturefile = "gfx/interface/ideas/totalen_war_idea.dds"
+    } 
+	
+	spriteType = {
+		name = "GFX_idea_svi_bustergrad_oposite"
+		texturefile = "gfx/interface/ideas/buster_oposite.dds"
+	}
+	
+	spriteType = {
+        name = "GFX_idea_cult_zavertina"
+        texturefile = "gfx/interface/ideas/cult_zavertina.dds"
+    }  
+	
+	spriteType = {
+        name = "GFX_idea_chb_nat_ter"
+        texturefile = "gfx/interface/ideas/NationalTerritorii.dds"
+    }  
+
+    spriteType = {
+        name = "GFX_idea_hypecratia_ethos"
+        texturefile = "gfx/interface/ideas/hypecratia_ethos.dds"
+    }
+	
+	spriteType = {
+		name = "GFX_idea_people_support_mass_opposition"
+		texturefile = "gfx/interface/ideas/idea_massive_oposition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_people_support_strong_opposition"
+		texturefile = "gfx/interface/ideas/idea_high_oposition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_people_support_extremely_low"
+		texturefile = "gfx/interface/ideas/idea_people_support_very_low.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_people_support_low"
+		texturefile = "gfx/interface/ideas/idea_people_support_low.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_people_support_undefined"
+		texturefile = "gfx/interface/ideas/idea_people_support_undefined.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_people_support_average"
+		texturefile = "gfx/interface/ideas/idea_people_support_average.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_people_support_high"
+		texturefile = "gfx/interface/ideas/idea_people_support_high.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_people_support_patriotic"
+		texturefile = "gfx/interface/ideas/idea_people_support_patriotic.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_people_support_small"
+		texturefile = "gfx/interface/ideas/idea_people_support_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_low_taxes"
+		texturefile = "gfx/interface/ideas/low_taxes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_high_taxes"
+		texturefile = "gfx/interface/ideas/high_taxes.dds"
+	}
+}

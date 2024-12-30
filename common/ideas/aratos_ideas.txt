@@ -1,0 +1,164 @@
+ideas = {
+	country = {
+		ARA_rebuild_the_nation = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = ast_all_in
+
+			modifier = {
+				consumer_goods_factor = -0.50
+			}
+		}
+		
+		ARA_people_against_fascism = {
+			allowed = {
+				NOT = { ruling_party = fascism }
+			}
+			
+			removal_cost = -1
+
+			picture = SPR_anti_fascist_crusade
+
+			modifier = {
+				fascism_drift = -0.09
+				drift_defence_factor = 0.3
+			}
+		}
+		
+		ARA_people_republick = {
+			allowed = {
+				ruling_party = communism
+			}
+			
+			removal_cost = -1
+
+			picture = SPR_anti_fascist_crusade
+
+			modifier = {
+				fascism_drift = -0.05
+				drift_defence_factor = 0.5
+				stability_factor = 0.15
+				enemy_justify_war_goal_time = 0.1
+				
+			}
+		}
+		
+		ARA_fuck_burshui = {
+			allowed = {
+			}
+			
+			removal_cost = -1
+
+			picture = eng_tackle_capitalism
+
+			modifier = {
+				democratic_drift = -0.05
+				neutrality_drift = -0.05
+			}
+		}
+
+		ARA_national_revitalization = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industry_repair_factor = 0.20
+			}
+		}
+
+		ARA_island_defending = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				research_speed_factor = 0.3
+				production_speed_bunker_factor = 0.35
+				consumer_goods_factor = -0.15
+				surrender_limit = 0.1
+			}
+		}
+
+		ARA_after_war = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = tfv_can_conscription_crisis
+
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		ARA_national_catastrophe = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		ARA_SZS = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				war_support_weekly = 0.1
+				political_advisor_cost_factor = -0.25
+				conscription = 0.05
+			}
+		}
+
+		ARA_dicator_constitution = {
+						allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = POL_april_constitution
+
+			modifier = {
+				political_advisor_cost_factor = 0.25
+				research_speed_factor = -0.05
+				party_popularity_stability_factor = 0.3
+			}
+		}
+	}
+}

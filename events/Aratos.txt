@@ -1,0 +1,106 @@
+add_namespace = aratos
+
+#Aratos Allies
+#SVI
+country_event = {
+	id = aratos.1
+	title = aratos.svi.t
+	desc = aratos.svi.d
+	picture = GFX_report_event_gre_allied_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.6.a #yes
+		ai_chance = {
+			factor = 55
+		}
+		
+		hidden_effect = {
+			ARA = { add_to_faction = SVI }
+		}
+	}
+	
+	option = {
+		name = germany.6.b #no
+		ai_chance = {
+			factor = 45
+		}
+		
+		hidden_effect = {
+			ARA = { country_event = { id = aratos.2 days = 1 }
+		}
+	}
+	}
+}
+country_event = {
+	id = aratos.2
+	title = aratos.svi.otkaz.t
+	desc = aratos.svi.otkaz.d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.23.a #ok
+		ai_chance = {
+			factor = 55
+		}
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#GON
+country_event = {
+	id = aratos.3
+	title = aratos.gon.t
+	desc = aratos.gon.d
+	picture = GFX_report_event_gre_allied_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.6.a #yes
+		ai_chance = {
+			factor = 55
+		}
+		
+		hidden_effect = {
+			ARA = { add_to_faction = GON }
+		}
+	}
+	
+	option = {
+		name = germany.6.b #no
+		ai_chance = {
+			factor = 45
+		}
+		
+		hidden_effect = {
+			ARA = { country_event = { id = aratos.4 days = 1 }
+		}
+	}
+	}
+}
+country_event = {
+	id = aratos.4
+	title = aratos.gon.otkaz.t
+	desc = aratos.gon.otkaz.d
+	picture = GFX_report_event_communist_leader
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.23.a #ok
+		ai_chance = {
+			factor = 55
+		}
+		
+		hidden_effect = {
+			
+		}
+	}
+}

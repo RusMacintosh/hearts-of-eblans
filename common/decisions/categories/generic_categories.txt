@@ -1,0 +1,38 @@
+hypecratia_on_the_rise = {
+	icon = generic_democracy
+
+	allowed = {
+		NOT = {
+			AND = {
+				has_dlc = "No Step Back"
+				OR = {
+					original_tag = EST
+					original_tag = LAT
+					original_tag = LIT
+					original_tag = POL
+				}
+			}
+
+			AND = {
+				has_dlc = "By Blood Alone"
+				OR = {
+					original_tag = SWI
+					original_tag = ITA
+				}
+			}
+
+			AND = {
+				has_dlc = "Arms Against Tyranny"
+				OR = {
+					original_tag = SWE
+					original_tag = FIN
+				}
+			}
+		}
+	}
+	
+	#visible = {
+	#	NOT = { has_government = democratic }
+	#	has_idea_with_trait = democratic_reformer
+	#}
+}

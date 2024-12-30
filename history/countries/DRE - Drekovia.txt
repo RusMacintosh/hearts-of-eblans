@@ -1,0 +1,90 @@
+capital = 4
+set_research_slots = 3
+
+oob = "DRE_1936"
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	basic_train = 1
+}
+
+recruit_character = universal_hype_dre
+
+set_politics = {
+	ruling_party = hypecratia
+	last_election = "1936.1.1"
+	elections_allowed = no
+}
+
+add_ideas = {
+	disarmed_nation
+	DRE_treaty_of_triannon_aat
+	defeted_at_wwone
+}
+
+set_popularities = {
+	hypecratia = 72
+	democratic = 4
+	communism = 11
+	fascism = 13
+}
+
+create_country_leader = {
+	name = "Денис Каломиша"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "drake_hype.dds"
+	expire = "2000.1.1"
+	ideology = hypelikee
+	traits = {
+		maloletka
+	}
+}
+
+create_country_leader = {
+	name = "Денис фон дэ Кал"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "drake_fascism.dds"
+	expire = "2000.1.1"
+	ideology = rexism
+	traits = {
+		maloletka
+	}
+}
+	
+create_country_leader = {
+	name = "Виталий Старший"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "not_drake_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = moderatism
+	traits = {
+		maloletka
+	}
+}
+	
+create_country_leader = {
+	name = "Денис Дрейк"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "drake_democratic.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		maloletka
+	}
+}
+	
+create_country_leader = {
+	name = "Денис Дленин"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "drake_communism.dds"
+	expire = "2000.1.1"
+	ideology = leninism
+	traits = {
+		maloletka
+	}
+}

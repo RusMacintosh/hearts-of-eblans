@@ -1,0 +1,151 @@
+division_template = {
+	name = "Морфная Пехота"		# Same for "Active" and "Reserve" Infantry Divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Морфные Кони"				# Cavalry Brigade -- precursor to Fast Divisions. Fast Divisions add 2nd regiment of 2x L tank, 2x mot 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # includes 1x AC comp, 1x L tank comp
+	}
+}
+
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9644
+		division_template = "Морфная Пехота"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9492
+		division_template = "Морфная Пехота"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11716
+		division_template = "Морфная Пехота"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11576
+		division_template = "Морфная Пехота"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3646
+		division_template = "Морфная Пехота"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9625
+		division_template = "Морфные Кони"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6613
+		division_template = "Морфные Кони"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11611
+		division_template = "Морфные Кони"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+}
+
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "NEL"
+		}
+		requested_factories = 2
+		progress = 0.18
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "NEL"
+		}
+		requested_factories = 1
+		progress = 0.48
+		efficiency = 100
+	}
+	}
+}

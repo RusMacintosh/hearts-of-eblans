@@ -1,0 +1,94 @@
+capital = 137
+
+oob = "CRI_khanate_soldiers"
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+
+
+set_politics = {
+	ruling_party = hypecratia
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Народный коммисариат Квадроберов"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "CVD_comm.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Квадро-Обершутце"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "CVD_fas.dds"
+	expire = "2000.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Рандомные Квадроберы"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "CVD_demo.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Рандомные Квадроберы"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "CVD_demo.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Хайповый совет Квадроберов"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "CVD_hype.dds"
+	expire = "2000.1.1"
+	ideology = hypelikee
+	traits = {
+		#
+	}
+}
+
+set_popularities = {
+	democratic = 4
+	fascism = 6
+	communism = 1
+	neutrality = 10
+	hypecratia = 79
+}
+
+

@@ -1,0 +1,14 @@
+opinion_modifiers = {
+	
+	chb_finding_friends = {
+		value = 25
+	}
+	
+	svinland_comm_friend = {
+		value = 135
+	}
+	
+	first_venezia_award = {
+		value = 10
+	}
+}

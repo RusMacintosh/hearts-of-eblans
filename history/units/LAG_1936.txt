@@ -1,0 +1,282 @@
+division_template = {
+	name = "Лагодинские военные"		# Same for "Active" and "Reserve" Infantry Divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {  
+	}
+}
+
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3434
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 524
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3309
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 3320
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 535
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 3392
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 400
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 11398
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3410
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 9412
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 3559
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 3586
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 11274
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 11492
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 11301
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 233
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 406
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 560
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 422
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 6415
+		division_template = "Лагодинские военные"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.7
+
+	}
+}
+
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LAG"
+		}
+		requested_factories = 1
+		progress = 0.18
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "LAG"
+		}
+		requested_factories = 1
+		progress = 0.48
+		efficiency = 100
+	}
+	}
+}

@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+		
+
+		PBU_slay_2023 = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = slay_2023
+
+			modifier = {
+				trade_opinion_factor = 0.25
+				improve_relations_maintain_cost_factor = -0.15
+				political_power_factor = 0.02
+			}
+		}
+		
+		PBU_slay_2024 = {
+			allowed = {
+				always = no
+			}
+
+
+			removal_cost = -1
+
+			picture = slay_2024
+
+			modifier = {
+				trade_opinion_factor = 0.25
+				improve_relations_maintain_cost_factor = -0.15
+				political_power_factor = 0.02
+			}
+		}
+	}
+}

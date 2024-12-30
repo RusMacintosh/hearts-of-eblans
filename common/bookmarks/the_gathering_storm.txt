@@ -1,0 +1,146 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "CHB"
+		default = yes
+		"CHB"={
+			history = ""
+			ideology = fascism
+			ideas = {
+				CHB_hungary_problem
+			}
+			focuses = {
+				
+			}
+		}
+		"ARA"={
+			history = ""
+			ideology = hypecratia
+			ideas = {
+				defeted_at_wwone
+				ARA_national_catastrophe
+				ARA_dicator_constitution
+			}
+			focuses = {
+				
+			}
+		}
+		"SVI"={
+			history = ""
+			ideology = democratic
+			ideas = {
+				svinland_ru
+				SVI_buster_oposite
+			}
+			focuses = {
+			}
+		}
+		"DRE"={
+			history = ""
+			ideology = hypecratia
+			ideas = {
+				DRE_treaty_of_triannon_aat
+				defeted_at_wwone
+			}
+			focuses = {
+				
+			}
+		}
+		"HAM"={
+			history = ""
+			ideology = hypecratia
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"BTK"={
+			history = ""
+			ideology = fascism
+			ideas = {
+				bad_government
+				slay_2023_king
+				demografic_problems
+			}
+			focuses = {
+			}
+		}
+		
+		"GON"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+				GON_kotel_shabanova
+				GON_legends_of_stintler
+				demografic_problems
+			}
+			focuses = {
+			}
+		}
+
+
+		"---"={
+			history = ""
+		}
+		
+		"MPK"={
+			minor = yes
+			history = ""
+			ideology = hypecratia
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"LAG"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"CVD" = {
+			minor = yes
+			history = ""
+			ideology = hypecratia
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"PYA" = {
+			minor = yes
+			history = ""
+			ideology = fascism
+			ideas = {
+				dva_disa
+				sp_crisis
+			}
+			focuses = {
+			}
+		}
+		
+		"HSU" = {
+			minor = yes
+			history = ""
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

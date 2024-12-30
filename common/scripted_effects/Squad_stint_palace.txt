@@ -1,0 +1,25 @@
+improve_stint_palace_idea = {
+	if = {
+		limit = { AND = { check_variable = { palace_ready_state > 1} has_idea = GON_stint_palace_1 } }
+		swap_ideas = {
+			remove_idea = GON_stint_palace_1
+			add_idea = GON_stint_palace_2 
+		}
+	}
+	
+	if = {
+		limit = { AND = { check_variable = { palace_ready_state > 3} has_idea = GON_stint_palace_2 } }
+		swap_ideas = {
+			remove_idea = GON_stint_palace_2
+			add_idea = GON_stint_palace_3
+		}
+	}
+	
+	if = {
+		limit = { AND = { check_variable = { palace_ready_state > 6} has_idea = GON_stint_palace_3 } }
+		swap_ideas = {
+			remove_idea = GON_stint_palace_3
+			add_idea = GON_stint_palace_4
+		}
+	}
+}

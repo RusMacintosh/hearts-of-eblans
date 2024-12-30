@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_sp_event_window"
+		textureFile = "/gfx/Super_Event_Window.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_close_button"
+		textureFile = "/gfx/Super_Event_Close_Button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_underlay"
+		textureFile = "/gfx/Super_Event_Underlay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_SDO_start"
+		textureFile = "/gfx/sp_events/Super_Event_SDO_start.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_mazokgrad_fall"
+		textureFile = "/gfx/sp_events/Super_Event_mazokgrad_fall.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_dayraid_fall"
+		textureFile = "/gfx/sp_events/Super_Event_dayraid_fall.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_blitzkrieg_zabuksoval"
+		textureFile = "/gfx/sp_events/Super_Event_blitzkrieg_zabuksoval.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sp_event_lagoda_raspil"
+		textureFile = "/gfx/sp_events/Super_Event_lagoda_raspil.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bruh"
+		textureFile = "/gfx/sp_events/Super_Event_dayraid_fall.dds"
+	}
+}

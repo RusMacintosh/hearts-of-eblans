@@ -1,0 +1,12 @@
+SpriteTypes = {
+
+	SpriteType = {
+		name = "GFX_portrait_bigpig"
+		texturefile = "gfx/leaders/SVI/big_pig.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_portrait_laki"
+		texturefile = "gfx/leaders/SVI/laki.dds"
+	}
+}

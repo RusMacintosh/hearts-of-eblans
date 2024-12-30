@@ -1,0 +1,60 @@
+ideas = {
+
+	country = {
+		slay_2023_mem_goda = {
+			allowed = {
+				always = no
+			}
+			
+			picture = slay_2023_award
+
+			modifier = {
+			}
+		}
+		
+		slay_2023_king = {
+			allowed = {
+				always = no
+			}
+			
+			picture = slay_2023_award
+
+			modifier = {
+			}
+		}
+		
+		slay_2024_mem_goda = {
+			allowed = {
+				always = no
+			}
+			
+			picture = slay_2024_award
+
+			modifier = {
+			}
+		}
+		
+		slay_2024_king = {
+			allowed = {
+				always = no
+			}
+			
+			picture = slay_2024_award
+
+			modifier = {
+			}
+		}
+		
+		slay_2024_queen = {
+			allowed = {
+				always = no
+			}
+			
+			picture = slay_2024_award
+
+			modifier = {
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,157 @@
+add_namespace = squad_news
+
+news_event = {
+	id = squad_news.1
+	title = squad_news.1.t
+	desc = squad_news.1.d
+	picture = GFX_news_event_partition_of_india
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+news_event = {
+	id = squad_news.2
+	title = squad_news.2.t
+	desc = squad_news.2.d
+	picture = GFX_news_event_polish_army
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = excellent
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#KRUGLISTAN ANSCHLUS
+news_event = {
+	id = squad_news.3
+	title = squad_news.3.t
+	desc = squad_news.3.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.19.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#Ремилитаризация Западной Австрии
+news_event = {
+	id = squad_news.4
+	title = squad_news.4.t
+	desc = squad_news.4.d
+	picture = GFX_news_event_generic_parliament
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.64.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#Hesus small intervention
+news_event = {
+	id = squad_news.5
+	title = squad_news.5.t
+	desc = squad_news.5.d
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.64.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+#Hesus neutrality
+news_event = {
+	id = squad_news.6
+	title = squad_news.6.t
+	desc = squad_news.6.d
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.64.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+news_event = {
+	id = squad_news.7
+	title = squad_news.7.t
+	desc = squad_news.7.d
+	picture = GFX_news_event_slay
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}
+
+news_event = {
+	id = squad_news.8
+	title = squad_news.8.t
+	desc = squad_news.8.d
+	picture = GFX_report_event_stint_palace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		
+		hidden_effect = {
+		
+		}
+	}
+}

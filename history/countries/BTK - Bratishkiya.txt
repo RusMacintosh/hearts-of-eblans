@@ -1,0 +1,111 @@
+capital = 64
+
+oob = "GER_1936"
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+set_research_slots = 5
+
+add_ideas = {
+	bad_government
+	slay_2023_king
+	demografic_problems
+}
+
+# Starting tech
+set_technology = {
+ 	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+   	atomic_research = 1
+	nuclear_reactor = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+recruit_character = universal_hype_btk
+
+set_convoys = 40
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 15
+	fascism = 46
+	communism = 16
+	neutrality = 5
+	hypecratia = 18
+}
+
+create_country_leader = {
+	name = "Братишкин"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "bratishkin_fascism.dds"
+	expire = "2000.1.1"
+	ideology = gen_nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Братишка"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "bratishkin_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Иосиф Вовка"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "bratishkin_communism.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Братишка"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "bratishkin_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Братхуйкинс"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "bratishkin_hypecratia.dds"
+	expire = "2000.1.1"
+	ideology = hypelikee
+	traits = {
+		#
+	}
+}

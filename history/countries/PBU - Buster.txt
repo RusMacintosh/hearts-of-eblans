@@ -1,0 +1,97 @@
+capital = 907
+
+oob = "PBU_1936"
+
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+add_ideas = PBU_slay_2023
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Полковник Бустеренко"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "BUS.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		polkovnik
+	}
+}
+
+create_country_leader = {
+	name = "Бустер-Фюрер"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "BUS.dds"
+	expire = "2000.1.1"
+	ideology = fascism_ideology
+	traits = {
+		polkovnik
+	}
+}
+
+create_country_leader = {
+	name = "Бустер"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "BUS.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		polkovnik
+	}
+}
+
+create_country_leader = {
+	name = "Бустер"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "BUS.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		polkovnik
+	}
+}
+
+create_country_leader = {
+	name = "Полковник Кончиленко"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "BUS.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		polkovnik
+	}
+}
+
+set_popularities = {
+	democratic = 2
+	fascism = 5
+	communism = 2
+	neutrality = 56
+	hypecratia = 35
+}
+
+

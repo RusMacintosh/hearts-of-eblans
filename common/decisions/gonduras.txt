@@ -1,0 +1,429 @@
+dvorets_building_cat = {
+	build_akvadiskoteka = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 50
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { akvadiskoteka < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { akvadiskoteka < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			improve_stint_palace_idea = true
+			set_variable = { akvadiskoteka = 1 }
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_vinnie_zavodi = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 50
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { vinnie_zavodi < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { vinnie_zavodi < 1 }
+		}
+	
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { vinnie_zavodi = 1 }
+			improve_stint_palace_idea = true
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_zoloto_i_barhat = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 50
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { zoloto_i_barhat < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { zoloto_i_barhat < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+		set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { zoloto_i_barhat = 1 }
+			improve_stint_palace_idea = true
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_zerkov = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 50
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { zerkov < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { zerkov < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { zerkov = 1 }
+			improve_stint_palace_idea = true
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_ohrana = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		days_remove = 50
+		
+		custom_cost_trigger = {
+			has_manpower > 1500
+			political_power > 50
+		}
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { ohrana < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }	
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { ohrana < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { ohrana = 1 }
+			improve_stint_palace_idea = true
+			man_power = -1500
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_propusknoy_regime = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 100
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { kpp < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { kpp < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { kpp = 1 }
+			improve_stint_palace_idea = true
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	build_noair_area = {
+	
+		icon = GFX_decision_SOV_place_hq
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = true
+		cost = 55
+		days_remove = 50
+	
+		allowed = {
+			original_tag = GON
+		}
+	
+		available = {
+			AND = {
+				check_variable = { naa < 1 }
+				check_variable = { is_all_palace_decisions_blocked < 1 }
+			}
+		}
+		
+	
+		visible = {
+			original_tag = GON
+			check_variable = { palace_builded > 0 }
+			check_variable = { naa < 1 }
+		}
+		
+		complete_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 1 }
+		}
+	
+		remove_effect = {
+			set_variable = { is_all_palace_decisions_blocked = 0 }
+			add_to_variable = { palace_ready_state = 1 }
+			set_variable = { naa = 1 }
+			improve_stint_palace_idea = true
+			add_to_variable = { anti_palace_oposition = 1 }
+			if = {
+				limit = { AND = { check_variable = { anti_palace_oposition > 6 } check_variable = { afc_razoblachenie < 1}}}
+				country_event = {
+					id = gonduras.5
+					days = 20
+					random_days = 50
+				}
+				news_event = { id = squad_news.8 days = 15 random_days = 25 }
+				set_variable = { afc_razoblachenie = 1 }
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	palace_building = {
+		activation = {
+			check_variable = { is_palace_selected > 0 }
+		}
+	
+		icon = GFX_decision_category_intervention_in_spain
+		
+		days_mission_timeout = 65
+		fire_only_once = yes
+		is_good = yes
+		
+		available = { #budet provaleno esli
+			NOT = { country_exists = GON }
+		}
+		
+		timeout_effect = {
+		set_variable = { palace_builded = 1 }
+		add_to_variable = { anti_palace_oposition = 1 }
+		}
+		
+	}
+}
+
+afc_gon_cat = {
+}

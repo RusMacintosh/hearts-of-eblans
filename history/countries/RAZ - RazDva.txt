@@ -1,0 +1,105 @@
+capital = 111
+
+oob = "FIN_1936"
+set_naval_oob = "FIN_1936_naval"
+
+add_ideas = {
+	defeted_at_wwone
+}
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+
+
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Генсек Раз Два"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "RazDva.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Обер-RazDva"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "RazDva.dds"
+	expire = "2000.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "RazDva"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "RazDva.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Raz Dva"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "RazDva.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Raz Dva Tri"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "RazDva.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		#
+	}
+}
+
+set_popularities = {
+	democratic = 43
+	fascism = 17
+	communism = 13
+	neutrality = 20
+	hypecratia = 7
+}
+
+

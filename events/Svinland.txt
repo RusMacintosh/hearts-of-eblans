@@ -1,0 +1,190 @@
+add_namespace = svin
+
+#Busters Civil war
+country_event = {
+	id = svin.1
+	title = svin.1.t
+	desc = svin.1.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svin.1.a #yes
+		ai_chance = {
+			
+		}
+		
+		hidden_effect = {
+			SVI = {
+				release = BUS
+			}
+			BUS = {
+				load_oob = "BUS_WAR"
+			}
+			
+			BUS = {
+				declare_war_on = {
+    				target = SVI
+    				type = independence_wargoal
+				}
+			}
+		}
+	}
+}
+
+#ADD TO HYPE ALLIES
+country_event = {
+	id = svin.2
+	title = svin.2.t
+	desc = svin.2.d
+	picture = GFX_report_event_canada_ronnie
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = svin.2.a #yes
+		ai_chance = {
+			factor = 60
+		}
+		
+		hidden_effect = {
+			SVI = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = svin.2.b #no
+		ai_chance = {
+			factor = 40
+		}
+		
+		hidden_effect = {
+			SVI = {
+				country_event = {
+				id = svin.3
+				days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = svin.3
+	title = svin.3.t
+	desc = svin.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+		option = {
+		name = svin.3.a #yes
+		ai_chance = {
+			factor = 60
+		}
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = {
+	id = svin.4
+	title = svin.4.t
+	desc = svin.4.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = svin.4.a #yes
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+			SVI = {
+				annex_country = {
+					target = RAZ
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = svin.4.b #no
+		ai_chance = {
+			factor = 60
+		}
+		
+		hidden_effect = {
+			SVI = {
+				create_wargoal = {
+					target = RAZ
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+#DEMAND 5opka Islands
+country_event = {
+	id = svin.5
+	title = svin.5.t
+	desc = svin.5.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = svin.5.a #yes
+		ai_chance = {
+			factor = 30
+		}
+		
+		hidden_effect = {
+			SVI = {
+				transfer_state = 145
+			}
+		}
+	}
+
+	option = {
+		name = svin.5.b #no
+		ai_chance = {
+			factor = 60
+		}
+		
+		hidden_effect = {
+			SVI = {
+				create_wargoal = {
+					target = PYA
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = svin.6
+	title = svin.6.t
+	desc = svin.6.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = drek.12.a #no
+		ai_chance = {
+			factor = 60
+		}
+	}
+}

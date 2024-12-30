@@ -1,0 +1,169 @@
+capital = 107
+
+oob = "YUG_1936"
+set_naval_oob = "YUG_1936_naval"
+set_research_slots = 4
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+set_research_slots = 4
+
+add_ideas = CHB_hungary_problem
+
+# Starting tech
+set_technology = {
+ 	infantry_weapons = 1
+	basic_train = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+   	atomic_research = 1
+	nuclear_reactor = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+}
+
+recruit_character = universal_hype_chb
+
+set_convoys = 20
+
+1939.1.1 = {
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		support_weapons = 1
+		gw_artillery = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 17
+	fascism = 54
+	communism = 9
+	neutrality = 20
+}
+
+create_country_leader = {
+	name = "Мазеловвв"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "Mazelovik.dds"
+	expire = "2000.1.1"
+	ideology = gen_nazism
+	traits = {
+		dictator
+	}
+}
+
+create_country_leader = {
+	name = "Совет Модераторов"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "SovetModerov.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Кот Завертин"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "Zavertin.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "MZLF"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "MZLF.dds"
+	expire = "2000.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Мазяка"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "Mazyaka.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		#
+	}
+}
+
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 55
+		fascism = 3
+		communism = 34
+		neutrality = 8
+	}
+}

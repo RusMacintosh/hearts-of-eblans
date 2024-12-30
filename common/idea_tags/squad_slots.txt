@@ -1,0 +1,7 @@
+idea_categories = {
+	government_support = {
+		slot = government_support_slot
+		cost = 150
+		removal_cost = -1
+	}
+}

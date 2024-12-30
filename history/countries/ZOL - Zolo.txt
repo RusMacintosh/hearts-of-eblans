@@ -1,0 +1,143 @@
+capital = 2
+
+oob = "ZOL_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1	
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+
+
+	early_fighter = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+}
+
+recruit_character = universal_hype_zol
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		
+		has_dlc = "No Step Back"
+		
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+}
+
+#New Text
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+	}
+}
+
+set_politics = {
+	ruling_party = hypecratia
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Джугашвили Иван Золиков"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "zolo_communism.dds"
+	expire = "2000.1.1"
+	ideology = stalinism
+	traits = {
+		slaboumie
+	}
+}
+
+create_country_leader = {
+	name = "Иван Золик"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "zolo_hypecratia.dds"
+	expire = "2000.1.1"
+	ideology = hypetiktok
+	traits = {
+		slaboumie
+	}
+}
+
+create_country_leader = {
+	name = "Иван Золочевский"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "zolo_fascism.dds"
+	expire = "2000.1.1"
+	ideology = gen_nazism
+	traits = {
+		slaboumie
+	}
+}
+
+create_country_leader = {
+	name = "Иван Золо"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "zolo_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = liberalism
+	traits = {
+		slaboumie
+	}
+}
+
+create_country_leader = {
+	name = "Иван Золо"
+	desc = "POLITICS_PRINCE_PAUL_DESC"
+	picture = "zolo_neutrality.dds"
+	expire = "2000.1.1"
+	ideology = despotism
+	traits = {
+		slaboumie
+	}
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 40
+	communism = 0
+	neutrality = 0
+	hypecratia = 60
+}
+
+

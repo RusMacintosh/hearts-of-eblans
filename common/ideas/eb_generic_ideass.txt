@@ -1,0 +1,389 @@
+ideas = {
+
+	country = {
+
+        hypecratia_ethos = {
+		
+			removal_cost = -1
+			
+			available = {
+				NOT = { ruling_party = hypecratia }
+			}
+
+			picture = GFX_idea_hypecratia_ethos
+
+			modifier = {
+				democratic_drift = -0.005
+                hypecratia_drift = 0.02
+			}
+		}
+		
+		demografic_problems = {
+			removal_cost = -1
+
+			picture = generic_army_problems
+
+			modifier = {
+				conscription_factor = -0.06
+			}
+		}
+		
+		hametova_politics = {
+		
+			removal_cost = -1
+
+			picture = generic_flexible_foreign_policy
+		
+			modifier = {
+				join_faction_tension = 0.85
+			}
+		}
+		
+		communism_supporting = {
+		
+			removal_cost = -1
+
+			picture = ast_abandon_the_westminster_system_communism
+		
+			modifier = {
+				fascism_drift = -0.03
+				democratic_drift = -0.03
+			}
+		}
+		
+
+        borets_s_pafosom = {
+		
+			removal_cost = -1
+
+			picture = GFX_idea_borets_s_pafosom
+
+			modifier = {
+				political_power_gain = -0.15
+				party_popularity_stability_factor = -0.1
+				stability_factor = -0.05
+			}
+		}
+		
+        svinland_ru = {
+		
+			removal_cost = -1
+
+			picture = GFX_idea_svinland_ru
+
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				surrender_limit = 0.05
+			}
+		}
+		
+        sp_crisis = {
+		
+			removal_cost = -1
+
+			picture = GFX_idea_sp_crisis
+
+			modifier = {
+				production_speed_buildings_factor = -0.03
+				war_support_factor = -0.05
+				local_resources_factor = -0.05
+			}
+		}
+		
+        bad_government = {
+		
+			removal_cost = -1
+
+			picture = GFX_idea_bad_government
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		dva_disa = {
+			removal_cost = -1
+
+			picture = GFX_idea_dva_disa
+
+			modifier = {
+				political_power_gain = 0.025
+				drift_defence_factor = 0.25
+			}
+		}
+
+        YUG_detiyvlasti = {
+			
+			picture = detiyvlasti
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				hypecratia_drift = 0.005
+				army_core_attack_factor = 0.15
+			}
+		}
+		
+        GENERIC_banned_schools = {
+			
+			picture = SPR_disbanded_army
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = -0.005
+				training_time_factor = -0.05
+				hypecratia_drift = 0.015
+			}
+		}
+		
+        GENERIC_banned_adults = {
+			
+			picture = all_adults_serve
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				local_resources = -0.25
+			}
+		}
+		
+		SVI_buster_oposite = {
+			allowed = {
+				always = no
+			}
+			picture = svi_bustergrad_oposite
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				training_time_factor = 0.1
+				army_attack_factor = -0.15
+				army_defence_factor = -0.1
+			}
+		}
+
+		SVI_pacific_army = {
+			allowed = {
+				always = no
+			}
+			picture = ARG_military_government
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				training_time_factor = -0.15
+				army_attack_factor = -0.10
+				army_defence_factor = -0.05
+				enemy_declare_war_tension = 0.2
+				enemy_justify_war_goal_time = 0.5
+				guarantee_cost = -0.15
+			}
+		}
+
+		SVI_diplomatic_country = {
+			allowed = {
+				always = no
+			}
+			picture = YUG_federal_defense_council
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				opinion_gain_monthly_factor = 0.5
+				annex_cost_factor = 0.7
+			}
+		}
+		
+		defeted_at_wwone = {
+			allowed = {
+				always = no
+			}
+			picture = great_depression
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+				research_speed_factor = -0.1
+			}
+		}
+		
+		SVI_detskiy_trud = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = SPR_masters_of_our_own_fate
+			
+			modifier = {
+				stability_factor = -0.025
+				consumer_goods_factor = -0.025
+				local_resources_factor = 0.125
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
+			}
+		}
+		
+		SVI_skufs_in_army = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = prc_low_popular_support3
+			
+			modifier = {
+				army_speed_factor = -0.1
+				training_time_factor = 0.1
+				army_defence_factor = 0.15
+				army_strength_factor = 0.2
+			}
+		}
+		
+		SVI_maliy_voen_budget = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = generic_neglected_military
+			
+			modifier = {
+				army_speed_factor = -0.125
+				army_attack_factor = -0.125
+				army_defence_factor = -0.125
+			}
+		}
+		
+		SVI_soviet_industrialisation = {
+		
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_improved_industries
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.5 
+				industry_repair_factor = 0.3
+				army_speed_factor = 0.35
+			}
+		}
+		
+		SVI_expansion_wars_preparing = {
+			allowed = {
+				always = no
+			}
+			
+			picture = SWI_spirit_of_helvetia_aggressive_war
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.5
+				training_time_factor = -0.15
+				war_support_weekly = 0.01
+			}
+		}
+		
+		SVI_devalvazia_arov = {
+		
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_economic_crisis
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				army_speed_factor = -0.03
+				army_defence_factor = -0.02
+			}
+		}
+		
+		SVI_razvitie_arov = {
+		
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				army_speed_factor = 0.03
+				army_defence_factor = 0.02
+			}
+		}
+		
+		SVI_neutrality_idea = {
+			allowed = {
+				always = no
+			}
+			
+			picture = hol_aloof_neutrality
+			
+			removal_cost = -1
+			
+			modifier = {
+				 communism_drift = -0.01
+				 neutrality_drift = 0.02
+			}
+		}
+		
+		SVI_army_of_liberty = {
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_war_preparation
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.05
+				justify_war_goal_time = -0.2
+				training_time_factor = -0.2
+				army_attack_factor = 0.15
+			}
+		}
+		
+		DRE_sila_duha = {
+			allowed = {
+				always = no
+			}
+			
+			picture = SWI_spirit_of_helvetia_defensive_war
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.05
+				justify_war_goal_time = -0.2
+				training_time_factor = -0.65
+				army_attack_factor = 0.25
+				army_speed_factor = 0.15
+				army_defence_factor = 0.2
+			}
+		}
+
+    }
+    
+}

@@ -1,0 +1,141 @@
+#############
+#improvement#
+#############
+
+
+people_support_development_improvement = {
+	#if = {
+	#limit = { has_idea = people_support_high }
+	#swap_ideas = {
+	#	remove_idea = people_support_high
+	#	add_idea = people_support_patriotic 
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_average }
+	#swap_ideas = {
+	#	remove_idea = people_support_average
+	#	add_idea = people_support_high
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_small }
+	#swap_ideas = {
+	#	remove_idea = people_support_small
+	#	add_idea = people_support_average
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_undefined }
+	#swap_ideas = {
+	#	remove_idea = people_support_undefined
+	#	add_idea = people_support_small
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_low }
+	#swap_ideas = {
+	#	remove_idea = people_support_low
+	#	add_idea = people_support_undefined
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_extremely_low }
+	#swap_ideas = {
+	#	remove_idea = people_support_extremely_low
+	#	add_idea = people_support_low
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_strong_opposition }
+	#swap_ideas = {
+	#	remove_idea = people_support_strong_opposition
+	#	add_idea = people_support_extremely_low
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_mass_opposition }
+	#swap_ideas = {
+	#	remove_idea = people_support_mass_opposition
+	#	add_idea = people_support_strong_opposition
+	#}
+	#}
+}
+
+#############
+#degradation#
+#############
+	
+people_support_development_degradation = {
+	#if = {
+	#limit = { has_idea = people_support_strong_opposition }
+	#swap_ideas = {
+	#	remove_idea = people_support_strong_opposition
+	#	add_idea = people_support_mass_opposition
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_extremely_low }
+	#swap_ideas = {
+	#	remove_idea = people_support_extremely_low
+	#	add_idea = people_support_strong_opposition
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_low }
+	#swap_ideas = {
+	#	remove_idea = people_support_low
+	#	add_idea = people_support_extremely_low
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_undefined }
+	#swap_ideas = {
+	#	remove_idea = people_support_undefined
+	#	add_idea = people_support_low
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_small }
+	#swap_ideas = {
+	#	remove_idea = people_support_small
+	#	add_idea = people_support_undefined
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_average }
+	#swap_ideas = {
+	#	remove_idea = people_support_average
+	#	add_idea = people_support_small
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_high }
+	#swap_ideas = {
+	#	remove_idea = people_support_high
+	#	add_idea = people_support_average
+	#}
+	#}
+	#
+	#if = {
+	#limit = { has_idea = people_support_patriotic }
+	#swap_ideas = {
+	#	remove_idea = people_support_patriotic
+	#	add_idea = people_support_high
+	#}
+	#}
+
+}

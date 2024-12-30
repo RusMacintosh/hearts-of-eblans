@@ -1,0 +1,205 @@
+division_template = {
+	name = "Дрейковы Завоеватели"		# Same for "Active" and "Reserve" Infantry Divisions
+	division_names_group = DRE_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Дрейковы Кавалеристы"  	# Cavalry Division
+	division_names_group = DRE_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      	# Actually, 2x bicycle cav bns
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Дрекова Моторизация"  		# Motorized Cavalry Brigade
+	division_names_group = DRE_MOT_01
+										# Note: motorized cavalry. Most sources have them truck-equipped.
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Дрейковы Скалолазы"					# Mountain Division
+	division_names_group = DRE_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+}
+
+### OOB ###
+units = {
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3718  # Hoeselt
+		division_template = "Дрейковы Завоеватели"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# II Corps d'Armée
+	division= {	# "6ème Дрейковы Завоеватели"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6708  # Leuven
+		division_template = "Дрейковы Завоеватели"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Завоеватели"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6573  # Leuven
+		division_template = "Дрейковы Завоеватели"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Завоеватели"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6571  # Leuven
+		division_template = "Дрейковы Завоеватели"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрекова Моторизация"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11634  # Leuven
+		division_template = "Дрекова Моторизация"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрекова Моторизация"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6680  # Leuven
+		division_template = "Дрекова Моторизация"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Завоеватели"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 9646  # Leuven
+		division_template = "Дрейковы Завоеватели"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Скалолазы"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3674  # Leuven
+		division_template = "Дрейковы Скалолазы"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Скалолазы"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 704  # Leuven
+		division_template = "Дрейковы Скалолазы"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	division= {	# "6ème Дрейковы Скалолазы"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6561  # Leuven
+		division_template = "Дрейковы Скалолазы"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "DRE"
+		}
+		requested_factories = 2
+		progress = 0.52
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "DRE"
+		}
+		requested_factories = 1
+		progress = 0.85
+		efficiency = 100
+	}
+}

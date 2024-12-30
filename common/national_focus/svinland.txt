@@ -1,0 +1,4281 @@
+focus_tree = {
+	id = SVIch_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SVI
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	############################
+	##### Fortification focuses#
+	############################
+
+	focus = {
+		id = SVI_south_2
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SVI_fortification_studies }
+		x = 0
+		y = 1
+		relative_position_id = SVI_fortification_studies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			SVI = { controls_state = 815 }
+			SVI = { controls_state = 809 }
+			SVI = { controls_state = 810 }
+		}
+
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 20
+			if = {
+				limit = { controls_state = 815 }
+				815 = {
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = {
+							id = 11498
+							id = 11226
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 809 }
+				809 = {
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = {
+							id = 11358
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { controls_state = 810 }
+				810 = {
+					set_building_level = {
+						type = bunker
+						level = 4
+						province = {
+							id = 310
+							id = 6459
+							id = 9275
+							limit_to_border = yes
+							level < 5
+						}
+					}
+				}
+			}
+			swap_ideas = {
+				add_idea = CZE_fortification_focus3
+				remove_idea = CZE_fortification_focus2
+			}	
+		}
+	}
+
+	focus = {
+		id = SVI_salograd_border
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SVI_south_2 }
+		x = -1
+		y = 1
+		relative_position_id = SVI_south_2
+
+		cost = 10
+
+		available = {
+			SVI = { owns_state = 195 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {       
+			army_experience = 30
+			195 = {
+				add_building_construction = { type = bunker province = 3151 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 149 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 6174 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 11068 level = 4 instant_build = yes }
+			}
+			
+			73 = {
+				add_building_construction = { type = bunker province = 11691 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3548 level = 3 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_kussia_line
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SVI_south_2 }
+		x = 1
+		y = 1
+		relative_position_id = SVI_south_2
+
+		cost = 10
+
+		available = {
+			SVI = { owns_state = 263 }
+			SVI = { owns_state = 244 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 30
+			263 = {
+				add_building_construction = { type = bunker province = 6086 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 110 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 8 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6225 level = 3 instant_build = yes }
+			}
+			244 = {      
+				add_building_construction = { type = bunker province = 70 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11174 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3110 level = 3 instant_build = yes }
+			}
+		}
+	}
+
+	###################################
+	######## INDUSTRIAL LEGACY ########
+	###################################
+
+	focus = {
+		id = SVI_industrial
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 1
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = CZE_industrial_legacy_idea
+		}
+	}
+
+	focus = {
+		id = favor_svins_1
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SVI_industrial }
+		x = -2
+		y = 1
+		relative_position_id = SVI_industrial
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = SVI_go_right
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = SVI_german_leanings
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = favor_svins_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = favor_svins_1 }
+		x = 0
+		y = 1
+		relative_position_id = favor_svins_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = favor_svins_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = favor_svins_2 }
+		x = 0
+		y = 2
+		relative_position_id = favor_svins_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_balanced_1
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SVI_industrial }
+		x = 0
+		y = 1
+		relative_position_id = SVI_industrial
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 0.5
+				has_completed_focus = SVI_go_right
+			}
+			modifier = {
+				factor = 0.5
+				has_completed_focus = SVI_german_leanings
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_balanced_2
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SVI_balanced_1 }
+		x = 0
+		y = 1
+		relative_position_id = SVI_balanced_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_balanced_3
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SVI_balanced_2 }
+		x = 0
+		y = 2
+		relative_position_id = SVI_balanced_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_arms_export_1
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SVI_industrial }
+		x = 2
+		y = 1
+		relative_position_id = SVI_industrial
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = CZE_export_focus1
+		}
+	}
+
+	focus = {
+		id = SVI_arms_export_2
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SVI_arms_export_1 }
+		x = 0
+		y = 1
+		relative_position_id = SVI_arms_export_1
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = CZE_export_focus1 add_idea = CZE_export_focus2  }
+		}
+	}
+
+	focus = {
+		id = SVI_arms_export_3
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SVI_arms_export_2 }
+		x = 0
+		y = 2
+		relative_position_id = SVI_arms_export_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 2
+				has_completed_focus = SVI_go_right
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = SVI_german_leanings
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = CZE_export_focus2 add_idea = CZE_export_focus3 }
+		}
+	}
+
+	##################################
+	######## POLITICAL DIRECTION #####
+	##################################
+
+	focus = {
+		id = SVI_political_direction
+		icon = GFX_goal_toha_politics
+		x = 13
+		y = 0
+		relative_position_id = SVI_industrial
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	##############################
+	### DEMOCRACY / NEUTRALITY ###
+	##############################
+
+		focus = {
+		id = SVI_era_of_silence
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = SVI_political_direction}
+		mutually_exclusive = { focus = SVI_left_way  focus = SVI_nationalism_way }
+		relative_position_id = SVI_political_direction
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = SVI_ismaaliit
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SVI_era_of_silence }
+		mutually_exclusive = { focus = SVI_establish_the_rahvuskogu }
+		x = 1
+		y = 1
+		relative_position_id = SVI_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = SVI_neutrality_idea
+		}
+	}
+
+	###CIVILIAN GOVERNMENT###
+	focus = {
+		id = SVI_establish_the_rahvuskogu
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = SVI_era_of_silence }
+		mutually_exclusive = { focus = SVI_ismaaliit }
+		x = -2
+		y = 1
+		relative_position_id = SVI_era_of_silence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_ideas = democratic_influence
+			add_ideas = democratic_opposition
+		}
+	}
+
+	focus = {
+		id = SVI_chamber_of_deputies
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SVI_establish_the_rahvuskogu }
+		prerequisite = { focus = SVI_ismaaliit }
+		x = 0
+		y = 1
+		relative_position_id = SVI_establish_the_rahvuskogu
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_exploit_the_banks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = SVI_chamber_of_deputies }
+		x = 1
+		y = 1
+		relative_position_id = SVI_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_exploit_the_banks_idea
+		}
+	}
+
+	focus = {
+		id = SVI_modernize_capital
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = SVI_chamber_of_deputies }
+		x = -1
+		y = 1
+		relative_position_id = SVI_chamber_of_deputies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_break_the_silence
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = SVI_modernize_capital }
+		prerequisite = { focus = SVI_exploit_the_banks }
+		x = 0
+		y = 1
+		relative_position_id = SVI_modernize_capital
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			communism < 0.16
+			fascism < 0.16
+			democratic > 0.25
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			if = {
+				limit = { has_idea = democratic_influence }
+				remove_ideas = democratic_influence
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_squash_the_opposition
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SVI_support_independent_militaries }
+		x = -1
+		y = 1
+		relative_position_id = SVI_support_independent_militaries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			neutrality > 0.4
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			set_politics = {
+				ruling_party = neutrality
+    			elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_prepare_for_freedom_wars
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = SVI_break_the_silence focus = SVI_squash_the_opposition focus = SVI_new_economic_policy }
+		x = 0
+		y = 1
+		relative_position_id = SVI_squash_the_opposition
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			RAZ = { is_in_faction = no }
+			RAZ = { exists = yes }
+			RAZ = { is_subject = no }
+		}
+
+		bypass = {
+			OR = {
+				RAZ = { is_in_faction = yes }
+				RAZ = { exists = no }
+				RAZ = { is_subject = yes }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = SVI_army_of_liberty
+		}
+	}
+
+	###MILITARY GOVERNMENT###
+
+	focus = {
+		id = SVI_national_council
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SVI_ismaaliit }
+		x = 0
+		y = 1
+		relative_position_id = SVI_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_national_council_idea
+			army_experience = 10
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_support_independent_militaries
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SVI_national_council }
+		x = 0
+		y = 1
+		relative_position_id = SVI_national_council
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SVI_new_economic_policy
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = SVI_support_independent_militaries }
+		x = 1
+		y = 1
+		relative_position_id = SVI_support_independent_militaries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			upgrade_economy_law = yes
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_corporate_chambers
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = SVI_new_economic_policy }
+		x = 0
+		y = 1
+		relative_position_id = SVI_new_economic_policy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_idea = civilian_economy }
+			NOT = { has_idea = low_economic_mobilisation }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = EST_corporate_chambers_idea
+		}
+	}
+
+	focus = {
+		id = SVI_fight_the_nazi
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = SVI_era_of_silence }
+		x = 2
+		y = 0
+		relative_position_id = SVI_ismaaliit
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+    			ideology = fascism
+    			popularity = -0.5
+			}
+			fascism_drift = -0.05
+		}
+	}
+
+	#################
+	### COMMUNISM ###
+	#################
+
+	focus = {
+		id = SVI_left_way
+		icon = GFX_focus_generic_join_comintern
+		x = -6
+		y = 1
+		relative_position_id = SVI_political_direction
+		prerequisite = { focus = SVI_political_direction}
+		mutually_exclusive = {focus = SVI_era_of_silence focus = SVI_nationalism_way}
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 120
+			#allow communist reformer
+			# relations changes
+			every_other_country = {
+				limit = { 
+					has_government = communism
+					num_of_factories > 30
+				}
+				add_opinion_modifier = { 
+					target = ROOT 
+					modifier =  FRA_leftist_rhetoric_communism
+				}
+			}
+			every_other_country = {
+				limit = { 
+					has_government = democratic
+					num_of_factories > 30
+				}
+				add_opinion_modifier = { 
+					target = ROOT
+					modifier = FRA_leftist_rhetoric_democratic
+				}
+			}
+			every_other_country = {
+				limit = { 
+					has_government = fascism
+					num_of_factories > 30
+				}
+				add_opinion_modifier = { 
+					target = ROOT 
+					modifier = FRA_leftist_rhetoric_fascism
+				}
+			}
+
+			add_ideas = communist_influence
+		}
+	}
+
+	focus = {
+		id = SVI_support_communism
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SVI_left_way}
+		x = 0
+		y = 1
+		relative_position_id = SVI_left_way
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			communism > 0.2
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = communism_supporting
+		}
+	}
+
+	focus = {
+		id = SVI_anton_vladimirovich
+		icon = GFX_focus_POL_complete_april_constitution
+		prerequisite = { focus = SVI_support_communism}
+		x = 0
+		y = 1
+		relative_position_id = SVI_support_communism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 65
+		}
+
+		available = {
+			communism > 0.45
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+    			elections_allowed = no
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+			add_ideas = home_of_revolution
+		}
+	}
+
+	focus = {
+		id = SVI_red_army
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		prerequisite = {focus = SVI_anton_vladimirovich}
+		x = -1
+		y = 1
+		relative_position_id = SVI_anton_vladimirovich
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			has_idea = SOV_soviet_commandos_poum
+		}
+
+		completion_reward = {
+			add_ideas = SOV_soviet_commandos_poum
+		}
+	}
+
+	focus = {
+		id = SVI_communism_advisers
+		icon = GFX_focus_SOV_support_spanish_poum
+		prerequisite = {focus = SVI_anton_vladimirovich}
+		x = 1
+		y = 1
+		relative_position_id = SVI_anton_vladimirovich
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			has_idea = saf_soviet_advisers
+		}
+
+		completion_reward = {
+			add_ideas = saf_soviet_advisers
+		}
+	}
+
+	focus = {
+		id = SVI_rabota_v_polyah
+		icon = GFX_focus_generic_farmland
+		prerequisite = {focus = SVI_red_army focus = SVI_communism_advisers}
+		x = -1
+		y = 2
+		relative_position_id = SVI_anton_vladimirovich
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			has_idea = SOV_support_of_the_peasants_idea
+		}
+
+		completion_reward = {
+			add_ideas = SOV_support_of_the_peasants_idea
+		}
+	}
+
+	focus = {
+		id = SVI_industrialisation
+		icon = GFX_focus_generic_communist_industry
+		prerequisite = {focus = SVI_red_army focus = SVI_communism_advisers}
+		x = 1
+		y = 2
+		relative_position_id = SVI_anton_vladimirovich
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+			has_idea = generic_improved_industries
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		195 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		263 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	#focus = {
+	#	id = SVI_oplot_democracy
+	#	icon = GFX_goal_support_democracy
+	#	prerequisite = { focus = SVI_political_direction}
+	#	mutually_exclusive = { focus = SVI_left_way focus = SVI_nationalism_way }
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = SVI_political_direction
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 90
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#		add_ideas = democratic_influence
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = SVI_svoboda_svinlendu
+	#	icon = GFX_focus_ARG_defense_and_democracy
+	#	prerequisite = { focus = SVI_oplot_democracy}
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = SVI_oplot_democracy
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 90
+	#	}
+	#
+	#	available = {
+	#		has_government = democratic
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = SVI_pacific_army
+	#	icon = GFX_focus_SVI_republican_defence_league
+	#	prerequisite = { focus = SVI_svoboda_svinlendu}
+	#	mutually_exclusive = {focus = SVI_army_of_liberty}
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = SVI_svoboda_svinlendu
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 65
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#		add_ideas = mutiny_2
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = SVI_army_of_liberty
+	#	icon = GFX_focus_secret_rearmament
+	#	prerequisite = { focus = SVI_svoboda_svinlendu}
+	#	mutually_exclusive = {focus = SVI_pacific_army}
+	#	x = 1
+	#	y = 1
+	#	relative_position_id = SVI_svoboda_svinlendu
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 65
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#		add_ideas = SVI_army_of_liberty
+	#	}
+	#}
+	#
+	#focus = {
+	#	id = SVI_wars_of_freedom
+	#	icon = GFX_focus_secret_rearmament
+	#	prerequisite = { focus = SVI_destroy_busters}
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = SVI_destroy_busters
+	#
+	#	cost = 10
+	#
+	#	available = {
+	#		has_government = democratic
+	#		SVI = { owns_state = 264 }
+	#		SVI = { owns_state = 247 }
+	#		SVI = { owns_state = 246 }
+	#		SVI = { owns_state = 242 }
+	#		SVI = { owns_state = 210 }
+	#		SVI = { owns_state = 207 }
+	#	}
+	#
+	#	ai_will_do = {
+	#		factor = 65
+	#	}
+	#
+	#	bypass = {
+	#		has_idea = SVI_expansion_wars_preparing
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#		add_ideas = SVI_expansion_wars_preparing
+	#	}
+	#}
+
+	focus = {
+		id = SVI_nationalism_way
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = SVI_political_direction}
+		mutually_exclusive = { focus = SVI_left_way focus = SVI_era_of_silence }
+		x = 8
+		y = 1
+		relative_position_id = SVI_political_direction
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+
+			add_popularity = {
+				ideology = hypecratia
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_reich
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = SVI_nationalism_way}
+		x = -2
+		y = 1
+		relative_position_id = SVI_nationalism_way
+		mutually_exclusive = { focus = SVI_buster_empire focus = SVI_hype_1 }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 1
+			}
+
+			set_politics = {
+				ruling_party = fascism
+    			elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_fortification_studies
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = SVI_stop_busters_oposite focus = SVI_otsos_big_pigu focus = SVI_hype_svin_ad}
+		relative_position_id = SVI_nationalism_way
+		x = 2
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200			
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			army_experience = 10
+			add_ideas = CZE_fortification_focus
+		}
+	}
+
+	focus = {
+		id = SVI_holy_wars
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SVI_stop_busters_oposite focus = SVI_stop_busters_oposite_2 focus = SVI_otsos_big_pigu focus = SVI_democracy_destroy_busters}
+		x = -2
+		y = 5
+		relative_position_id = SVI_nationalism_way
+
+		cost = 10
+
+		available = {
+			has_war_support > 0.65
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+			has_idea = SVI_expansion_wars_preparing
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = { idea = SVI_expansion_wars_preparing days = 1075 }
+		}
+	}
+
+	focus = {
+		id = SVI_fuck_lagoda
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SVI_holy_wars}
+		x = -1
+		y = 1
+		relative_position_id = SVI_holy_wars
+
+		cost = 10
+
+		available = {
+			LAG = { exists = yes }
+			LAG = { is_in_faction = no }
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+			OR = {
+				LAG = { exists = no }
+				LAG = { is_in_faction = yes }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				target = LAG
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_destroy_kussia
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SVI_holy_wars}
+		x = 1
+		y = 1
+		relative_position_id = SVI_holy_wars
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				target = KUS
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_northern_expansion
+		icon = GFX_focus_generic_invade_finland
+		prerequisite = { focus = SVI_fuck_lagoda focus = SVI_destroy_kussia }
+		x = 0
+		y = 2
+		relative_position_id = SVI_holy_wars
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			RAZ = {exists = yes }
+			RAZ = { is_subject = no }
+		}
+
+		bypass = {
+			OR = {
+				RAZ = {exists = no }
+				RAZ = { is_subject = yes }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			create_wargoal = {
+				target = RAZ
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_stop_busters_oposite
+		icon = GFX_goal_svi_destroy_bustergrad
+		prerequisite = { focus = SVI_reich}
+		mutually_exclusive = { focus = SVI_stop_busters_oposite_2 }
+		x = -1
+		y = 1
+		relative_position_id = SVI_reich
+
+		cost = 10
+
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 49999 }
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = SVI_buster_oposite
+			SVI = { annex_country = {
+    			target = BUS
+    			transfer_troops = yes
+			}}
+			hidden_effect = {
+				country_event = {
+					id = svin.1
+					days = 120
+					random_days = 100
+				}
+			}
+			add_war_support = 0.23
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_stop_busters_oposite_2
+		icon = GFX_goal_svi_destroy_bustergrad
+		prerequisite = { focus = SVI_reich}
+		mutually_exclusive = { focus = SVI_stop_busters_oposite }
+		x = 1
+		y = 1
+		relative_position_id = SVI_reich
+
+		cost = 10
+
+		available = {
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = SVI_buster_oposite
+			set_rule = {
+				can_create_factions = yes
+			}
+			puppet = BUS
+		}
+	}
+
+	focus = {
+		id = SVI_razvitie_arov
+		icon = GFX_goal_razvitie_arov
+		prerequisite = { focus = SVI_northern_expansion }
+		x = 0
+		y = 1
+		relative_position_id = SVI_northern_expansion
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+			has_idea = SVI_razvitie_arov
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = SVI_razvitie_arov
+		}
+	}
+
+	focus = {
+		id = SVI_atomic_program
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = SVI_razvitie_arov }
+		x = 0
+		y = 1
+		relative_position_id = SVI_razvitie_arov
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 5
+				uses = 2
+				category = nuclear
+			}
+			random_state = {
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_buster_empire
+		icon = GFX_goal_buster_empire
+		prerequisite = { focus = SVI_nationalism_way}
+		x = 2
+		y = 1
+		relative_position_id = SVI_nationalism_way
+		mutually_exclusive = {focus = SVI_reich focus = SVI_hype_1}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = SVI_buster_oposite
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+
+			set_politics = {
+				ruling_party = neutrality
+    			elections_allowed = no
+			}
+
+			SVI = { annex_country = {
+    			target = BUS
+    			transfer_troops = yes
+			}}
+			retire_character = SVI_laki
+			set_cosmetic_tag = SVI_BUSTER
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_1
+		icon = GFX_goal_hypecratia_effort
+		prerequisite = { focus = SVI_nationalism_way}
+		x = 7
+		y = 1
+		relative_position_id = SVI_nationalism_way
+		mutually_exclusive = { focus = SVI_buster_empire focus = SVI_reich}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = { idea = hypecratia_ethos days = 700 }
+			add_stability = -0.1
+			add_war_support -0.1
+			add_popularity = {
+				ideology = hypecratia
+				popularity = 0.2
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_svin_ad
+		icon = GFX_goal_hypecratia_celebration
+		prerequisite = { focus = SVI_hype_1 }
+		x = 3
+		y = 2
+		relative_position_id = SVI_hype_1
+
+		cost = 10
+
+		available = {
+			hypecratia > 0.35
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = hypecratia
+				popularity = 0.4
+			}
+
+			set_politics = {
+				ruling_party = hypecratia
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_bustergrad
+		icon = GFX_goal_svi_destroy_bustergrad
+		prerequisite = { focus = SVI_hype_hypercore_rise }
+		x = 0
+		y = 2
+		relative_position_id = SVI_hype_5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			remove_ideas = SVI_buster_oposite
+			SVI = { annex_country = {
+    			target = BUS
+    			transfer_troops = yes
+			}}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_kill_bigpig
+		icon = GFX_goal_otsos_bigpigu
+		prerequisite = { focus = SVI_hype_bustergrad focus = SVI_hype_demand_pyatorka_islands }
+		x = -2
+		y = 1
+		relative_position_id = SVI_hype_bustergrad
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = -25000
+			add_stability = -0.23
+			hidden_effect = {
+			country_event = {
+				id = svin.1
+				days = 120
+				random_days = 100
+			}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_pacific_way
+		icon = GFX_focus_hol_war_on_pacifism
+		prerequisite = { focus = SVI_hype_kill_bigpig }
+		x = 0
+		y = 1
+		relative_position_id = SVI_hype_kill_bigpig
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = SVI_pacific_army
+		}
+	}
+
+	focus = {
+		id = SVI_hype_entente
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = SVI_hype_pacific_way }
+		x = 0
+		y = 1
+		relative_position_id = SVI_hype_pacific_way
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "SVI_hype_entente"
+		}
+	}
+
+	focus = {
+		id = SVI_hype_train_diplomatic_skills
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = SVI_hype_entente }
+		x = 0
+		y = 2
+		relative_position_id = SVI_hype_entente
+
+		cost = 16
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = SVI_diplomatic_country
+		}
+	}
+
+	focus = {
+		id = SVI_hype_militarize_scandinavia_hypecrats
+		icon = GFX_focus_usa_honor_the_confederacy
+		prerequisite = { focus = SVI_hype_1 }
+		x = -1
+		y = 2
+		relative_position_id = SVI_hype_1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			RAZ = {
+				add_ideas = hypecratia_ethos
+			}
+			add_popularity = {
+				ideology = hypecratia
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_march_at_razdva
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SVI_hype_militarize_scandinavia_hypecrats }
+		x = 0
+		y = 1
+		relative_position_id = SVI_hype_militarize_scandinavia_hypecrats
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			RAZ = {hypecratia > 0.25}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			RAZ = {
+				set_politics = {
+					ruling_party = hypecratia
+					elections_allowed = no
+				}
+				add_stability = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_RAZ_to_entente
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = SVI_hype_march_at_razdva }
+		mutually_exclusive = { focus = SVI_hype_unite_our_nations }
+		x = -1
+		y = 1
+		relative_position_id = SVI_hype_march_at_razdva
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			RAZ = { has_government = hypecratia }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			RAZ = {
+				country_event = {
+				id = svin.2
+				days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_unite_our_nations
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = SVI_hype_march_at_razdva }
+		mutually_exclusive = { focus = SVI_hype_RAZ_to_entente }
+		x = 1
+		y = 1
+		relative_position_id = SVI_hype_march_at_razdva
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			RAZ = {
+				country_event = {
+					id = svin.4
+					days = 1
+				}
+			}
+		}
+	}
+
+	#focus = {
+	#	id = SVI_hype_form_svin_nation
+	#	icon = GFX_goal_generic_intelligence_exchange
+	#	prerequisite = { focus = SVI_hype_demand_pyatorka_islands }
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = SVI_hype_demand_pyatorka_islands
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 90
+	#	}
+	#
+	#	available = {
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+
+	focus = {
+		id = SVI_hype_demand_pyatorka_islands
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SVI_hype_RAZ_to_entente focus = SVI_hype_unite_our_nations }
+		x = 0
+		y = 2
+		relative_position_id = SVI_hype_march_at_razdva
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+			RAZ = { has_government = hypecratia }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			PYA = {
+				country_event = {
+					id = svin.5
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_add_milana
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SVI_hype_entente }
+		x = -2
+		y = 2
+		relative_position_id = SVI_hype_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		available = {
+			HAM = { has_government = hypecratia }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			HAM = {
+				country_event = {
+				id = svin.2
+				days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_add_pyatorka
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SVI_hype_entente }
+		x = -1
+		y = 1
+		relative_position_id = SVI_hype_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+		
+		available = {
+			PYA = { has_government = hypecratia }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			PYA = {
+				country_event = {
+				id = svin.2
+				days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_add_nekoglai
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SVI_hype_entente }
+		x = 1
+		y = 1
+		relative_position_id = SVI_hype_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+		
+		available = {
+			NEK = { has_government = hypecratia }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			NEK = {
+				country_event = {
+				id = svin.2
+				days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_add_CHB
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SVI_hype_entente }
+		x = 2
+		y = 2
+		relative_position_id = SVI_hype_entente
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+		
+		available = {
+			CHB = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			CHB = {
+				country_event = {
+				id = svin.2
+				days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_hype_3
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = SVI_hype_svin_ad }
+		x = 1
+		y = 1
+		relative_position_id = SVI_hype_svin_ad
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = { idea = SVI_skufs_in_army days = 500 }
+		}
+	}
+
+	focus = {
+		id = SVI_hype_4
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = SVI_hype_svin_ad }
+		x = -1
+		y = 1
+		relative_position_id = SVI_hype_svin_ad
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+
+	focus = {
+		id = SVI_hype_5
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = SVI_hype_3 focus = SVI_hype_4 }
+		x = 0
+		y = 2
+		relative_position_id = SVI_hype_svin_ad
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = SVI_detskiy_trud
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	#focus = {
+	#	id = SVI_hype_hypercore_marionete
+	#	icon = GFX_goal_hypecratia_effort
+	#	prerequisite = { focus = SVI_hype_5 }
+	#	mutually_exclusive = { focus = SVI_hype_hypercore_rise }
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = SVI_hype_5
+#
+	#	cost = 10
+#
+	#	ai_will_do = {
+	#		factor = 90
+	#	}
+#
+	#	bypass = {
+#
+	#	}
+#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = yes
+	#	search_filters = { FOCUS_FILTER_POLITICAL }
+#
+	#	completion_reward = {
+	#		add_stability = 0.03
+	#		add_war_support -0.1
+	#		release_puppet_on_controlled = HYP
+	#	}
+	#}
+
+	focus = {
+		id = SVI_hype_hypercore_rise
+		icon = GFX_goal_hypecratia_effort
+		prerequisite = { focus = SVI_hype_5}
+		x = 0
+		y = 1
+		relative_position_id = SVI_hype_5
+		mutually_exclusive = { focus = SVI_hype_hypercore_marionete }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support 0.15
+			release = HYP
+
+			HYP = {
+				declare_war_on = {
+    				target = SVI
+    				type = independence_wargoal
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_otsos_big_pigu
+		icon = GFX_goal_otsos_bigpigu
+		prerequisite = { focus = SVI_buster_empire}
+		x = 0
+		y = 1
+		relative_position_id = SVI_buster_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			news_event = { id = squad_news.2 hours = 2 }
+			add_manpower = 5000
+			add_war_support = 1
+		}
+	}
+
+	focus = {
+		id = SVI_destroy_busters
+		icon = GFX_goal_svi_destroy_bustergrad
+		prerequisite = {focus = SVI_rabota_v_polyah focus = SVI_industrialisation}
+		x = -6
+		y = 6
+		relative_position_id = SVI_political_direction
+
+		cost = 10
+
+		available = {
+			
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = SVI_buster_oposite
+			}
+		}
+
+		completion_reward = {
+			SVI = { annex_country = {
+    			target = BUS
+    			transfer_troops = yes
+			}}
+			hidden_effect = {
+			country_event = {
+				id = svin.1
+				days = 120
+				random_days = 100
+			}
+			}
+
+			remove_ideas = SVI_buster_oposite
+		}
+	}
+
+	focus = {
+		id = SVI_democracy_destroy_busters
+		icon = GFX_goal_svi_destroy_bustergrad
+		prerequisite = {focus = SVI_prepare_for_freedom_wars focus = SVI_corporate_chambers}
+		x = 0
+		y = 6
+		relative_position_id = SVI_era_of_silence
+
+		cost = 10
+
+		available = {
+			
+		}
+
+		bypass = {
+			NOT = {
+				has_idea = SVI_buster_oposite
+			}
+		}
+
+		completion_reward = {
+			SVI = { annex_country = {
+    			target = BUS
+    			transfer_troops = yes
+			}}
+			hidden_effect = {
+				country_event = {
+					id = svin.1
+					days = 200
+					random_days = 100
+				}
+			}
+			remove_ideas = SVI_buster_oposite
+		}
+	}
+
+	focus = {
+		id = SVI_wars_for_communism
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = {focus = SVI_communisate__west}
+		x = 0
+		y = 1
+		relative_position_id = SVI_communisate__west
+
+		cost = 10
+
+		available = {
+			has_government = communism
+			SVI = { owns_state = 264 }
+			SVI = { owns_state = 247 }
+			SVI = { owns_state = 246 }
+			SVI = { owns_state = 242 }
+			SVI = { owns_state = 210 }
+			SVI = { owns_state = 207 }
+		}
+
+		bypass = {
+			has_idea = SVI_expansion_wars_preparing
+		}
+
+		completion_reward = {
+			add_ideas = SVI_expansion_wars_preparing
+		}
+	}
+
+	focus = {
+		id = SVI_communisate__west
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {focus = SVI_destroy_busters}
+		x = 0
+		y = 1
+		relative_position_id = SVI_destroy_busters
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = KUS
+				type = topple_government
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_soviet_attack
+		icon = GFX_focus_attack_soviet
+		prerequisite = {focus = SVI_wars_for_communism}
+		mutually_exclusive = {focus = SVI_soviet_pact}
+		x = -1
+		y = 1
+		relative_position_id = SVI_wars_for_communism
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = RAB
+				type = topple_government
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_soviet_pact
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = {focus = SVI_wars_for_communism}
+		mutually_exclusive = {focus = SVI_soviet_attack}
+		x = 1
+		y = 1
+		relative_position_id = SVI_wars_for_communism
+
+		cost = 10
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+		}
+
+		completion_reward = {
+			diplomatic_relation = {
+    			country = RAB
+    			relation = non_aggression_pact
+    			active = yes
+			}
+
+			RAB = {
+				add_opinion_modifier = {
+					target = SVI
+					modifier = svinland_comm_friend
+				}
+			}
+
+			add_opinion_modifier = {
+				target = RAB
+				modifier = svinland_comm_friend
+			}
+		}
+	}
+
+	#focus = {
+	#	id = SVI_liberate_south_countries
+	#	icon = GFX_focus_SWE_refuge_from_war
+	#	prerequisite = {focus = SVI_wars_of_freedom}
+	#	x = 0
+	#	y = 1
+	#	relative_position_id = SVI_wars_of_freedom
+	#}
+
+
+	#######################################
+	##### MILITARY RESEARCH INSTITUTE #####	
+	#######################################
+
+	focus = {
+		id = SVI_military_research_institute
+		icon = GFX_focus_CZE_military_research_institute
+		x = 22
+		y = 0
+		relative_position_id = SVI_political_direction
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = SVI_mountain_bonus
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SVI_military_research_institute }
+		x = -3
+		y = 1
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SVI_mountain_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_inf_and_artillery_advancement
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = SVI_military_research_institute }
+		x = -1
+		y = 1
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_support_bonus
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SVI_mountain_bonus }
+		x = -3
+		y = 2
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+			add_tech_bonus = {
+				name = CZE_support_bonus #@#
+				bonus = 1.0
+				uses = 1
+				technology = support_weapons2
+				technology = support_weapons3
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_inf_and_artillery_advancement_2
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SVI_inf_and_artillery_advancement }
+		x = -1
+		y = 2
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_inf_and_artillery_advancement_2 #@#
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_doctrine_bonus
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SVI_support_bonus }
+		prerequisite = { focus = SVI_inf_and_artillery_advancement_2 }
+		x = -2
+		y = 3
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_motorization_scheme
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SVI_military_research_institute }
+		x = 1
+		y = 1
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			has_tech = motorised_infantry
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_armour_bonus_1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SVI_military_research_institute }
+		x = 3
+		y = 1
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_mechanization
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SVI_motorization_scheme }
+		x = 1
+		y = 2
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_mechanization #@#
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_armour_bonus_ii
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SVI_armour_bonus_1 }
+		x = 3
+		y = 2
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_doctrine_bonus_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SVI_mechanization }
+		prerequisite = { focus = SVI_armour_bonus_ii }
+		x = 2
+		y = 3
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_war_college
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SVI_doctrine_bonus }
+		prerequisite = { focus = SVI_doctrine_bonus_2 }
+		x = 0
+		y = 4
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = SVI_war_college_idea
+			if = {
+				limit = {
+					NOT = { amount_research_slots > 5 }
+				}
+				add_research_slot = 1
+				custom_effect_tooltip = SVI_war_college_effect_tt
+			}
+		}
+	}
+
+	#######################################
+	####### AERONAUTICAL INSTITUTE ########	
+	#######################################
+
+	focus = {
+		id = SVI_military_aeronautical_institute
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		x = 8
+		y = 0
+		relative_position_id = SVI_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+
+	focus = {
+		id = SVI_import_foreign_fighters
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SVI_military_aeronautical_institute }
+		x = -2
+		y = 1
+		relative_position_id = SVI_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_import_foreign_fighters #@#
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_light_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SVI_import_foreign_fighters }
+		mutually_exclusive = { focus = SVI_heavy_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = SVI_import_foreign_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_light_fighter_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_heavy_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SVI_import_foreign_fighters }
+		mutually_exclusive = { focus = SVI_light_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = SVI_import_foreign_fighters
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_heavy_fighter_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_air_is_our_sea
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SVI_military_aeronautical_institute }
+		x = 0
+		y = 1
+		relative_position_id = SVI_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_air_focus
+		}
+	}
+
+	focus = {
+		id = SVI_rule_the_air
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SVI_air_is_our_sea }
+		prerequisite = { focus = SVI_light_fighter_focus focus = SVI_heavy_fighter_focus }
+		prerequisite = { focus = SVI_tac_focus focus = SVI_cas_focus }
+		x = 0
+		y = 3
+		relative_position_id = SVI_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_import_foreign_bombers
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SVI_military_aeronautical_institute }
+		x = 2
+		y = 1
+		relative_position_id = SVI_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_import_foreign_bombers #@#
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_cas_focus
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SVI_import_foreign_bombers }
+		mutually_exclusive = { focus = SVI_tac_focus }
+		x = -1
+		y = 1
+		relative_position_id = SVI_import_foreign_bombers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_cas_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_tac_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SVI_import_foreign_bombers }
+		mutually_exclusive = { focus = SVI_cas_focus }
+		x = 1
+		y = 1
+		relative_position_id = SVI_import_foreign_bombers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CZE_tac_focus #@#
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#######################################
+	######### ACCESS TO THE SEA ###########	
+	#######################################
+
+	focus = {
+		id = SVI_access_to_the_sea
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 7
+		y = 0
+		relative_position_id = SVI_military_aeronautical_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+
+	focus = {
+		id = SVI_sudden_shipyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SVI_access_to_the_sea }
+		x = -2
+		y = 1
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_shipbuilding_legacy
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SVI_access_to_the_sea }
+		x = 0
+		y = 1
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SVI_naval_focus
+		}
+	}
+
+	focus = {
+		id = SVI_battleship_catchup_1
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SVI_shipbuilding_legacy }
+		x = 2
+		y = 2
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_dSVIroyer_catchup_1
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = SVI_shipbuilding_legacy }
+		x = -2
+		y = 2
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_cruiser__catchup_1
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SVI_shipbuilding_legacy }
+		x = 0
+		y = 2
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_raiding_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SVI_dSVIroyer_catchup_1 }
+		prerequisite = { focus = SVI_cruiser__catchup_1 }
+		mutually_exclusive = { focus = SVI_capital_focus }
+		x = -1
+		y = 3
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+
+	focus = {
+		id = SVI_capital_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SVI_cruiser__catchup_1 }
+		prerequisite = { focus = SVI_battleship_catchup_1 }
+		mutually_exclusive = { focus = SVI_raiding_focus }
+		x = 1
+		y = 3
+		relative_position_id = SVI_access_to_the_sea
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+
+}

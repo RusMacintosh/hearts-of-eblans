@@ -1,0 +1,22 @@
+state={
+	id=982
+	name="STATE_982"
+	provinces={
+		323 3219 6249 6326 9323 
+	}
+	history={
+		owner = SVI
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 2
+		}
+		add_core_of = SVI
+		victory_points = {
+			6249 1
+		}
+	}
+	manpower=0
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
