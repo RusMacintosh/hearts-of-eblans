@@ -13,18 +13,39 @@ form_DRE_EMPIRE_cat = {
 	
 		available = {
 			is_subject = no
-			# Chicken-Bekonia
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_chb		
+				# Chicken-Bekonia
 				controls_state = 155
 				controls_state = 43
 				controls_state = 154
 				controls_state = 973
 				controls_state = 974
+			}
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_89		
+
 				
-			# Reich
+				# Reich
 				controls_state = 52
 				controls_state = 53
 
-			#Drekovia
+			}
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_krug			
+				
+
+				#Kruglistan
+				controls_state = 69
+				controls_state = 9
+				controls_state = 75
+				controls_state = 74
+				controls_state = 972
+			}
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_dre		
+
+				#Drekovia
 				controls_state = 848
 				controls_state = 153
 				controls_state = 152
@@ -37,13 +58,7 @@ form_DRE_EMPIRE_cat = {
 				controls_state = 975
 				controls_state = 976
 				
-
-			#Kruglistan
-				controls_state = 69
-				controls_state = 9
-				controls_state = 75
-				controls_state = 74
-				controls_state = 972
+			}
 		}
 		
 		highlight_states = {
@@ -81,7 +96,7 @@ form_DRE_EMPIRE_cat = {
 		}
 	
 		visible = {
-			original_tag = DRE
+			has_completed_focus=DRE_own_way
 		}
 	
 		complete_effect = {
@@ -116,6 +131,9 @@ drekovia_integrations_cat = {
 		cost = 50
 		
 		available = {
+			controls_state = 88
+		}
+		visible = {
 			controls_state = 88
 		}
 		

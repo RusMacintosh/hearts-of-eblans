@@ -11,6 +11,7 @@ ideologies = {
 			}
 
 			socialism = {
+				color = { 255 117 207 }
 			}
 		}
 
