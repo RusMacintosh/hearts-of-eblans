@@ -4,6 +4,7 @@ oob = "GER_1936"
 starting_train_buffer = 2
 set_fuel_ratio = 0.8
 set_research_slots = 5
+recruit_character = BTK_Bratishkin
 
 add_ideas = {
 	bad_government
@@ -55,16 +56,16 @@ set_popularities = {
 	hypecratia = 18
 }
 
-create_country_leader = {
-	name = "Братишкин"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "bratishkin_fascism.dds"
-	expire = "2000.1.1"
-	ideology = gen_nazism
-	traits = {
-		#
-	}
-}
+#create_country_leader = {
+#	name = "Братишкин"
+#	desc = "POLITICS_PRINCE_PAUL_DESC"
+#	picture = "bratishkin_fascism.dds"
+#	expire = "2000.1.1"
+#	ideology = gen_nazism
+#	traits = {
+#		#
+#	}
+#}
 
 create_country_leader = {
 	name = "Братишка"

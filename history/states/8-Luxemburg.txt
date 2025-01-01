@@ -20,6 +20,7 @@ state=
 		}
 		victory_points = { 6583 5 }
 		add_core_of = DPN
+		add_claim_by = MOY
 	}
 
 	provinces=

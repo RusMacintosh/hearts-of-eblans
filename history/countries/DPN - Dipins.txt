@@ -1,4 +1,4 @@
-capital = 6
+capital = 984
 
 oob = "DIP_1936"
 if = {

@@ -12,6 +12,7 @@ state = {
 
 		owner = DPN
 		add_core_of = DPN
+		add_claim_by = MOY
 
 		victory_points = {
 			9418 1 # Arlons

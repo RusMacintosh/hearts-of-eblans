@@ -1,9 +1,8 @@
 characters = {
 	universal_hype_btk = {
-		name = "Рейхс-Хайпократ"
+		name = "Модер-Хайпократ"
 		portraits={
 			civilian={
-				large=GFX_unknown_char_small
 				small=GFX_unknown_char_small
 			}
 		}
@@ -16,7 +15,7 @@ characters = {
 			}	
 			traits  = {
 				hypecratia_booster
-			}	
+			}
 			cost = 100
 			do_effect = {
 				NOT = {
@@ -25,4 +24,19 @@ characters = {
 			}
 		}
 	}
+	BTK_Bratishkin = {
+		name=BTK_Bratishkin
+		portraits={
+			civilian = {
+				large="GFX_portrait_BTK"
+			}
+		}
+		country_leader = {
+            ideology = nazism
+            traits = { # 
+			}
+            desc = BTK_socialist
+        }
 	}
+}
+	

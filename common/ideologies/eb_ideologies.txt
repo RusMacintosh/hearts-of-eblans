@@ -5,14 +5,16 @@ ideologies = {
 		types = {
 
 			conservatism = {
+				
 			}
 
 			liberalism = {
 			}
 
 			socialism = {
-				color = { 255 117 207 }
+				
 			}
+			
 		}
 
 		dynamic_faction_names = {
@@ -24,7 +26,7 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 
-		color = { 0 0 255 }
+		color = { 106 44 112 }
 
 		rules = {
 			can_create_collaboration_government = no
@@ -64,8 +66,6 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.10 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	
-
-
 
 	communism = {
 
@@ -142,6 +142,9 @@ ideologies = {
 			
 			hypeclown = {
 				color = { 184 24 69 }
+			}
+			twitcherizm={
+				color = { 106 44 112 }
 			}
 		}
 

@@ -11,6 +11,7 @@ state={
 
 	history={
 		owner = BTK
+		add_claim_by = MOY
 		add_dynamic_modifier = {
 			modifier = FRA_maginot_line_dynamic_modifier
 		}

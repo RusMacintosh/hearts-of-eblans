@@ -7,6 +7,10 @@ SpriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_portrait_laki"
-		texturefile = "gfx/leaders/SVI/laki.dds"
+		texturefile = "gfx/leaders/SVI/Laki.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_BTK"
+		texturefile = "gfx/leaders/BTK/bratishkin_fascism.dds"
 	}
 }

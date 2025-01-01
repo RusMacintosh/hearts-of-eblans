@@ -1,13 +1,13 @@
 state={
-	id=30
-	name="STATE_30"
+	id=984
+	name="STATE_984"
 	provinces={
-		503 527 3495 3509 3523 9478 11463 11465 
+		9523 9534 11506 11518 
 	}
 	history={
 		owner = DPN
 		victory_points = {
-			9478 1
+			11506 15
 		}
 		buildings = {
 			infrastructure = 4
@@ -16,8 +16,8 @@ state={
 		}
 		add_core_of = DPN
 	}
-	manpower=1388400
+	manpower=1400000
 	buildings_max_level_factor=1.000
-	state_category=city
-	local_supplies=0.000 
+	local_supplies=0.000
+	state_category=metropolis
 }
