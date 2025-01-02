@@ -10,8 +10,9 @@ state = {
 
 	history = {
 
-		owner = BTK
+		owner = ZUS
 		add_core_of = BTK
+		set_demilitarized_zone = yes
 
 		victory_points = {
 			692 20 # Munich

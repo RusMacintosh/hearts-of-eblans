@@ -7,7 +7,7 @@ state={
 	state_category = town
 
 	history={
-		owner = GVI
+		owner = LOM
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -17,7 +17,7 @@ state={
 			6682 1 
 		}
 		add_core_of = HAM
-		add_core_of = GVI
+		add_core_of = LOM
 	}
 
 	provinces={

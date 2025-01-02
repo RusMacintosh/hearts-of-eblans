@@ -9,8 +9,8 @@ state = {
 
 	history = {
 
-		owner = HAM
-		add_core_of = HAM
+		owner = GVI
+		add_core_of = GVI
 		add_claim_by = BUL
 
 		victory_points = { 

@@ -11,7 +11,7 @@ state = {
 	}
 
 	history = {
-		owner = ZOL
+		owner = NEK
 		victory_points = { #Bologna
 			6606 5
 		}
@@ -29,8 +29,7 @@ state = {
 				naval_base = 2
 			}
 		}
-		add_core_of = ZOL
-		add_core_of = PAP
+		add_core_of = NEK
 	}
 
 	provinces = {

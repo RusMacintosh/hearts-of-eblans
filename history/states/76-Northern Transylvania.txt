@@ -7,9 +7,9 @@ state = {
 	
 	history = {
 
-		owner = GVI
+		owner = LOM
 		add_core_of = HAM
-		add_core_of = GVI
+		add_core_of = LOM
 
 		buildings = {
 			infrastructure = 2

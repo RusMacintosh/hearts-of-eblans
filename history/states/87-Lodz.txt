@@ -5,7 +5,9 @@ state={
 	
 	state_category = town
 	history={
-		owner = BTK
+		owner = SHD
+		add_core_of = SHD
+		add_core_of = BTK
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
@@ -13,7 +15,6 @@ state={
 		victory_points = {
 			9508 10
 		}
-		add_core_of = BTK
 
 		1939.1.1 = {
 			buildings = {

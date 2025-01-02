@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = DKK
+		owner = EVL
 		victory_points = {
 			2097 10
 		}
@@ -33,7 +33,7 @@ state={
 				naval_base = 1
 			}
 		}
-		add_core_of = DKK
+		add_core_of = EVL
 		add_claim_by = KUR
 	}
 

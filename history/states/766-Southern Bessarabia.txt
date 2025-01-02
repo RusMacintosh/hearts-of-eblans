@@ -12,7 +12,7 @@ state=
 		}
 		add_core_of = MOL
 		add_core_of = UKR
-		owner = HAM
+		owner = GVI
 		buildings = {
 			infrastructure = 2
 			dockyard = 1
@@ -20,7 +20,7 @@ state=
 				naval_base = 3
 			}
 		}
-		add_core_of = HAM
+		add_core_of = GVI
 	}
 	provinces=
 	{

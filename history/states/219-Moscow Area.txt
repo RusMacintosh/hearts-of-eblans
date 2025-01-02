@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = RAB
+		owner = HAM
 		victory_points = {
 			6380 50 
 		}
@@ -28,7 +28,7 @@ state={
                 }
             }
 		}
-		add_core_of = RAB
+		add_core_of = HAM
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

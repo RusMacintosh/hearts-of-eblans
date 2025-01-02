@@ -10,9 +10,8 @@ state = {
 
 	history = {
 
-		owner = DPN
-		add_core_of = DPN
-		add_claim_by = MOY
+		owner = TND
+		add_core_of = TND
 
 		victory_points = {
 			9418 1 # Arlons

@@ -4,10 +4,10 @@ state={
 	name="STATE_18"
 	manpower = 1370800
 	
-	state_category = city
+	state_category = city 
 
 	history={
-		owner = MOY
+		owner = KRY
 		victory_points = {
 			9490 5 
 		}
@@ -22,7 +22,7 @@ state={
 			industrial_complex = 1
 			air_base = 10
 		}
-		add_core_of = MOY
+		add_core_of = KRY
 	}
 
 	provinces={

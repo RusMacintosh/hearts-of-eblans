@@ -8,7 +8,7 @@ state={
 	state_category = town
 
 	history={
-		owner = LOM
+		owner = HOZ
 		victory_points = { #Varna
 			9783 5
 		}
@@ -34,7 +34,7 @@ state={
 				naval_base = 1
 			}
 		}
-		add_core_of = LOM
+		add_core_of = HOZ
 	}
 
 	provinces={

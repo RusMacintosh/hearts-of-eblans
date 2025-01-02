@@ -175,3 +175,51 @@ DER = {
 	color = rgb { 148 83 83 }
 	color_ui = rgb { 148 83 83 }
 }
+EVL = {
+	color = rgb { 200 155 123 }
+	color_ui = rgb { 200 155 123 } 
+}
+HOZ = {
+	color = rgb { 125 134 156 }
+	color_ui = rgb { 125 134 156 }
+}
+STY = {
+	color = rgb { 152 223 175 }
+	color_ui = rgb { 152 223 175 }
+}
+SHD = {
+	color = rgb { 81 79 89 }
+	color_ui = rgb { 81 79 89 }
+}
+KRY = {
+	color = rgb { 101 90 124 }
+	color_ui = rgb { 101 90 124 }
+}
+GCH = {
+	color = rgb { 8 96 95 }
+	color_ui = rgb { 8 96 95 }
+}
+TND = {
+	color = rgb { 246 131 156 }
+	color_ui = rgb { 246 131 156 }
+}
+GNS = {
+	color = rgb { 84 198 235 }
+	color_ui = rgb { 84 198 235 }
+}
+ST9 = {
+	color = rgb { 138 137 192 }
+	color_ui = rgb { 138 137 192 }
+}
+JHF = {
+	color = rgb { 89 65 169 }
+	color_ui = rgb { 89 65 169 }
+}
+MKR = {
+	color = rgb { 169 177 143 }
+	color_ui = rgb { 169 177 143 }
+}
+LID = {
+	color = rgb { 249 57 67 }
+	color_ui = rgb {  249 57 67 }
+}

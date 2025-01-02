@@ -10,7 +10,9 @@ state={
 
 
 	history={
-		owner = NEK
+		owner = GCH
+		add_core_of = GCH
+		add_core_of = BTK
 		victory_points = { 9620 15 }
 		victory_points = { 663 10 }
 		buildings = {
@@ -19,7 +21,7 @@ state={
 			industrial_complex = 3
 			air_base = 4
 		}
-		add_core_of = NEK
+		
 	}
 
 	provinces={

@@ -13,7 +13,7 @@ state = {
 	}
 
 	history = {
-		owner = ZOL
+		owner = MKR
 		victory_points = {
 			6788 10 
 		}
@@ -30,8 +30,7 @@ state = {
 				naval_base = 8
 			}
 		}
-		add_core_of = ZOL
-		add_core_of = SPM
+		add_core_of = MKR
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 10

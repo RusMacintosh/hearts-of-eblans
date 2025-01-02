@@ -4,7 +4,7 @@ state={
 	name="STATE_353"
 
 	history={
-		owner = DKK
+		owner = EVL
 		victory_points = {
 			11853 3
 		}
@@ -31,7 +31,7 @@ state={
 			limit = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
-			add_core_of = DKK
+			add_core_of = EVL
 			add_core_of = KUR
 		}
 	}

@@ -7,10 +7,9 @@ state = {
 
 	history = {
 
-		owner = BTK
+		owner = GNS
+		add_core_of = GNS
 		add_core_of = BTK
-		add_core_of = HSU
-		add_core_of = PRE
 
 		buildings = {
 

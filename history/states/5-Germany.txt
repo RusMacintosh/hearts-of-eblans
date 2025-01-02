@@ -6,9 +6,9 @@ state = {
 
 	history = {
 
-		owner = BTK
+		owner = SHD
+		add_core_of = SHD
 		add_core_of = BTK
-		add_core_of = PRE
 
 		victory_points = {
 			6375 3 # Allenstein

@@ -11,11 +11,11 @@ state={
 	}
 
 	history={
-		owner = RAB
+		owner = HAM
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = RAB
+		add_core_of = HAM
 		victory_points = {
 			11351 1
 		}

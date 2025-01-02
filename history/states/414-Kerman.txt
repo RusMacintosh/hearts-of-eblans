@@ -7,7 +7,7 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = DKK
+		owner = EVL
 		buildings = {
 			infrastructure = 1
 		}
@@ -17,7 +17,7 @@ state={
 		victory_points = {
 			7990 1 
 		}
-		add_core_of = DKK
+		add_core_of = EVL
 	}
 
 	provinces={

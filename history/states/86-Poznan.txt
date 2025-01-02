@@ -7,9 +7,9 @@ state = {
 	state_category = city
 	history = {
 
-		owner = BTK
+		owner = SHD
+		add_core_of = SHD
 		add_core_of = BTK
-		add_claim_by = PRE
 
 		victory_points = {
 			6558 10 # Poznan

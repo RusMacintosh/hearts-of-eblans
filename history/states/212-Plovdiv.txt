@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = LOM
+		owner = HOZ
 		victory_points = { #Plovdiv
 			6923 10
 		}
@@ -27,7 +27,7 @@ state={
 			industrial_complex =2
 			air_base = 2
 		}
-		add_core_of = LOM
+		add_core_of = HOZ
 	}
 
 	provinces={

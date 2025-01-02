@@ -10,12 +10,9 @@ state={
 	}
 
 	history={
-		owner = BTK
-		add_claim_by = MOY
-		add_dynamic_modifier = {
-			modifier = FRA_maginot_line_dynamic_modifier
-		}
-		set_demilitarized_zone = yes
+		owner = KRY
+		add_core_of = KRY
+		add_core_of = BTK
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
 		victory_points = { 678 5 }
@@ -54,7 +51,6 @@ state={
 			air_base = 5
 
 		}
-		add_core_of = BTK
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

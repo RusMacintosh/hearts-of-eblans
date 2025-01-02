@@ -35,7 +35,7 @@ characters = {
             ideology = nazism
             traits = { # 
 			}
-            desc = BTK_socialist
+            desc = BTK_socialist 
         }
 	}
 }

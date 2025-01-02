@@ -7,9 +7,9 @@ state = {
 
 	history = {
 
-		owner = BTK
+		owner = JHF
+		add_core_of = JHF
 		add_core_of = BTK
-		add_core_of = BAY
 
 		victory_points = {
 			11544 10 # Nuremberg

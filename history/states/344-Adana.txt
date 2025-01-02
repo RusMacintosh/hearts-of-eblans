@@ -7,7 +7,7 @@ state={
 	state_category = town
 
 	history={
-		owner = DKK
+		owner = EVL
 		victory_points = {
 			9893 15
 		}
@@ -27,7 +27,7 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = DKK
+		add_core_of = EVL
 		add_claim_by = KUR
 	}
 

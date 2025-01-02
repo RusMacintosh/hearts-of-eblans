@@ -12,15 +12,14 @@ state=
 
 	history=
 	{
-		owner = DPN
+		owner = TND
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 3
 		}
 		victory_points = { 6583 5 }
-		add_core_of = DPN
-		add_claim_by = MOY
+		add_core_of = TND
 	}
 
 	provinces=
