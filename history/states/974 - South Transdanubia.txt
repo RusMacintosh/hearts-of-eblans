@@ -14,7 +14,7 @@ state = {
 
 		owner = CHB
 		
-		add_core_of = HNR
+		add_core_of = CHD
 
 		victory_points = {
 			11610 5 

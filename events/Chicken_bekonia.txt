@@ -361,3 +361,51 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = chicken.14
+	title = chicken.14.t
+	desc = chicken.14.d
+
+	picture = GFX_report_event_anschlus_drake
+
+	is_triggered_only = yes
+	option = {
+		name = chicken.14.a
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			CHB = {
+				release_on_controlled = CHD
+			}
+			DRE = {
+				diplomatic_relation = { 
+					country = CHD 
+					relation = military_access 
+				}
+	
+				diplomatic_relation = { 
+					country = CHD 
+					relation = guarantee 
+				}
+			}
+		}
+	}
+	option = {
+		name = chicken.14.b
+		ai_chance = {
+			factor = 50
+		}
+		hidden_effect = {
+			CHB = {
+				release_on_controlled = CHD
+			}
+			CHD = {
+				declare_war_on = {
+					target = CHB
+					type = annex_everything
+				}
+			}
+		}
+	}
+}

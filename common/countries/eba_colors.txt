@@ -11,13 +11,9 @@ DIK = {
 	color = rgb { 85 128 73 }
 	color_ui = rgb { 85 128 73 }
 }
-SNR = {
+CHD = {
 	color = rgb { 59 81 179 }
 	color_ui = rgb { 59 81 179 }
-}
-HNR = {
-	color = rgb { 90 199 242 }
-	color_ui = rgb { 90 199 242 }
 }
 HYP = {
 	color = rgb { 121 42 163 }

@@ -42,18 +42,18 @@ set_convoys = 40
 
 
 set_politics = {
-	ruling_party = fascism
-	last_election = "1936.1.1"
+	ruling_party = democratic
+	last_election = "1936.1.1" 
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	democratic = 15
-	fascism = 46
-	communism = 16
-	neutrality = 5
-	hypecratia = 18
+	democratic = 25
+	fascism = 15
+	communism = 2
+	neutrality = 50
+	hypecratia = 8
 }
 
 #create_country_leader = {
@@ -68,11 +68,11 @@ set_popularities = {
 #}
 
 create_country_leader = {
-	name = "Братишка"
+	name = "Вова Братишкин"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
 	picture = "bratishkin_neutrality.dds"
 	expire = "2000.1.1"
-	ideology = liberalism
+	ideology = nazism
 	traits = {
 		#
 	}
@@ -90,7 +90,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Братишка"
+	name = "Владимир Братишкин"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
 	picture = "bratishkin_neutrality.dds"
 	expire = "2000.1.1"
@@ -101,7 +101,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Братхуйкинс"
+	name = "Братишкин"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
 	picture = "bratishkin_hypecratia.dds"
 	expire = "2000.1.1"

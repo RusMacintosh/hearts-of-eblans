@@ -6,17 +6,7 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "CHB"
 		default = yes
-		"CHB"={
-			history = ""
-			ideology = fascism
-			ideas = {
-				CHB_hungary_problem
-			}
-			focuses = {
-				
-			}
-		}
-		"ARA"={
+		ARA={
 			history = ""
 			ideology = hypecratia
 			ideas = {
@@ -25,10 +15,12 @@ bookmarks = {
 				ARA_dicator_constitution
 			}
 			focuses = {
-				
+				ARA_crush_communist
+				ARA_restore_SZS
+				ARA_people_republic
 			}
 		}
-		"SVI"={
+		SVI={
 			history = ""
 			ideology = democratic
 			ideas = {
@@ -36,9 +28,12 @@ bookmarks = {
 				SVI_buster_oposite
 			}
 			focuses = {
+				SVI_destroy_busters
+				SVI_hype_hypercore_rise
+				SVI_razvitie_arov
 			}
 		}
-		"DRE"={
+		DRE={
 			history = ""
 			ideology = hypecratia
 			ideas = {
@@ -46,10 +41,24 @@ bookmarks = {
 				defeted_at_wwone
 			}
 			focuses = {
-				
+				DRE_own_way
+				DRE_svo_chb_start
+				DRE_svergnut_dreyka
 			}
 		}
-		"HAM"={
+		CHB={
+			history = ""
+			ideology = fascism
+			ideas = {
+				CHB_hungary_problem
+			}
+			focuses = {
+				chb_communism_effort
+				chb_hypecratia_effort
+				chb_iam_chickenbekon
+			}
+		}
+		HAM={
 			history = ""
 			ideology = hypecratia
 			ideas = {
@@ -57,7 +66,7 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"BTK"={
+		BTK={
 			history = ""
 			ideology = fascism
 			ideas = {
@@ -66,10 +75,13 @@ bookmarks = {
 				demografic_problems
 			}
 			focuses = {
+				BTK_restart_89_squad
+				BTK_dead_economy
+				BTK_loyal_narezka
 			}
 		}
 		
-		"GON"={
+		GON={
 			history = ""
 			ideology = neutrality
 			ideas = {
@@ -78,6 +90,9 @@ bookmarks = {
 				demografic_problems
 			}
 			focuses = {
+				GON_scrit_vse_uliki
+				GON_kill_monarchy
+				GON_great_gondurasia_freedom
 			}
 		}
 

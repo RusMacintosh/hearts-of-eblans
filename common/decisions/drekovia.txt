@@ -2,10 +2,9 @@ form_DRE_EMPIRE_cat = {
 	form_DRE_EMPIRE = {
 	
 		icon = generic_form_nation
-		#picture = GFX_decision_cat_picture_form_greater_greece
 		
 		fire_only_once = yes
-		cost = 50
+		cost = 0
 	
 		allowed = {
 			original_tag = DRE
@@ -57,6 +56,7 @@ form_DRE_EMPIRE_cat = {
 				controls_state = 73
 				controls_state = 975
 				controls_state = 976
+				controls_state = 88
 				
 			}
 		}
@@ -83,6 +83,7 @@ form_DRE_EMPIRE_cat = {
 				state = 73
 				state = 975
 				state = 976
+				state = 88
 				
 
 				state = 69
@@ -101,16 +102,149 @@ form_DRE_EMPIRE_cat = {
 	
 		complete_effect = {
 			set_cosmetic_tag = DRE_EMPIRE
-			# Chicken-Bekonia
-			155 = { add_core_of = ROOT }
-			43 = { add_core_of = ROOT }
-			154 = { add_core_of = ROOT }
-			973 = { add_core_of = ROOT }
-			974 = { add_core_of = ROOT }
 			
-			# Reich
-			52 = { add_core_of = ROOT }
-			53 = { add_core_of = ROOT }
+			custom_override_tooltip= {
+				tooltip = DRE_empire_nat_tt
+				# Chicken-Bekonia
+				155 = { add_core_of = ROOT }
+				43 = { add_core_of = ROOT }
+				154 = { add_core_of = ROOT }
+				973 = { add_core_of = ROOT }
+				974 = { add_core_of = ROOT }
+			
+				# Reich
+				52 = { add_core_of = ROOT }
+				53 = { add_core_of = ROOT }
+				88 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+			}
+			
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	expand_DRE_EMPIR_SLA = {
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		cost = 0
+	
+		allowed = {
+			original_tag = DRE
+		}
+		visible = {
+			has_cosmetic_tag = DRE_EMPIRE
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_sla		
+
+				#Silazhik
+				controls_state = 160
+				controls_state = 159
+				controls_state = 39
+				controls_state = 850
+				controls_state = 846
+				controls_state = 151
+				
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 160
+				state = 159
+				state = 39
+				state = 850
+				state = 846
+				state = 151
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+	
+		complete_effect = {
+			
+			custom_override_tooltip= {
+				tooltip = DRE_empire_nat_SLA_tt
+				# Chicken-Bekonia
+				160 = { add_core_of = ROOT }
+				159 = { add_core_of = ROOT }
+				39 = { add_core_of = ROOT }
+				850 = { add_core_of = ROOT }
+				846 = { add_core_of = ROOT }
+				151 = { add_core_of = ROOT }
+			
+			}
+			
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	expand_DRE_EMPIR_CHB = {
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		cost = 0
+	
+		allowed = {
+			original_tag = DRE
+		}
+		visible = {
+			has_cosmetic_tag = DRE_EMPIRE
+		}
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = dre_control_terr_sla		
+
+				#Silazhik
+				controls_state = 102
+				controls_state = 853
+				controls_state = 852
+				controls_state = 736
+				
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 102
+				state = 852
+				state = 853
+				state = 736
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+	
+		complete_effect = {
+			
+			custom_override_tooltip= {
+				tooltip = DRE_empire_nat_CHB_tt
+				# Chicken-Bekonia
+				102 = { add_core_of = ROOT }
+				852 = { add_core_of = ROOT }
+				853 = { add_core_of = ROOT }
+				736 = { add_core_of = ROOT }
+			
+			}
+			
 		}
 	
 		ai_will_do = {
@@ -124,32 +258,7 @@ form_DRE_EMPIRE_cat = {
 }
 
 drekovia_integrations_cat = {
-	integrate_lagoda = {
-		icon = GFX_decision_eng_blackshirt_speech
-		
-		fire_only_once = yes
-		cost = 50
-		
-		available = {
-			controls_state = 88
-		}
-		visible = {
-			controls_state = 88
-		}
-		
-		highlight_states = {
-			highlight_state_targets = {
-				state = 88
-			}
-			highlight_color_while_active = 3
-			highlight_color_before_active = 2
-		}
-		
-		complete_effect = {
-			88 = { add_core_of = ROOT }
-		}
-		
-	}
+	
 	
 	#integrate_vapers = {
 	#	icon = GFX_decision_eng_blackshirt_speech

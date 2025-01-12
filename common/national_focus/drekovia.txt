@@ -16,7 +16,7 @@ focus_tree = {
 
 	############################
 	##### Fortification focuses#
-	############################
+	############################ 
 
 	focus = {
 		id = DRE_politics
@@ -499,8 +499,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			BTK = {
-				country_event = { id = drek.5 days = 3 }
+			ZUS = {
+				country_event = { id = drek.5 days = 7 }
 			}
 		}
 	}
@@ -1156,6 +1156,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_timed_idea = { idea = DRE_war_preparation days = 720 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -1163,7 +1164,6 @@ focus_tree = {
 		id = DRE_svo_chb_1
 		icon = GFX_goal_dre_svo_chb
 		relative_position_id = DRE_preparing_for_the_inevitable
-		prerequisite = { focus = DRE_preparing_for_the_inevitable}
 		#mutually_exclusive = { focus = DRE_svo_btk_1 }
 		x = 0
 		y = 1
@@ -1180,6 +1180,9 @@ focus_tree = {
 				has_capitulated = no
 				is_subject = no
 			}
+		}
+		allow_branch = {
+			has_completed_focus = DRE_preparing_for_the_inevitable
 		}
 
 		bypass = {
@@ -1229,28 +1232,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			CHB = {
-				release_on_controlled = SNR
-				release_on_controlled = HNR
-			}
-
-			diplomatic_relation = { 
-				country = SNR 
-				relation = military_access 
-			}
-
-			diplomatic_relation = { 
-				country = HNR 
-				relation = military_access 
-			}
-
-			diplomatic_relation = { 
-				country = SNR 
-				relation = guarantee 
-			}
-
-			diplomatic_relation = { 
-				country = HNR 
-				relation = guarantee 
+				country_event = chicken.14
 			}
 		}
 	}
@@ -2041,15 +2023,11 @@ focus_tree = {
 				target = CHB
 				type = annex_everything
 			}
-
-			SNR = {
-				declare_war_on = {
-					target = CHB
-					type = annex_everything
-				}
+			puppet = {
+				target = CHD
+				end_wars = no
 			}
-
-			HNR = {
+			CHD = {
 				declare_war_on = {
 					target = CHB
 					type = annex_everything

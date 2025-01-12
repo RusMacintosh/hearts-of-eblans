@@ -90,7 +90,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = germany.64.a
+		name = news.3.a
 		
 		hidden_effect = {
 		
@@ -110,7 +110,7 @@ news_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = germany.64.a
+		name = news.4.a
 		
 		hidden_effect = {
 		
@@ -154,4 +154,4 @@ news_event = {
 		
 		}
 	}
-}
+} 

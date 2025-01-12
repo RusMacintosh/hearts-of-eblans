@@ -8,7 +8,7 @@ state = {
 	history = {
 
 		owner = CHB
-		add_core_of = CHB
+		add_core_of = CHD
 
 		buildings = {
 			infrastructure = 2

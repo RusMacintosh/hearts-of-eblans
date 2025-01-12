@@ -1,0 +1,1443 @@
+focus_tree = {
+	id = brat
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BTK
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2850 y = 0 }
+	focus = {
+		id = BTK_nach_89
+		icon = GFX_goal_unknown
+		cost = 25.00
+		x = 16
+		y = 2
+			allow_branch = {
+					NOT = {
+							has_completed_focus = BTK_nach_89
+						}
+				}
+			completion_reward = {
+					custom_effect_tooltip = BTK_89_nach_tt
+					mark_focus_tree_layout_dirty = yes
+					country_event = btk.4
+				}
+
+	}
+	focus = {
+		id = BTK_nachalo_army
+		icon = GFX_focus_AUS_frontmiliz_focus
+		cost = 4.00 
+		x = 23
+		y = 0
+			allow_branch = {
+					has_completed_focus = BTK_nach_89
+				}
+
+	}
+	focus = {
+		id = BTK_dead_economy
+		icon = GFX_focus_BRA_coffee_crisis
+		cost = 1.00
+		x = 6
+		y = 0
+			allow_branch = {
+					has_completed_focus = BTK_nach_89
+				}
+
+	}
+	focus = {
+		id = BTK_polit
+		icon = GFX_goal_unknown
+		cost = 1.00
+		x = 12
+		y = 9
+			allow_branch = {
+					has_completed_focus = BTK_nach_89
+				}
+				
+		
+		available = {
+			date > 1936.06.01
+			hidden_trigger = {
+				NOT = { country_exists = KRU }	
+			}
+		}
+
+	}
+	focus = {
+		id = BTK_89_idea
+		icon = GFX_goal_unknown
+		cost = 9.00
+		x = 12
+		y = 13
+			allow_branch = {
+					has_cosmetic_tag = BTK_89
+				}
+
+	}
+	focus = {
+		id = BTK_mirniy_atom
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		x = 23
+		y = 7
+		allow_branch = {
+			has_completed_focus = BTK_nach_89
+			has_cosmetic_tag = BTK_89
+		}
+		available = {
+			has_cosmetic_tag = BTK_89
+		}
+
+	}
+	focus = {
+		id = BTK_start_economic_repair
+		icon = GFX_focus_generic_military_industry
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_dead_economy
+		}
+		mutually_exclusive = {
+			focus = BTK_make_military_economy
+			focus = BTK_new_tacticks
+		}
+		x = 2
+		y = 1
+
+	}
+	focus = {
+		id = BTK_social
+		icon = GFX_focus_generic_coffee
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_start_economic_repair
+		}
+		x = 1
+		y = 2
+
+	}
+	focus = {
+		id = BTK_release_taxes
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_social
+		}
+		x = 1
+		y = 5
+
+	}
+	focus = {
+		id = BTK_emissia
+		icon = GFX_focus_fra_devalue_the_franc
+		cost = 2.00
+		prerequisite = {
+			focus = BTK_start_economic_repair
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = BTK_make_military_economy
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_dead_economy
+		}
+		mutually_exclusive = {
+			focus = BTK_start_economic_repair
+			focus = BTK_new_tacticks
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = BTK_natoinalize
+		icon = GFX_focus_DEN_heavy_regulations
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_start_economic_repair
+			focus = BTK_make_military_economy
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = BTK_new_private
+		icon = GFX_focus_SWE_refuge_from_war
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_natoinalize
+		}
+		
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = BTK_start_industrializat_program
+		icon = GFX_focus_SOV_merge_plants
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_start_economic_repair
+		}
+		available  = {
+			has_completed_focus = BTK_emissia
+			has_completed_focus = BTK_new_private
+			has_completed_focus = BTK_release_taxes
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = BTK_mobilizatsia
+		icon = GFX_focus_generic_advanced_military_studies
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_make_military_economy
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = BTK_army_standart
+		icon = GFX_focus_CONGO_ccci
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_mobilizatsia
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = BTK_mil_industria
+		icon = GFX_focus_generic_reorient_production
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_army_standart
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = BTK_indus_1
+		icon = GFX_focus_generic_industry_1
+		cost = 15.00
+		prerequisite = {
+			focus = BTK_start_industrializat_program
+			focus = BTK_mil_industria
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = BTK_start_industrializat_program
+				has_completed_focus = BTK_mil_industria
+			}
+			#has_completed_focus = BTK_restart_89_squad
+		}
+		
+			completion_reward = {
+				hidden_effect = {
+					mark_focus_tree_layout_dirty = yes
+				}
+				if = {
+					limit = {
+						has_completed_focus = BTK_start_industrializat_program
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = industrial_complex
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = BTK_mil_industria
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = arms_factory
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = BTK_new_tacticks
+		icon = GFX_focus_POL_complete_april_constitution
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_dead_economy
+		}
+		mutually_exclusive = {
+			focus = BTK_start_economic_repair
+			focus = BTK_make_military_economy
+		}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = BTK_new_tax
+		icon = GFX_focus_CHL_silverworking
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_new_tacticks
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = BTK_start_wideprog
+		icon = GFX_focus_AUS_womens_education_initiative
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_new_tax
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = BTK_restart_89_squad
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = BTK_polit
+		} 
+		x = 12
+		y = 10
+			completion_reward = {
+					custom_effect_tooltip = BTK_restart_89_squad_tt
+					
+			}
+
+	}
+	focus = {
+		id = BTK_internal_politiks
+		icon = GFX_focus_AUS_lawmaking_leniency
+		cost = 2.00
+		prerequisite = {
+			focus = BTK_restart_89_squad
+		}
+		x = 8
+		y = 11
+
+	}
+	focus = {
+		id = BTK_old_conflickt
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_internal_politiks
+		}
+		x = 6
+		y = 12
+
+	}
+	focus = {
+		id = BTK_gensyxa
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_old_conflickt
+		}
+		completion_reward = {
+			GNS = { country_event = btk.2 }
+		}
+		x = 4
+		y = 13
+
+	}
+	focus = {
+		id = BTK_razvitie_botov
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_internal_politiks
+		}
+		x = 8
+		y = 12
+
+	}
+	focus = {
+		id = BTK_integrity
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_razvitie_botov
+		}
+		x = 8
+		y = 13
+
+	}
+	focus = {
+		id = BTK_priglos_stint
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_89_idea
+		}
+		x = 11
+		y = 14
+
+	}
+	focus = {
+		id = BTK_nelya_back
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_priglos_stint
+		}
+		x = 9
+		y = 15
+
+	}
+	focus = {
+		id = BTK_new_social
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_new_tacticks
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = BTK_new_init
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_new_social
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = BTK_stint_marionteka
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_priglos_stint
+		}
+		x = 11
+		y = 15
+
+	}
+	focus = {
+		id = BTK_private_boost
+		icon = GFX_focus_mex_privatisation
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_new_tacticks
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = BTK_new_mio
+		icon = GFX_focus_GER_kdf_wagen
+		cost = 6.00
+		prerequisite = {
+			focus = BTK_private_boost
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = BTK_new_economy
+		icon = GFX_focus_generic_currency_reforms
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_start_wideprog
+		}
+		prerequisite = {
+			focus = BTK_new_init
+		}
+		prerequisite = {
+			focus = BTK_new_mio
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = BTK_vspomnit_druzey
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_restart_89_squad
+		}
+		x = 12
+		y = 11
+
+	}
+	focus = {
+		id = BTK_stasyan
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_vspomnit_druzey
+		}
+		x = 12
+		y = 12
+
+	}
+	focus = {
+		id = BTK_priglos_eblanov
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_89_idea
+		}
+		x = 13
+		y = 14
+
+	}
+	focus = {
+		id = BTK_integrirovat_eblanov
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = BTK_priglos_eblanov
+		}
+		x = 13
+		y = 15
+
+	}
+	focus = {
+		id = BTK_lomaka_gvin
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_vspomnit_druzey
+		}
+		completion_reward = {
+			create_faction = "89 пакт"
+			BTK = {
+				add_to_faction = GVI
+			}
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = BTK_t2x2_newgovernot
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = BTK_priglos_eblanov
+		}
+		x = 15
+		y = 15
+
+	}
+	focus = {
+		id = BTK_moders
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_nachalo_army
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = BTK_upgrade_twitch
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_moders
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = BTK_form_tg_modders
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_moders
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = BTK_narezka
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_nachalo_army
+		}
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = BTK_loyal_narezka
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_narezka
+			focus = BTK_moders
+		}
+		prerequisite = {
+			focus = BTK_narezka
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = BTK_partnerki
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_nachalo_army
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = BTK_pari
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_partnerki
+		}
+		mutually_exclusive = {
+			focus = BTK_yandex
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = BTK_yandex
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_partnerki
+		}
+		mutually_exclusive = {
+			focus = BTK_pari
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = BTK_trip
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_pari
+			focus = BTK_yandex
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = BTK_strim_s_ham
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_loyal_narezka
+			focus = BTK_trip
+			focus = BTK_upgrade_twitch
+		}
+		mutually_exclusive = {
+			focus = BTK_attack_tiktok_likee
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = BTK_attack_tiktok_likee
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_trip
+			focus = BTK_loyal_narezka
+			focus = BTK_upgrade_twitch
+		}
+		mutually_exclusive = {
+			focus = BTK_strim_s_ham
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = BTK_army_uchenia
+		icon = GFX_focus_generic_manpower
+		cost = 5.00
+		prerequisite = {
+			focus = BTK_strim_s_ham
+			focus = BTK_attack_tiktok_likee
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = BTK_antihesus
+		icon = GFX_goal_unknown
+		cost = 0.1
+		prerequisite = {
+			focus = BTK_army_uchenia
+		}
+		mutually_exclusive = {
+			focus = BTK_anti_clown
+			focus = BTK_morale_preserve
+			focus = BTK_anti_evelone
+		}
+		x = 20
+		y = 6
+
+	}
+	focus = {
+		id = BTK_anti_clown
+		icon = GFX_goal_unknown
+		cost = 0.1
+		prerequisite = {
+			focus = BTK_army_uchenia
+		}
+		mutually_exclusive = {
+			focus = BTK_antihesus
+			focus = BTK_morale_preserve
+			focus = BTK_anti_evelone
+		}
+		x = 22
+		y = 6
+
+	}
+	focus = {
+		id = BTK_morale_preserve
+		icon = GFX_goal_unknown
+		cost = 0.1
+		prerequisite = {
+			focus = BTK_army_uchenia
+		}
+		mutually_exclusive = {
+			focus = BTK_antihesus
+			focus = BTK_anti_clown
+			focus = BTK_anti_evelone
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = BTK_anti_evelone
+		icon = GFX_goal_unknown
+		cost = 0.1
+		prerequisite = {
+			focus = BTK_army_uchenia
+		}
+		mutually_exclusive = {
+			focus = BTK_antihesus
+			focus = BTK_anti_clown
+			focus = BTK_morale_preserve
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = BTK_tank
+		icon = GFX_focus_generic_tank_assembly
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_antihesus
+			focus = BTK_anti_clown
+			focus = BTK_morale_preserve
+			focus = BTK_anti_evelone
+		}
+		x = 25
+		y = 7
+
+	}
+	focus = {
+		id = BTK_specnaz
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_antihesus
+			focus = BTK_anti_clown
+			focus = BTK_anti_evelone
+			focus = BTK_morale_preserve
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = BTK_vdv
+		icon = GFX_focus_generic_paratrooper
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_specnaz
+		}
+		x = 16
+		y = 8
+
+	}
+	focus = {
+		id = BTK_transatlantic
+		icon = GFX_focus_generic_refit_civilian_ships
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_antihesus
+			focus = BTK_anti_clown
+			focus = BTK_morale_preserve
+			focus = BTK_anti_evelone
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = BTK_otryad_marines
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_specnaz
+		}
+		prerequisite = {
+			focus = BTK_transatlantic
+		}
+		x = 18
+		y = 8
+
+	}
+	focus = {
+		id = BTK_planes
+		icon = GFX_focus_generic_copy_plane_designs
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_anti_evelone
+			focus = BTK_morale_preserve
+			focus = BTK_anti_clown
+			focus = BTK_antihesus
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = BTK_norm
+		icon = GFX_focus_generic_license_production
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_tank
+		}
+		mutually_exclusive = {
+			focus = BTK_flame
+		}
+		x = 26
+		y = 8
+
+	}
+	focus = {
+		id = BTK_flame
+		icon = GFX_focus_generic_self_propelled_gun
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_tank
+		}
+		mutually_exclusive = {
+			focus = BTK_norm
+		}
+		x = 24
+		y = 8
+
+	}
+	focus = {
+		id = BTK_new_standart
+		icon = GFX_focus_generic_army_tanks2
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_norm
+			focus = BTK_flame
+		}
+		x = 25
+		y = 9
+
+	}
+	focus = {
+		id = BTK_vintovki
+		icon = GFX_focus_generic_combined_arms
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_anti_evelone
+			focus = BTK_morale_preserve
+			focus = BTK_anti_clown
+			focus = BTK_antihesus
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = BTK_school_taktik
+		icon = GFX_focus_FIN_confederated_finno_russian_republics
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_vintovki
+		}
+		x = 28
+		y = 8
+
+	}
+	focus = {
+		id = BTK_new_pasta
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_school_taktik
+		}
+		x = 27
+		y = 9
+
+	}
+	focus = {
+		id = BTK_flot
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_transatlantic
+		}
+		x = 19
+		y = 9
+
+	}
+	focus = {
+		id = BTK_naval
+		icon = GFX_focus_GER_graf_zeppelin
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_planes
+		}
+		prerequisite = {
+			focus = BTK_transatlantic
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = BTK_jet
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_rakety
+		}
+		x = 21
+		y = 10
+
+	}
+	focus = {
+		id = BTK_polety
+		icon = GFX_focus_generic_armored_air_support
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_planes
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = BTK_rakety
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_polety
+		}
+		x = 21
+		y = 9
+
+	}
+	focus = {
+		id = BTK_indus2
+		icon = GFX_focus_generic_industry_2
+		cost = 15.00
+		prerequisite = {
+			focus = BTK_indus_1
+		}
+		allow_branch = {
+			has_completed_focus = BTK_indus_1
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_start_industrializat_program
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_mil_industria
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = BTK_idus3
+		icon = GFX_focus_generic_industry_3
+		cost = 15.00
+		prerequisite = {
+			focus = BTK_indus2
+		}
+		allow_branch = {
+			has_completed_focus = BTK_indus2
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_start_industrializat_program
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_mil_industria
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		x = 5
+		y = 7
+
+	}
+	focus = {
+		id = BTK_indus_4
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 15.00
+		prerequisite = {
+			focus = BTK_idus3
+		}
+		allow_branch = {
+			has_completed_focus = BTK_idus3
+		}
+		completion_reward = {
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_start_industrializat_program
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = BTK_mil_industria
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = BTK_old_enemy_new_fred
+		icon = GFX_goal_unknown
+		cost = 8.00
+		prerequisite = {
+			focus = BTK_restart_89_squad
+		}
+		x = 16
+		y = 11
+
+	}
+	focus = {
+		id = BTK_shadowkek
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_vspomnit_druzey
+		}
+		x = 10
+		y = 12
+
+	}
+	focus = {
+		id = BTK_alliance_with_evelone
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = BTK_old_enemy_new_fred
+		}
+		x = 16
+		y = 12
+
+	}
+	focus = {
+		id = BTK_cold_sub_war
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_alliance_with_evelone
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = BTK_jojo
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_old_conflickt
+		}
+		completion_reward = {
+			JHF = { country_event = btk.1 }
+		}
+		x = 6
+		y = 13
+
+	}
+	focus = { 
+		id = BTK_vybut_gayki
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_gensyxa
+		}
+		x = 4
+		y = 14
+		completion_reward = {
+			GCH = { country_event = btk.3 }
+		}
+
+	}
+	focus = {
+		id = BTK_logodski_ustupki
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_jojo
+		}
+		available = {
+			has_completed_focus = BTK_lomaka_gvin
+		}
+		completion_reward = {
+			BTK = {
+				add_to_faction = LAG
+			}
+		
+		}
+		x = 6
+		y = 14
+
+	}
+	focus = {
+		id = BTK_control_devochki
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = BTK_nelya_back
+		}
+		x = 8
+		y = 16
+
+	}
+	focus = {
+		id = BTK_svadba_stinta
+		icon = GFX_goal_unknown
+		cost = 20.00
+		prerequisite = {
+			focus = BTK_nelya_back
+		}
+		prerequisite = {
+			focus = BTK_stint_marionteka
+		}
+		x = 10
+		y = 16
+
+	}
+	focus = {
+		id = BTK_form_friendly_squads
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = BTK_89_idea
+		}
+		x = 12
+		y = 16
+
+	}
+}

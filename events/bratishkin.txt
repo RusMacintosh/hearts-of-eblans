@@ -1,0 +1,465 @@
+add_namespace = btk
+#КОнтент для других стран
+country_event = {
+	id = btk.1
+	title = btk.0.t
+	desc = btk.0.d
+	picture = GFX_report_event_svo_for_chb
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.0.a
+		
+		hidden_effect = {
+			BTK = {
+				declare_war_on = {
+					target = JHF
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.0.b
+		
+		hidden_effect = {
+			BTK = {
+				annex_country = {
+					target = JHF
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.2
+	title = btk.0.t
+	desc = btk.0.d
+	picture = GFX_report_event_svo_for_chb
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.0.a
+		
+		hidden_effect = {
+			BTK = {
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.0.b
+		
+		hidden_effect = {
+			BTK = {
+				annex_country = {
+					target = GNS
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.3
+	title = btk.0.t
+	desc = btk.0.d
+	picture = GFX_report_event_svo_for_chb
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.0.a
+		
+		hidden_effect = {
+			BTK = {
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.0.b
+		
+		hidden_effect = {
+			BTK = {
+				annex_country = {
+					target = GCH
+					transfer_troops = yes
+				}
+			}
+			BTK = {
+				declare_war_on = {
+					target = GNS
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.0	.c
+		
+		hidden_effect = {
+			BTK = {
+				transfer_state = 50
+				transfer_state = 978
+			}
+		}
+	}
+}
+
+#Внутренний конфликт
+country_event = {
+	id = btk.4
+	title = btk.4.t
+	desc = btk.4.d
+	picture = GFX_report_event_svo_for_chb
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.4.a
+		
+		hidden_effect = {
+			set_country_leader_ideology = marxism
+			set_political_party = {
+				ideology = communism
+				popularity = 25
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			retire_ideology_leader = communism
+			promote_character = {
+				character = BTK_Bratishkin
+				ideology = marxism
+			}
+			add_country_leader_role = {
+				character = BTK_Bratishkin
+				promote_leader = yes
+				country_leader = {
+					ideology = marxism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.4.b
+		hidden_effect = {
+			set_country_leader_ideology = liberalism
+			set_political_party = {
+				ideology = democratic
+				popularity = 25
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			retire_ideology_leader = democratic
+			promote_character = {
+				character = BTK_Bratishkin
+				ideology = liberalism
+			}
+			add_country_leader_role = {
+				character = BTK_Bratishkin
+				promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+		}
+	}
+	option = {
+		name = btk.4.c
+		
+		hidden_effect = {
+			set_country_leader_ideology = moderatism
+			set_political_party = {
+				ideology = neutrality
+				popularity = 25
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			retire_ideology_leader = neutrality
+			promote_character = {
+				character = BTK_Bratishkin
+				ideology = despotism
+			}
+			add_country_leader_role = {
+				character = BTK_Bratishkin
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+		}
+			
+	}
+	option = {
+		name = btk.4.e
+		
+		hidden_effect = {
+			set_country_leader_ideology = rexism
+			set_political_party = {
+				ideology = fascism
+				popularity = 25
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			retire_ideology_leader = fascism
+			promote_character = {
+				character = BTK_Bratishkin
+				ideology = rexism
+			}
+			add_country_leader_role = {
+				character = BTK_Bratishkin
+				promote_leader = yes
+				country_leader = {
+					ideology = rexism
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+		}
+			
+	}
+}
+country_event = {
+	id = btk.5
+	title = btk.1.t
+	desc = btk.1.d
+	picture = GFX_report_event_svo_for_chb
+	fire_only_once = yes
+	major = no
+	trigger = {
+		focus_progress = {
+			focus = BTK_nach_89
+			progress > 0.1
+		}
+	}
+	option = {
+		name = btk.1.a
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.b
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.c
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.e
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.6
+	title = btk.1.t
+	desc = btk.1.d
+	picture = GFX_report_event_svo_for_chb
+	fire_only_once = yes
+	major = no
+	trigger = {
+		focus_progress = {
+			focus = BTK_nach_89
+			progress > 0.25
+		}
+	}
+	option = {
+		name = btk.1.a
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.b
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.c
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.e
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.7
+	title = btk.1.t
+	desc = btk.1.d
+	picture = GFX_report_event_svo_for_chb
+	fire_only_once = yes
+	major = no
+	trigger = {
+		focus_progress = {
+			focus = BTK_nach_89
+			progress > 0.5
+		}
+	}
+	option = {
+		name = btk.1.a
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.b
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.c
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.e
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.8
+	title = btk.1.t
+	desc = btk.1.d
+	picture = GFX_report_event_svo_for_chb
+	fire_only_once = yes
+	major = no
+	trigger = {
+		focus_progress = {
+			focus = BTK_nach_89
+			progress > 0.75
+		}
+	}
+	option = {
+		name = btk.1.a
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.b
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.c
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	option = {
+		name = btk.1.e
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+form_BTK_89_cat = {
+
+	icon = GFX_decision_category_border_conflicts
+	picture = GFX_decision_form_89
+	
+	allowed = {
+		original_tag = BTK
+	}
+
+	visible = {
+		original_tag = BTK
+	}
+	priority = 29
+}
+
+drekovia_integrations_cat = {
+
+	icon = GFX_decision_category_generic_political_actions
+	
+
+	allowed = {
+		original_tag = BTK
+	}
+
+	visible = {
+		has_completed_focus = DRE_own_way
+	}
+
+}

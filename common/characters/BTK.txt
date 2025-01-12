@@ -32,10 +32,10 @@ characters = {
 			}
 		}
 		country_leader = {
-            ideology = nazism
+            ideology = liberalism
             traits = { # 
 			}
-            desc = BTK_socialist 
+            desc = BTK_socialist  
         }
 	}
 }

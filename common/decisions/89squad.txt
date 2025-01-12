@@ -1,0 +1,270 @@
+form_BTK_89_cat = {
+	form_BTK_89 = {
+	
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 50
+	
+		allowed = {
+			original_tag = BTK
+		}
+	
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = btk_control_terr_89	
+				# Bratishkin
+				controls_state = 64
+				controls_state = 59
+				controls_state = 56
+				controls_state = 61
+				controls_state = 62
+				controls_state = 63
+				controls_state = 68
+				controls_state = 66
+				controls_state = 67
+				controls_state = 762
+				controls_state = 58
+			}
+			custom_trigger_tooltip = {
+				tooltip = btk_control_terr_shd	
+
+				
+				# Shadow
+				controls_state = 86
+				controls_state = 87
+				controls_state = 807
+				controls_state = 85
+				controls_state = 5
+				controls_state = 98
+				controls_state = 763
+
+			}
+			custom_trigger_tooltip = {
+				tooltip = btk_control_terr_girl
+				
+
+				# Devochki
+				controls_state = 51
+				controls_state = 55
+				controls_state = 42
+				controls_state = 57
+				controls_state = 50
+				controls_state = 978
+				#controls_state = 845
+				#controls_state = 3
+			}
+			custom_trigger_tooltip = {
+				tooltip = btk_control_terr_jojo
+
+				#jojohf
+				controls_state = 54
+				controls_state = 60
+				controls_state = 65
+				
+				
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 64
+				state = 59
+				state = 56
+				state = 61
+				state = 62
+				state = 63
+				state = 68
+				state = 66
+				state = 67
+				state = 58
+				state = 762
+
+				state = 86
+				state = 87
+				state = 807
+				state = 85
+				state = 5
+				state = 98
+				state = 763
+
+				state = 51
+				state = 55
+				state = 42
+				state = 57
+				state = 50
+				state = 978
+				#state = 845
+				#state = 3
+
+				state = 54
+				state = 60
+				state = 65
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+	
+		visible = {
+			original_tag = BTK
+			has_completed_focus = BTK_restart_89_squad
+		}
+	
+		complete_effect = {
+			set_cosmetic_tag = BTK_89
+			mark_focus_tree_layout_dirty = yes
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = GFX_BTK_89
+			}
+			# Chicken-Bekonia
+			#155 = { add_core_of = ROOT }
+			#43 = { add_core_of = ROOT }
+			#154 = { add_core_of = ROOT }
+			#973 = { add_core_of = ROOT }
+			#974 = { add_core_of = ROOT }
+			
+			# Reich
+			#52 = { add_core_of = ROOT }
+			#53 = { add_core_of = ROOT }
+		}
+	
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	North_friends = {
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 50
+	
+		allowed = {
+			original_tag = BTK
+		}
+		visible = {
+			original_tag = BTK
+			has_completed_focus = BTK_stasyan
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 56
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		days_remove = 10
+		remove_effect = {
+            annex_country = {
+				target = ST9
+				transfer_troops = yes
+			}
+        }
+
+	}
+
+	Shadowkek_vernis = {
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 50
+	
+		allowed = {
+			original_tag = BTK
+		}
+		visible = {
+			original_tag = BTK
+			has_completed_focus = BTK_shadowkek
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 86
+				state = 87
+				state = 807
+				state = 85
+				state = 5
+				state = 98
+				state = 763
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		days_remove = 10
+		remove_effect = {
+            annex_country = {
+				target = SHD
+				transfer_troops = yes
+			}
+        }
+
+	}
+	Vernut_stariy = {
+		icon = generic_form_nation
+		#picture = GFX_decision_cat_picture_form_greater_greece
+		
+		fire_only_once = yes
+		cost = 50
+	
+		allowed = {
+			original_tag = BTK
+		}
+		visible = {
+			has_cosmetic_tag = BTK_89
+			OR = {
+				owns_state = 54
+				owns_state = 50
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 52
+				state = 53
+				
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		complete_effect = {
+			transfer_state = 52
+			transfer_state = 53
+			53 = {
+				set_demilitarized_zone = no
+			}
+			52 = {
+				set_demilitarized_zone = no
+			}
+		}
+
+	}
+}
+

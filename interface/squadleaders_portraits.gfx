@@ -13,4 +13,8 @@ SpriteTypes = {
 		name = "GFX_portrait_BTK"
 		texturefile = "gfx/leaders/BTK/bratishkin_fascism.dds"
 	}
+	SpriteType = {
+		name = "GFX_BTK_89"
+		texturefile = "gfx/leaders/BTK/BTK_hype.dds" 
+	}
 }

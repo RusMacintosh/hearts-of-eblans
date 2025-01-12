@@ -4,6 +4,10 @@ spriteTypes = {
 		name = "GFX_decision_drake_empire"
 		texturefile = "gfx/interface/decisions/decision_form_drake_empire.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_form_89"
+		texturefile = "gfx/interface/decisions/decision_form_89.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_decision_dvorets"
