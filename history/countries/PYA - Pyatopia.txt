@@ -11,7 +11,6 @@ add_ideas = {
 	slay_2023_mem_goda
 }
 
-recruit_character = universal_hype_pya
 recruit_character = dichlorid_oganeson
 recruit_character = dichlorid_oganeson_leader
 recruit_character = mc_maks_advisor
@@ -51,61 +50,6 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
-}
-
-create_country_leader = {
-	name = "Баранов Кириллиус"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "5opka_fascism.dds"
-	expire = "2000.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Кириллиус I Великий СПшер"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "5opka_fascism.dds"
-	expire = "2000.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Пятёрка"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "5opka_neutrality.dds"
-	expire = "2000.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Конгресс Нарезчиков"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "5opka_democratic.dds"
-	expire = "2000.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "5opka Великий BO55"
-	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "5opka_hypecratia.dds"
-	expire = "2000.1.1"
-	ideology = hypetiktok
-	traits = {
-		luzifer_stilya
-	}
 }
 
 set_popularities = {
