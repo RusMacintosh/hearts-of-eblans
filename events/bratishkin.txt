@@ -83,7 +83,7 @@ country_event = {
 		hidden_effect = {
 			BTK = {
 				declare_war_on = {
-					target = GNS
+					target = GCH
 					type = annex_everything
 				}
 			}
@@ -108,7 +108,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = btk.0	.c
+		name = btk.0.c
 		
 		hidden_effect = {
 			BTK = {

@@ -1,5 +1,62 @@
 spriteTypes = {	
 
+
+	spriteType = {
+		name = "GFX_goal_PYA_nax"
+		texturefile = "gfx/interface/goals/goal_PYA_nax.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_PYA_42_party"
+		texturefile = "gfx/interface/goals/goal_PYA_42_party.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_PYA_42_party.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_goal_PYA_mc_maks"
+		texturefile = "gfx/interface/goals/goal_PYA_mc_maks.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_PYA_mc_maks.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_goal_PYA_slava_bossu"
+		texturefile = "gfx/interface/goals/goal_PYA_slava_bossu.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_PYA_slava_bossu.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
 	SpriteType = {
 		name = "GFX_goal_svi_destroy_bustergrad_shine"
 		texturefile = "gfx/interface/goals/destroy_bustergrad.dds"		

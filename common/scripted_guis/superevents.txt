@@ -38,6 +38,12 @@ scripted_gui = {
 			}
 		}
 		
+		triggers = {
+			Super_Event_Image_the_great_war_visible = {
+				has_global_flag = PYA_the_great_war
+			}
+		}
+		
 		
 		############
 		###BUTTON###
@@ -80,6 +86,12 @@ scripted_gui = {
 						has_global_flag = DRE_lagoda_raspil
 					}
 					clr_global_flag = DRE_lagoda_raspil
+				}
+				if = {
+					limit = {
+						has_global_flag = PYA_the_great_war
+					}
+					clr_global_flag = PYA_the_great_war
 				}
 			}
 		}

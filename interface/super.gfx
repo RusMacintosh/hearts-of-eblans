@@ -43,4 +43,8 @@ spriteTypes = {
 		name = "GFX_bruh"
 		textureFile = "/gfx/sp_events/Super_Event_dayraid_fall.dds"
 	}
+	spriteType = {
+		name = "GFX_sp_event_the_great_war"
+		textureFile = "gfx/sp_events/Super_Event_the_great_war.dds"
+	}
 }

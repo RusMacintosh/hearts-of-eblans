@@ -1,28 +1,99 @@
 characters = {
-	universal_hype_pya = {
-		name = "Хайпократ"
-		portraits={
-			civilian={
-				large=GFX_unknown_char_small
-				small=GFX_unknown_char_small
+	dichlorid_oganeson = {
+		name = "Дихлорид Оганесона"
+		portraits = {
+			civilian = {
+				small = GFX_dichlorid_oganeson_advisor
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = dichlorid_oganeson
+			allowed = {
+				if = {
+					has_completed_focus = PYA_mc_maks
+					NOT = {
+						PYA = {
+							has_government = hypecratia
+						}
+					}
+				}
+			}
+			
+			traits = {
+				42bratuxa
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
 			}
 		}
 		
-		advisor={
-			slot = political_advisor
-			idea_token = universal_hype_pya
-			allowed = {
-				always = yes
-			}	
-			traits  = {
-				hypecratia_booster
-			}	
-			cost = 100
-			do_effect = {
-				NOT = {
-					has_government = hypecratia # You can only select it if your current ideology isn't your new one
-				}
+	}
+	
+	dichlorid_oganeson_leader = {
+		name = "Дихлорид Оганесона"
+		portraits = {
+			civilian = {
+				large = GFX_dichlorid_oganeson_portrait
+			}
+		}
+		country_leader = {
+			ideology = 42ideology
+			expire = "2042.1.1.1"
+			id = -1
+
+			traits = {
+				42bratuxa
 			}
 		}
 	}
+
+	mc_maks_advisor = {
+		name = "МС Макс"
+		portraits = {
+			civilian = {
+				small = GFX_mc_maks_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = mc_maks
+			allowed = {
+				if = {
+					has_completed_focus = PYA_42_party
+					NOT = {
+						PYA = {
+							has_government = fascism
+						}
+					}
+				}
+			}
+			traits = {
+				mс_chuma
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
+
+	mc_maks = {
+		name = "МС Макс"
+		portraits = {
+			civilian = {
+				large = GFX_mc_maks
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "2042.1.1.1"
+			id = -1
+
+			traits = {
+				mс_chuma
+			}
+		}
+	}
+}

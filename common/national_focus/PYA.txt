@@ -1,0 +1,362 @@
+focus_tree = {
+    id = PYA_boss
+
+    continuous_focus_position = { x = 5 y = 1500 }
+
+    country = {
+        factor = 0
+        
+        modifier = {
+            add = 10
+            tag = PYA
+        }
+    }
+    default = no
+
+    focus = {
+        id = PYA_razvilka
+        icon = GFX_goal_PYA_razvilka
+        cost = 10
+        x = 7
+        y = 0
+        completion_reward = {
+            country_event = razvilka.1
+        }
+    }
+
+    focus = {
+        id = PYA_42_party
+        icon = GFX_goal_PYA_42_party
+        x = 1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = PYA_razvilka
+        }
+        mutually_exclusive = {
+            focus = PYA_mc_maks
+        }
+        mutually_exclusive = {
+            focus = PYA_slava_bossu
+        }
+        completion_reward = {
+
+        }
+    }
+    
+    focus = {
+        id = PYA_nax
+        icon = GFX_goal_PYA_nax
+        cost = 5
+        x = 2
+        y = 2
+        prerequisite = {
+            focus = PYA_42_party
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_f5lay
+        icon = GFX_goal_PYA_f5lay
+        cost = 5
+        x = 0
+        y = 2
+        prerequisite = {
+            focus = PYA_42_party
+        }
+        completion_reward = {
+            country_event = PYA_f5lay_event
+        }
+    }
+
+    focus = {
+        id = PYA_42bratuxa_goda
+        icon = GFX_goal_PYA_42bratuxa_goda
+        cost = 5
+        x = 1
+        y = 3
+        prerequisite = {
+            focus = PYA_f5lay
+        }
+        prerequisite = {
+            focus = PYA_nax
+        }
+        completion_reward = {
+            country_event = PYA_42bratuxa_goda_event
+        }
+    }
+
+    focus = {
+        id = PYA_aktery_pyatorki
+        icon = GFX_goal_PYA_aktery_pyaotrki
+        cost = 5
+        x = 0
+        y = 4
+        prerequisite = {
+            focus = PYA_f5lay
+        }
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = PYA_mc_maks
+        icon = GFX_goal_PYA_mc_maks
+        x = 13
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = PYA_razvilka
+        }
+        mutually_exclusive = {
+            focus = PYA_42_party
+        }
+        mutually_exclusive = {
+            focus = PYA_slava_bossu
+        }
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = PYA_pozor_na_ege
+        icon = GFX_goal_PYA_pozor_na_ege
+        cost = 5
+        x = 12
+        y = 2
+        prerequisite = {
+            focus = PYA_mc_maks
+        }
+        completion_reward = { }
+    }
+
+    
+
+    focus = {
+        id = PYA_ban_mc_maksa
+        icon = GFX_goal_PYA_ban_mc_maksa
+        cost = 5
+        x = 12
+        y = 3
+        prerequisite = {
+            focus = PYA_pozor_na_ege
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = PYA_fail_goda
+        icon = GFX_goal_PYA_fail_goda
+        cost = 5
+        x = 12
+        y = 4
+        prerequisite = {
+            focus = PYA_ban_mc_maksa
+        }
+        completion_reward = { }
+    }
+    
+    focus = {
+        id = PYA_slava_bossu
+        icon = GFX_goal_PYA_slava_bossu
+        cost = 5
+        x = 7
+        y = 1
+        prerequisite = {
+            focus = PYA_razvilka
+        }
+        mutually_exclusive = {
+            focus = PYA_42_party
+        }
+        mutually_exclusive = {
+            focus = PYA_mc_maks
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_42_deputaty
+        icon = GFX_goal_PYA_42_deputaty
+        cost = 5
+        x = 4
+        y = 5
+        prerequisite = {
+            focus = PYA_slava_bossu
+            focus = PYA_42_party
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_nabor_v_otso
+        icon = GFX_goal_PYA_nabor_v_otso
+        cost = 5
+        x = 4
+        y = 6
+        prerequisite = {
+            focus = PYA_42_deputaty
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_privatka
+        icon = GFX_goal_PYA_privatka
+        cost = 5
+        x = 6
+        y = 2
+        prerequisite = {
+            focus = PYA_slava_bossu
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_bitva_onlifans
+        icon = GFX_goal_PYA_bitva_onlifans
+        cost = 5
+        x = 6
+        y = 4
+        prerequisite = {
+            focus = PYA_progrev
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_max_grow
+        icon = GFX_goal_PYA_max_grow
+        cost = 5
+        x = 6
+        y = 5
+        prerequisite = {
+            focus = PYA_bitva_onlifans
+        }
+        completion_reward = {
+            
+        }
+    }
+
+    focus = {
+        id = PYA_progrev
+        icon = GFX_goal_PYA_progrev
+        cost = 5
+        x = 6
+        y = 3
+        prerequisite = {
+            focus = PYA_privatka
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_telega
+        icon = GFX_goal_PYA_telega
+        cost = 5
+        x = 8
+        y = 2
+        prerequisite = {
+            focus = PYA_slava_bossu
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_42_pasty
+        icon = GFX_goal_PYA_42_pasty
+        cost = 5
+        x = 8
+        y = 3
+        prerequisite = {
+            focus = PYA_telega
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_42_ataki
+        icon = GFX_goal_PYA_42_ataki
+        cost = 5
+        x = 8
+        y = 4
+        prerequisite = {
+            focus = PYA_42_pasty
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_
+        icon = GFX_goal_PYA_
+        cost = 5
+        x = 8
+        y = 5
+        prerequisite = {
+            focus = PYA_42_ataki
+        }
+        completion_reward = { }
+    }
+
+    focus = {
+        id = PYA_main_hype_of_twich
+        icon = GFX_goal_main_hype_of_twich
+        cost = 5
+        x = 7
+        y = 6
+        prerequisite = {
+            focus = PYA_max_grow
+        }
+        prerequisite = {
+            focus = PYA_
+        }
+        completion_reward = {
+
+        }
+    }
+
+    focus = {
+        id = PYA_vpered_v_budushee
+        icon = GFX_goal_vpered_v_budushee
+        cost = 2
+        x = 7
+        y = 7
+        prerequisite = {
+            focus = PYA_main_hype_of_twich
+        }
+        prerequisite = {
+            focus = PYA_nabor_v_otso
+        }
+        completion_reward = {
+            hidden_effect = {
+                if = {
+                    limit = { has_completed_focus = PYA_slava_bossu }
+                    country_event = { id = razvilka.1 }
+                }
+            }
+        }
+    }
+
+}

@@ -45,6 +45,12 @@ guiTypes = {
 			position = {x = 0 y = 0}
 		}
 		
+		iconType = {
+			name = "Super_Event_Image_the_great_war"
+			spriteType = "GFX_sp_event_the_great_war"
+			position = { x = 0 y = 0 }
+		}
+		
 		
 		###############
 		###INTERFACE###

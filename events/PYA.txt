@@ -1,0 +1,111 @@
+add_namespace = boss
+
+country_event = {
+	id = boss.1
+	title = boss.1.t
+	desc = boss.1.d
+	picture = GFX_event_boss.1
+	is_triggered_only = yes
+	option = {
+		name = boss.1.a
+		ai_chance = {
+			factor = 50
+		}
+		PYA = {
+
+		}
+	}
+	option = {
+		name = boss.1.b
+		ai_chance = {
+			factor = 50
+		}
+		PYA = {
+
+		}
+	}
+}
+
+country_event = {
+	id = boss.2
+	title = boss.2.t
+	desc = boss.2.d
+	picture = GFX_event_boss.2
+	is_triggered_only = yes
+	option = {
+		name = boss.2.a
+		ai_chance = {
+			factor = 50
+		}
+		PYA = {
+			
+		}
+	}
+	option = {
+		name = boss.2.b
+		ai_chance = {
+			factor = 50
+		}
+		PYA = {
+			add_ideas = {
+				PYA_42bratuxa_goda_idea
+			}
+		}
+	}
+}
+
+add_namespace = razvilka
+
+country_event = {
+	id = razvilka.1
+	title = razvilka.1.t
+	desc = razvilka.1.d
+	picture = GFX_event_razvilka.1
+	is_triggered_only = yes
+	option = {
+		name = razvilka.1.a
+		ai_chance = {
+			factor = 33
+		}
+		PYA = {
+			hidden_effect = {
+				load_focus_tree = PYA_boss
+				set_country_flag = PYA_boss_vibory
+			}
+			custom_effect_tooltip = {
+				localization_key = razvilka.1.a.tt
+			}
+		}
+	}
+	option = {
+		name = razvilka.1.b
+		ai_chance = {
+			factor = 34
+		}
+		PYA = {
+			hidden_effect = {
+				load_focus_tree = PYA_boss
+				set_country_flag = PYA_boss_dictator
+			}
+			custom_effect_tooltip = {
+				localization_key = razvilka.1.b.tt
+			}
+		}
+	}
+	option = {
+		name = razvilka.1.c
+		ai_chance = {
+			factor = 33
+		}
+		PYA = {
+			hidden_effect = {
+				load_focus_tree = PYA_boss
+				set_country_flag = PYA_boss_korol
+			}
+			custom_effect_tooltip = {
+				localization_key = razvilka.1.c.tt
+				
+			}
+		}
+	}
+}

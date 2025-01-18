@@ -4,7 +4,7 @@ country_event = {
 	id = super.1
 	title = super.1.t
 	desc = super.1.d
-	picture = GFX_report_event_diplomatic_message
+	picture = GFX_report_event_diplomatic_message 
 
 	is_triggered_only = yes
 	
@@ -113,5 +113,31 @@ country_event = {
 		set_global_flag = Super_Event_Visible
 		
 		play_song = "lagoda_raspil"
+	}
+}
+country_event = {
+	id = super.5
+	title = super.5.t
+	desc = super.5.d
+	picture = GFX_report_event_diplomatic_message
+
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		PYA = {
+			has_completed_focus = PYA_the_great_war
+		}
+	}
+
+	immediate = {
+		name = super.5.a
+		log = "[GetDateText]: [This.GetName]: super.5.a executed"
+		
+        set_global_flag = PYA_the_great_war
+		set_global_flag = Super_Event_Visible
+		
+		play_song = "the_great_war"
 	}
 }

@@ -3,7 +3,7 @@ capital = 141
 oob = "SWE_1936"
 set_naval_oob = "SWE_1936_naval"
 
-set_research_slots = 5
+set_research_slots = 5 
 
 add_ideas = {
 	dva_disa
@@ -12,6 +12,11 @@ add_ideas = {
 }
 
 recruit_character = universal_hype_pya
+recruit_character = dichlorid_oganeson
+recruit_character = dichlorid_oganeson_leader
+recruit_character = mc_maks_advisor
+recruit_character = mc_maks
+
 
 set_autonomy = {
 	target = MPK

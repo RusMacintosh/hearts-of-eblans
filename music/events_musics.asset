@@ -22,3 +22,8 @@ music = {
 	name = "lagoda_raspil"
 	file = "lagoda_raspil.ogg"
 }
+
+music = {
+	name = "the_great_war"
+	file = "the_great_war.ogg"
+}

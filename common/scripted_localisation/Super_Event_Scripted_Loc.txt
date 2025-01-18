@@ -36,7 +36,13 @@ defined_text = {
         }
         localization_key = "sp_event_lagoda_raspil"
     }
-	
+
+	text = {
+        trigger = {
+            has_global_flag = PYA_the_great_war
+        }
+        localization_key = "sp_event_the_great_war"
+    }
 }
 
 #Remarks
@@ -76,6 +82,13 @@ defined_text = {
             has_global_flag = DRE_lagoda_raspil
         }
         localization_key = "sp_event_lagoda_raspil_remark"
+    }
+
+	text = {
+        trigger = {
+            has_global_flag = PYA_the_great_war
+        }
+        localization_key = "sp_event_the_great_war_remark"
     }
 	
 }
@@ -117,5 +130,12 @@ defined_text = {
             has_global_flag = DRE_lagoda_raspil
         }
         localization_key = "sp_event_lagoda_raspil_quote"
+    }
+
+	text = {
+        trigger = {
+            has_global_flag = PYA_the_great_war
+        }
+        localization_key = "sp_event_the_great_war_quote"
     }
 }

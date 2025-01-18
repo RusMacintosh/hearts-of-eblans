@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		PYA_mc_maks_doctrine_idea = {
+			allowed = {
+				always = no
+			}
+			picture = idea_mc_maks_doctrine_idea
+
+			modifier = {
+				justify_war_goal_time = -0.25
+			}
+		}
+
+		PYA_42bratuxa_goda_idea = {
+			allowed = {
+				always = no
+			}
+			picture = idea_PYA_42bratuxa_goda_idea
+
+			modifier = {
+				
+			}
+		}
+	}
+}

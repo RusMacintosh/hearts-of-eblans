@@ -164,4 +164,6 @@ spriteTypes = {
 		name = "GFX_idea_high_taxes"
 		texturefile = "gfx/interface/ideas/high_taxes.dds"
 	}
+    ### Pyaterka
+    
 }

@@ -17,4 +17,26 @@ SpriteTypes = {
 		name = "GFX_BTK_89"
 		texturefile = "gfx/leaders/BTK/BTK_hype.dds" 
 	}
+	spriteType = {
+		name = "GFX_dichlorid_oganeson_portrait"
+		texturefile = "gfx/leaders/PYA/PYA_dichlorid_oganeson.dds"
+	}
+
+	spriteType = {
+		name = "GFX_mc_maks"
+		texturefile = "gfx/leaders/PYA/PYA_mc_maks_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_mc_maks"
+		texturefile = "gfx/leaders/PYA/PYA_mc_maks_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_dichlorid_oganeson_advisor"
+		texturefile = "gfx/leaders/PYA/PYA_dichlorid_oganeson_small.dds"
+	}
+	spriteType = {
+		name = "GFX_mc_maks_small"
+		texturefile = "gfx/leaders/PYA/PYA_mc_maks_small.dds"
+	}
+	
 }
