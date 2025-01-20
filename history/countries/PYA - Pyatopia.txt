@@ -59,5 +59,3 @@ set_popularities = {
 	neutrality = 16
 	hypecratia = 42
 }
-
-
