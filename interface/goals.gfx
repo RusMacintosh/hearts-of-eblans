@@ -329,7 +329,10 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_goal_continuous_armor_production"
 	texturefile = "gfx/interface/goals/goal_continuous_armor_production.dds"			
-	}	
+	}
+	
+	### КАСТОМНЫЕ ФОКУСЫ
+	#пятерка
 	spriteType = {
 		name = "GFX_goal_PYA_42_party"
 		texturefile = "gfx/interface/goals/goal_PYA_42_party.dds"
@@ -350,6 +353,191 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_PYA_nax"
 		texturefile = "gfx/interface/goals/goal_PYA_nax.dds"
+	}
+	#Аратосс
+	spriteType = {
+		name = "GFX_ARA_yes_org"
+		texturefile = "gfx/interface/goals/ARA_yes_org.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_stop_const" 
+		texturefile = "gfx/interface/goals/ARA_stop_const.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_restore"
+		texturefile = "gfx/interface/goals/ARA_restore.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_people_republick"
+		texturefile = "gfx/interface/goals/ARA_people_republick.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_path_reich"
+		texturefile = "gfx/interface/goals/ARA_path_reich.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_oppose_dictat"
+		texturefile = "gfx/interface/goals/ARA_oppose_dictat.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_nationla"
+		texturefile = "gfx/interface/goals/ARA_nationla.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_mon_constitusion"
+		texturefile = "gfx/interface/goals/ARA_mon_constitusion.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_help_people"
+		texturefile = "gfx/interface/goals/ARA_help_people.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_form_people"
+		texturefile = "gfx/interface/goals/ARA_form_people.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_dissvolve_monarchy"
+		texturefile = "gfx/interface/goals/ARA_dissvolve_monarchy.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_coronation_mon"
+		texturefile = "gfx/interface/goals/ARA_coronation_mon.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_communist"
+		texturefile = "gfx/interface/goals/ARA_communist.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_ban_comm"
+		texturefile = "gfx/interface/goals/ARA_ban_comm.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_Allow_farright"
+		texturefile = "gfx/interface/goals/ARA_Allow_farright.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_against_fascism"
+		texturefile = "gfx/interface/goals/ARA_against_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_promote_nationalism"
+		texturefile = "gfx/interface/goals/ARA_promote_nationalism.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_press_freedom"
+		texturefile = "gfx/interface/goals/ARA_press_freedom.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_military_gov"
+		texturefile = "gfx/interface/goals/ARA_military_gov.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_king_support"
+		texturefile = "gfx/interface/goals/ARA_king_support.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_fascism"
+		texturefile = "gfx/interface/goals/ARA_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_election"
+		texturefile = "gfx/interface/goals/ARA_election.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_democracy"
+		texturefile = "gfx/interface/goals/ARA_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_coronation"
+		texturefile = "gfx/interface/goals/ARA_coronation.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_abolish_diktat"
+		texturefile = "gfx/interface/goals/ARA_abolish_diktat.dds"
+	}
+	spriteType = {
+		name = "GFX_ARA_ban_org"
+		texturefile = "gfx/interface/goals/ARA_ban_org.dds"
+	}
+
+
+
+	#Братишкин
+	spriteType = {
+		name = "GFX_BTK_twitch_upgrade"
+		texturefile = "gfx/interface/goals/BTK_twitch_upgrade.dds"
+	} 
+	spriteType = {
+		name = "GFX_BTK_trip"
+		texturefile = "gfx/interface/goals/BTK_trip.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_telega"
+		texturefile = "gfx/interface/goals/BTK_telega.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_strim_hametova"
+		texturefile = "gfx/interface/goals/BTK_strim_hametova.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_narezka"
+		texturefile = "gfx/interface/goals/BTK_narezka.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_morale"
+		texturefile = "gfx/interface/goals/BTK_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_moders"
+		texturefile = "gfx/interface/goals/BTK_moders.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_mod_1"
+		texturefile = "gfx/interface/goals/BTK_mod_1.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_loyal"
+		texturefile = "gfx/interface/goals/BTK_loyal.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_anticlown"
+		texturefile = "gfx/interface/goals/BTK_anticlown.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_yandex"
+		texturefile = "gfx/interface/goals/BTK_yandex.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_partner"
+		texturefile = "gfx/interface/goals/BTK_partner.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_pari"
+		texturefile = "gfx/interface/goals/BTK_pari.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_nach"
+		texturefile = "gfx/interface/goals/BTK_nach.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_attack"
+		texturefile = "gfx/interface/goals/BTK_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_antievelone"
+		texturefile = "gfx/interface/goals/BTK_antievelone.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_army_uchenia"
+		texturefile = "gfx/interface/goals/BTK_army_uchenia.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_army"
+		texturefile = "gfx/interface/goals/BTK_army.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_antihesus"
+		texturefile = "gfx/interface/goals/BTK_antihesus.dds"
 	}
 	
 

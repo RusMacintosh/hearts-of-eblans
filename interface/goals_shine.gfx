@@ -5,7 +5,7 @@ spriteTypes = {
 		name = "GFX_goal_PYA_nax"
 		texturefile = "gfx/interface/goals/goal_PYA_nax.dds"
 	}
-
+	### SUPERFOCUSES
 	spriteType = {
 		name = "GFX_goal_PYA_42_party"
 		texturefile = "gfx/interface/goals/goal_PYA_42_party.dds"
@@ -56,6 +56,110 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 	}
+	spriteType = {
+		name = "GFX_ARA_oppose_dictat"
+		texturefile = "gfx/interface/goals/ARA_oppose_dictat.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARA_oppose_dictat.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_ARA_coronation_mon"
+		texturefile = "gfx/interface/goals/ARA_coronation_mon.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ARA_coronation_mon.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_BTK_army"
+		texturefile = "gfx/interface/goals/BTK_army.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BTK_army.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_BTK_strim_hametova"
+		texturefile = "gfx/interface/goals/BTK_strim_hametova.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BTK_strim_hametova.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_BTK_attack"
+		texturefile = "gfx/interface/goals/BTK_attack.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BTK_attack.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_BTK_nach"
+		texturefile = "gfx/interface/goals/BTK_nach.dds"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/BTK_nach.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+
+
+
+
 
 	SpriteType = {
 		name = "GFX_goal_svi_destroy_bustergrad_shine"

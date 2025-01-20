@@ -2129,11 +2129,11 @@ focus_tree = {
 
     #############
     ##POLITICAL##
-    #############
+    ############# 
 
     focus = {
 		id = ARA_oppose_dictatorship
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_ARA_oppose_dictat
 		relative_position_id = ARA_after_war
 		prerequisite = { focus = ARA_after_war }
         mutually_exclusive = { focus = ARA_power_to_the_tsar }
@@ -2165,7 +2165,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_democratic_principles
-		icon = GFX_goal_support_democracy
+		icon = GFX_ARA_democracy
         relative_position_id = ARA_oppose_dictatorship
         mutually_exclusive = { focus = ARA_communism_ministers}
         prerequisite = { focus = ARA_oppose_dictatorship }
@@ -2202,7 +2202,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_ban_far_right_organizations
-		icon = GFX_focus_eng_move_to_secure_the_dominions
+		icon = GFX_ARA_ban_org
         relative_position_id = ARA_oppose_dictatorship
 		mutually_exclusive = { focus = ARA_restrained_paramilitary_organizations}
         prerequisite = { focus = ARA_democratic_principles focus = ARA_setup_monarchy }
@@ -2239,7 +2239,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_restrained_paramilitary_organizations
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_ARA_yes_org
         relative_position_id = ARA_oppose_dictatorship
 		mutually_exclusive = { focus = ARA_ban_far_right_organizations}
         prerequisite = { focus = ARA_democratic_principles focus = ARA_setup_monarchy }
@@ -2280,7 +2280,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_seek_coop_with_tsar
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_ARA_king_support
         relative_position_id = ARA_democratic_principles
 		mutually_exclusive = { focus = ARA_support_people}
         prerequisite = { focus = ARA_democratic_principles }
@@ -2317,7 +2317,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_support_people
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_ARA_help_people
         relative_position_id = ARA_democratic_principles
 		mutually_exclusive = { focus = ARA_seek_coop_with_tsar }
         prerequisite = { focus = ARA_democratic_principles }
@@ -2355,7 +2355,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_form_popular_block
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_ARA_form_people
         relative_position_id = ARA_support_people
         prerequisite = { focus = ARA_support_people }
 		x = -1
@@ -2393,7 +2393,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_abolish_dictator
-		icon = GFX_focus_rom_handle_king
+		icon = GFX_ARA_abolish_diktat
         relative_position_id = ARA_support_people
         prerequisite = { focus = ARA_support_people }
 		x = 1
@@ -2441,7 +2441,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_legislative_elections
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_ARA_election
         relative_position_id = ARA_support_people
         prerequisite = { focus = ARA_abolish_dictator focus = ARA_seek_coop_with_tsar }
 		x = 2
@@ -2486,7 +2486,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_power_to_the_tsar
-		icon = GFX_focus_SOV_the_true_tsars
+		icon = GFX_ARA_coronation
 		relative_position_id = ARA_after_war
 		prerequisite = { focus = ARA_after_war}
         mutually_exclusive = { focus = ARA_oppose_dictatorship }
@@ -2518,7 +2518,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_setup_monarchy
-		icon = GFX_focus_generic_monarchy_2
+		icon = GFX_ARA_coronation_mon
 		relative_position_id = ARA_power_to_the_tsar
 		mutually_exclusive = { focus = ARA_save_the_fascism_way }
 		prerequisite = { focus = ARA_power_to_the_tsar}
@@ -2555,7 +2555,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_reinforce_tsar
-		icon = GFX_focus_usa_voter_registration_act
+		icon = GFX_ARA_military_gov
 		relative_position_id = ARA_setup_monarchy
 		prerequisite = { focus = ARA_setup_monarchy}
 		x = 0
@@ -2593,7 +2593,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_restore_constitution
-		icon = GFX_focus_hol_the_foundations_of_defense
+		icon = GFX_ARA_mon_constitusion
 		relative_position_id = ARA_setup_monarchy
 		prerequisite = { focus = ARA_setup_monarchy}
 		x = 1
@@ -2628,7 +2628,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_freedom_of_press
-		icon = GFX_focus_generic_treaty
+		icon = GFX_ARA_press_freedom
 		relative_position_id = ARA_restore_constitution
 		prerequisite = { focus = ARA_restore_constitution}
 		x = 0
@@ -2666,7 +2666,7 @@ focus_tree = {
 		id = ARA_promote_bulgarian_nationalism
 
 		prerequisite = { focus = ARA_setup_monarchy focus = ARA_save_the_fascism_way }
-		icon = GFX_focus_POL_nationalist_education
+		icon = GFX_ARA_promote_nationalism
 		relative_position_id = ARA_setup_monarchy
 		x = 3
 		y = 2
@@ -2688,7 +2688,7 @@ focus_tree = {
 		id = ARA_national_revitalization
 
 		prerequisite = { focus = ARA_promote_bulgarian_nationalism focus = ARA_path_to_great_reich }
-		icon = GFX_focus_SWE_counter_revolution
+		icon = GFX_ARA_nationla
 		relative_position_id = ARA_crush_communist
 		x = 0
 		y = 2
@@ -2710,7 +2710,7 @@ focus_tree = {
 		id = ARA_path_to_great_reich
 
 		prerequisite = { focus = ARA_save_the_fascism_way }
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_ARA_path_reich
 		relative_position_id = ARA_save_the_fascism_way
 		x = -2
 		y = 2
@@ -2735,7 +2735,7 @@ focus_tree = {
 		id = ARA_restore_SZS
 
 		prerequisite = { focus = ARA_promote_bulgarian_nationalism }
-		icon = GFX_focus_LIT_restore_the_grand_duchy
+		icon = GFX_ARA_restore
 		relative_position_id = ARA_promote_bulgarian_nationalism
 		x = 0
 		y = 2
@@ -2753,7 +2753,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_crush_communist
-		icon = GFX_focus_spr_crush_the_revolution
+		icon = GFX_ARA_ban_comm
 		relative_position_id = ARA_power_to_the_tsar
 		prerequisite = { focus = ARA_setup_monarchy focus = ARA_save_the_fascism_way}
 		x = 1
@@ -2788,7 +2788,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_save_the_fascism_way
-		icon = GFX_focus_generic_fascist_propaganda
+		icon = GFX_ARA_fascism
 		relative_position_id = ARA_power_to_the_tsar
 		mutually_exclusive = { focus = ARA_setup_monarchy }
 		prerequisite = { focus = ARA_power_to_the_tsar}
@@ -2824,7 +2824,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_allow_far_right_organizations
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_ARA_Allow_farright
 		relative_position_id = ARA_save_the_fascism_way
 		prerequisite = { focus = ARA_save_the_fascism_way}
 		x = 0
@@ -2859,7 +2859,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_communism_ministers
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_ARA_communist
         relative_position_id = ARA_oppose_dictatorship
         mutually_exclusive = { focus = ARA_democratic_principles}
         prerequisite = { focus = ARA_oppose_dictatorship }
@@ -2891,7 +2891,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_overthrow_the_dictator
-		icon = GFX_goal_tfv_burn_the_royal_portraits
+		icon = GFX_ARA_dissvolve_monarchy
         relative_position_id = ARA_communism_ministers
         prerequisite = { focus = ARA_communism_ministers }
 		x = -1
@@ -2941,7 +2941,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_abolish_the_constitution
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		icon = GFX_ARA_stop_const
         relative_position_id = ARA_overthrow_the_dictator
         prerequisite = { focus = ARA_overthrow_the_dictator }
 		x = -1
@@ -2973,7 +2973,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_destroy_burshui
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_ARA_dissvolve_monarchy
         relative_position_id = ARA_communism_ministers
         prerequisite = { focus = ARA_communism_ministers }
 		x = 1
@@ -3004,7 +3004,7 @@ focus_tree = {
 
     focus = {
 		id = ARA_front_against_fascism
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_ARA_against_fascism
         relative_position_id = ARA_destroy_burshui
         prerequisite = { focus = ARA_destroy_burshui }
 		x = 0
@@ -3066,7 +3066,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_people_republic
-		icon = GFX_focus_BUL_the_peoples_republic_of_bulgaria
+		icon = GFX_ARA_people_republick
         relative_position_id = ARA_overthrow_the_dictator
         prerequisite = { focus = ARA_overthrow_the_dictator }
 		x = 0

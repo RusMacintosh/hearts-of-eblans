@@ -11,7 +11,7 @@ focus_tree = {
 	continuous_focus_position = { x = 2850 y = 0 }
 	focus = {
 		id = BTK_nach_89
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_nach
 		cost = 25.00
 		x = 16
 		y = 2
@@ -29,7 +29,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_nachalo_army
-		icon = GFX_focus_AUS_frontmiliz_focus
+		icon = GFX_BTK_army
 		cost = 4.00 
 		x = 23
 		y = 0
@@ -614,7 +614,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_moders
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_moders
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_nachalo_army
@@ -625,7 +625,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_upgrade_twitch
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_twitch_upgrade
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_moders
@@ -636,7 +636,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_form_tg_modders
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_telega
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_moders
@@ -647,7 +647,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_narezka
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_narezka
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_nachalo_army
@@ -658,7 +658,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_loyal_narezka
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_loyal
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_narezka
@@ -673,7 +673,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_partnerki
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_partner
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_nachalo_army
@@ -684,7 +684,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_pari
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_pari
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_partnerki
@@ -698,7 +698,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_yandex
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_yandex
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_partnerki
@@ -712,7 +712,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_trip
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_trip
 		cost = 10.00
 		prerequisite = {
 			focus = BTK_pari
@@ -724,7 +724,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_strim_s_ham
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_strim_hametova
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_loyal_narezka
@@ -740,7 +740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_attack_tiktok_likee
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_attack
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_trip
@@ -756,7 +756,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_army_uchenia
-		icon = GFX_focus_generic_manpower
+		icon = GFX_BTK_army_uchenia
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_strim_s_ham
@@ -768,7 +768,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_antihesus
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_antihesus
 		cost = 0.1
 		prerequisite = {
 			focus = BTK_army_uchenia
@@ -784,7 +784,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_anti_clown
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_anticlown
 		cost = 0.1
 		prerequisite = {
 			focus = BTK_army_uchenia
@@ -800,7 +800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_morale_preserve
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_morale
 		cost = 0.1
 		prerequisite = {
 			focus = BTK_army_uchenia
@@ -816,7 +816,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_anti_evelone
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_antievelone
 		cost = 0.1
 		prerequisite = {
 			focus = BTK_army_uchenia
