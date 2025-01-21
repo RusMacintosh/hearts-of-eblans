@@ -51,7 +51,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 	42bratuxa_leader = {
 		random = no
 		justify_war_goal_time = -0.25
@@ -62,7 +61,6 @@ leader_traits = {
 			factor = 1
 		}
 	}
-
 	mс_chuma = {
 		random = no
 		war_support_factor = 0.1
