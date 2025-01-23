@@ -21,7 +21,7 @@ focus_tree = {
 	focus = {
 		id = DRE_politics
 		icon = GFX_goal_drake_politics
-		x = 6
+		x = 7
 		y = 0
 
 		cost = 10
@@ -86,7 +86,7 @@ focus_tree = {
 		relative_position_id = DRE_politics
 		mutually_exclusive = { focus = DRE_svergnut_dreyka }
 		prerequisite = { focus = DRE_politics }
-		x = -5
+		x = -4
 		y = 1
 
 		cost = 10
@@ -121,6 +121,12 @@ focus_tree = {
 			976 = {
 				set_demilitarized_zone = no
 			}
+			DRE={
+				transfer_state = 152
+				transfer_state = 153
+				transfer_state = 848
+				transfer_state = 976
+			}
 			news_event = {
 				id = squad_news.4
 				days = 5
@@ -134,7 +140,7 @@ focus_tree = {
 		relative_position_id = DRE_undemilitarisation_of_west_austria
 		prerequisite = { focus = DRE_undemilitarisation_of_west_austria }
 		mutually_exclusive = { focus = DRE_friendship_with_chickenbekon }
-		x = 1
+		x = -1
 		y = 1
 
 		cost = 10
@@ -169,7 +175,7 @@ focus_tree = {
 		icon = GFX_goal_drake_expansion
 		relative_position_id = DRE_undemilitarisation_of_west_austria
 		prerequisite = { focus = DRE_anschluss }
-		x = 1
+		x = -1
 		y = 2
 
 		cost = 10

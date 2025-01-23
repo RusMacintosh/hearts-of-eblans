@@ -15,16 +15,18 @@ focus_tree = {
 		cost = 25.00
 		x = 16
 		y = 2
-			allow_branch = {
-					NOT = {
-							has_completed_focus = BTK_nach_89
-						}
+		cancelable = no
+		allow_branch = {
+			NOT = {
+					has_completed_focus = BTK_nach_89
 				}
-			completion_reward = {
-					custom_effect_tooltip = BTK_89_nach_tt
-					mark_focus_tree_layout_dirty = yes
-					country_event = btk.4
-				}
+		}
+		select_effect = { 
+				country_event = btk.9
+		}
+		completion_reward = {
+			country_event = btk.4
+		}
 
 	}
 	focus = {
@@ -51,7 +53,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_polit
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_polit
 		cost = 1.00
 		x = 12
 		y = 9
@@ -61,9 +63,24 @@ focus_tree = {
 				
 		
 		available = {
-			date > 1936.06.01
-			hidden_trigger = {
-				NOT = { country_exists = KRU }	
+			OR = {
+				date > 1936.06.01
+				custom_trigger_tooltip ={
+					tooltip = BTK_dogovor
+					always = no
+				}
+				hidden_trigger = {
+					OR = {
+						NOT = { country_exists = KRU }
+						DRE = {
+							owns_state = 152
+							owns_state = 153
+							owns_state = 848
+							owns_state = 976
+						}
+					}
+					
+				}
 			}
 		}
 
@@ -111,7 +128,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_social
-		icon = GFX_focus_generic_coffee
+		icon = GFX_BTK_social
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_start_economic_repair
@@ -122,7 +139,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_release_taxes
-		icon = GFX_focus_hol_abandon_the_gold_standard
+		icon = GFX_BTK_cut_tax
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_social
@@ -133,7 +150,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_emissia
-		icon = GFX_focus_fra_devalue_the_franc
+		icon = GFX_BTK_emissua
 		cost = 2.00
 		prerequisite = {
 			focus = BTK_start_economic_repair
@@ -159,7 +176,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_natoinalize
-		icon = GFX_focus_DEN_heavy_regulations
+		icon = GFX_BTK_nationalizatia
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_start_economic_repair
@@ -171,7 +188,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_new_private
-		icon = GFX_focus_SWE_refuge_from_war
+		icon = GFX_BTK_newprivate
 		cost = 5.00
 		prerequisite = {
 			focus = BTK_natoinalize
@@ -204,7 +221,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_mobilizatsia
-		icon = GFX_focus_generic_advanced_military_studies
+		icon = GFX_BTK_mobolizart
 		cost = 4.00
 		prerequisite = {
 			focus = BTK_make_military_economy
@@ -215,7 +232,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_army_standart
-		icon = GFX_focus_CONGO_ccci
+		icon = GFX_BTK_armystandart
 		cost = 4.00
 		prerequisite = {
 			focus = BTK_mobilizatsia
@@ -375,7 +392,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_restart_89_squad
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_restart_89
 		cost = 2.00
 		prerequisite = {
 			focus = BTK_polit
@@ -390,7 +407,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_internal_politiks
-		icon = GFX_focus_AUS_lawmaking_leniency
+		icon = GFX_BTK_internal
 		cost = 2.00
 		prerequisite = {
 			focus = BTK_restart_89_squad
@@ -542,7 +559,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_vspomnit_druzey
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_druz
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_restart_89_squad
@@ -553,7 +570,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_stasyan
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_sts9
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_vspomnit_druzey
@@ -586,7 +603,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_lomaka_gvin
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_gvin
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_vspomnit_druzey
@@ -632,6 +649,16 @@ focus_tree = {
 		}
 		x = 20
 		y = 2
+		hidden_effect = {
+			retire_ideology_leader = hypecratia
+			create_country_leader = {
+				name = BTK_sovet_moderov
+				desc = ""
+				picture = "GFX_portrait_BTK"
+				expire = "1965.1.1"
+				ideology = twitcherizm
+			}
+		}
 
 	}
 	focus = {
@@ -1314,7 +1341,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_old_enemy_new_fred
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_evelone
 		cost = 8.00
 		prerequisite = {
 			focus = BTK_restart_89_squad
@@ -1325,7 +1352,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_shadowkek
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_shd
 		cost = 1.00
 		prerequisite = {
 			focus = BTK_vspomnit_druzey
@@ -1336,7 +1363,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BTK_alliance_with_evelone
-		icon = GFX_goal_unknown
+		icon = GFX_BTK_evelone
 		cost = 10.00
 		prerequisite = {
 			focus = BTK_old_enemy_new_fred

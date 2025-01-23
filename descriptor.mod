@@ -1,8 +1,13 @@
-version="1.0"
+version="0.1.3b"
 tags={
 	"Alternative History"
+	"Events"
+	"National Focuses"
+	"Gameplay"
+	"Ideologies"
 }
-name="Eblans"
-supported_version="1.15.3"
+name="The new 89: Last Days of Twitch"
 picture="thumbnail.png"
 replace_path="gfx/loadingscreens"
+supported_version="1.15.4"
+remote_file_id="3412939902"

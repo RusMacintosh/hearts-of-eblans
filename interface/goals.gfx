@@ -539,6 +539,66 @@ spriteTypes = {
 		name = "GFX_BTK_antihesus"
 		texturefile = "gfx/interface/goals/BTK_antihesus.dds"
 	}
+	spriteType = {
+		name = "GFX_BTK_social"
+		texturefile = "gfx/interface/goals/BTK_social.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_armystandart"
+		texturefile = "gfx/interface/goals/BTK_armystandart.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_shd"
+		texturefile = "gfx/interface/goals/BTK_shd.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_restart_89"
+		texturefile = "gfx/interface/goals/BTK_restart_89.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_polit"
+		texturefile = "gfx/interface/goals/BTK_polit.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_newprivate"
+		texturefile = "gfx/interface/goals/BTK_newprivate.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_nationalizatia"
+		texturefile = "gfx/interface/goals/BTK_nationalizatia.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_mobolizart"
+		texturefile = "gfx/interface/goals/BTK_mobolizart.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_gvin"
+		texturefile = "gfx/interface/goals/BTK_gvin.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_evelone"
+		texturefile = "gfx/interface/goals/BTK_evelone.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_emissua"
+		texturefile = "gfx/interface/goals/BTK_emissua.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_druz"
+		texturefile = "gfx/interface/goals/BTK_druz.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_cut_tax"
+		texturefile = "gfx/interface/goals/BTK_cut_tax.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_internal"
+		texturefile = "gfx/interface/goals/BTK_internal.dds"
+	}
+	spriteType = {
+		name = "GFX_BTK_sts9"
+		texturefile = "gfx/interface/goals/BTK_sts9.dds"
+	}
 	
 
 

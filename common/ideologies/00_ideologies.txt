@@ -5,14 +5,15 @@ ideologies = {
 		types = {
 
 			conservatism = {
-				
+				color = { 55 114 255 }
 			}
 
 			liberalism = {
+				color = { 234 210 172 }
 			}
 
 			socialism = {
-				
+				color = { 167 51 63 }
 			}
 			
 		}
@@ -26,7 +27,7 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 
-		color = { 86 203 249 }
+		color = { 53 86 145 }
 
 		rules = {
 			can_create_collaboration_government = no
@@ -66,24 +67,28 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.10 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 	
-
 	communism = {
 
 		types = {
 
 			marxism = {
+				color = { 197 34 51 }
 			}
 
 			leninism = {
+				color = { 165 28 48 }
 			}
 
 			stalinism = {
+				color = { 116 18 29 }
 			}
 
 			anti_revisionism = {
+				color = { 58 67 94 }
 			}
 
 			anarchist_communism = {
+				color = { 88 12 31 }
 			}
 		}
 
@@ -208,6 +213,7 @@ ideologies = {
 			}
 
 			rexism = {
+				
 			}
 		}
 
@@ -219,7 +225,7 @@ ideologies = {
 			"FACTION_NAME_FASCIST_5"
 		}
 
-		color = { 150 75 0 }
+		color = { 109 89 89 }
 
 		war_impact_on_world_tension = 1.0			#evil!
 		faction_impact_on_world_tension = 1.0
@@ -276,7 +282,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 
-		color = { 124 124 124 }
+		color = { 191 192 192 }
 
 
 		war_impact_on_world_tension = 0.25		#no major danger
