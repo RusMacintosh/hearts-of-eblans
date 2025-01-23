@@ -44,5 +44,26 @@ spriteTypes = {
 		name = "GFX_report_event_stint_palace"
 		texturefile = "gfx/event_pictures/news_palace.dds"
 	}
+	#BTK
+	spriteType = {
+		name = "GFX_report_event_picture_BTK_1"
+		texturefile = "gfx/event_pictures/report_event_picture_BTK_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_BTK_2"
+		texturefile = "gfx/event_pictures/report_event_picture_BTK_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_BTK_3"
+		texturefile = "gfx/event_pictures/report_event_picture_BTK_3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_BTK_4"
+		texturefile = "gfx/event_pictures/report_event_picture_BTK_4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_picture_BTK_5"
+		texturefile = "gfx/event_pictures/report_event_picture_BTK_5.dds"
+	}
 	
 }

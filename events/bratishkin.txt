@@ -4,7 +4,7 @@ country_event = {
 	id = btk.1
 	title = btk.0.t
 	desc = btk.0.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_4
 	
 	major = no
 	
@@ -38,7 +38,7 @@ country_event = {
 	id = btk.2
 	title = btk.0.t
 	desc = btk.0.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_4
 	
 	major = no
 	
@@ -72,7 +72,7 @@ country_event = {
 	id = btk.3
 	title = btk.0.t
 	desc = btk.0.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_4
 	
 	major = no
 	
@@ -124,7 +124,7 @@ country_event = {
 	id = btk.4
 	title = btk.4.t
 	desc = btk.4.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_1
 	
 	major = no
 	
@@ -136,9 +136,28 @@ country_event = {
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = fascism
+			retire_ideology_leader = democratic
+			set_political_party = {
+				ideology = democratic
+				popularity = 15
+			}
 			set_political_party = {
 				ideology = communism
-				popularity = 25
+				popularity = 65
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 20
+			}
+			set_political_party = {
+				ideology = fascism
+				popularity = 0
+			}
+			set_political_party = {
+				ideology = hypecratia
+				popularity = 0
 			}
 			set_politics = {
 				ruling_party = communism
@@ -164,6 +183,19 @@ country_event = {
 				long_name = BTK_comm_new_long
 				name = BTK_comm_new
 			}
+			retire_ideology_leader = democratic
+			create_country_leader = {
+				name = BTK_sovet_moderov
+				desc = ""
+				picture = "GFX_portrait_BTK"
+				expire = "1965.1.1"
+				ideology = socialism
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = "ВсеСквадская Коммунистическая Партия (Модеры)"
+				name = "ВКП(М)"
+			}
 		}
 	}
 	option = {
@@ -173,9 +205,28 @@ country_event = {
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = fascism
+			retire_ideology_leader = communism
 			set_political_party = {
 				ideology = democratic
-				popularity = 25
+				popularity = 75
+			}
+			set_political_party = {
+				ideology = communism
+				popularity = 15
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 10
+			}
+			set_political_party = {
+				ideology = fascism
+				popularity = 0
+			}
+			set_political_party = {
+				ideology = hypecratia
+				popularity = 0
 			}
 			set_politics = {
 				ruling_party = democratic
@@ -208,11 +259,31 @@ country_event = {
 		trigger = { 
 			neutrality > 0.5
 		}
+		
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
+			retire_ideology_leader = democratic
+			retire_ideology_leader = fascism
+			retire_ideology_leader = communism
+			set_political_party = {
+				ideology = democratic
+				popularity = 15
+			}
+			set_political_party = {
+				ideology = communism
+				popularity = 0
+			}
 			set_political_party = {
 				ideology = neutrality
+				popularity = 55
+			}
+			set_political_party = {
+				ideology = fascism
 				popularity = 25
+			}
+			set_political_party = {
+				ideology = hypecratia
+				popularity = 5
 			}
 			set_politics = {
 				ruling_party = neutrality
@@ -238,6 +309,19 @@ country_event = {
 				long_name = BTK_neu_new_long
 				name = BTK_neu_new
 			}
+			retire_ideology_leader = democratic
+			create_country_leader = {
+				name = BTK_sovet_moderov
+				desc = ""
+				picture = "GFX_portrait_BTK"
+				expire = "1965.1.1"
+				ideology = conservatism
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = "Партия поддержки Конституционной монархии"
+				name = "Оппозиция"
+			}
 		}
 			
 	}
@@ -248,8 +332,27 @@ country_event = {
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
+			retire_ideology_leader = democratic
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = communism
+			set_political_party = {
+				ideology = democratic
+				popularity = 0
+			}
+			set_political_party = {
+				ideology = communism
+				popularity = 0
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 0
+			}
 			set_political_party = {
 				ideology = fascism
+				popularity = 75
+			}
+			set_political_party = {
+				ideology = hypecratia
 				popularity = 25
 			}
 			set_politics = {
@@ -317,13 +420,13 @@ country_event = {
 	id = btk.5
 	title = btk.1.t
 	desc = btk.1.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_5
 	fire_only_once = yes
 	major = no
 	trigger = {
 		focus_progress = {
 			focus = BTK_nach_89
-			progress > 0.1
+			progress > 0.2
 		}
 	}
 	option = {
@@ -332,7 +435,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -342,7 +445,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -352,7 +455,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -362,7 +465,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -371,61 +474,7 @@ country_event = {
 	id = btk.6
 	title = btk.1.t
 	desc = btk.1.d
-	picture = GFX_report_event_svo_for_chb
-	fire_only_once = yes
-	major = no
-	trigger = {
-		focus_progress = {
-			focus = BTK_nach_89
-			progress > 0.25
-		}
-	}
-	option = {
-		name = btk.1.a
-		
-		hidden_effect = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.15
-			}
-		}
-	}
-	option = {
-		name = btk.1.b
-		
-		hidden_effect = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.15
-			}
-		}
-	}
-	option = {
-		name = btk.1.c
-		
-		hidden_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.15
-			}
-		}
-	}
-	option = {
-		name = btk.1.e
-		
-		hidden_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-		}
-	}
-}
-country_event = {
-	id = btk.7
-	title = btk.1.t
-	desc = btk.1.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_5
 	fire_only_once = yes
 	major = no
 	trigger = {
@@ -440,7 +489,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -450,7 +499,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -460,7 +509,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -470,22 +519,22 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
 }
 country_event = {
-	id = btk.8
+	id = btk.7
 	title = btk.1.t
 	desc = btk.1.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_5
 	fire_only_once = yes
 	major = no
 	trigger = {
 		focus_progress = {
 			focus = BTK_nach_89
-			progress > 0.75
+			progress > 0.7
 		}
 	}
 	option = {
@@ -494,7 +543,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -504,7 +553,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -514,7 +563,7 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.15
+				popularity = 0.12
 			}
 		}
 	}
@@ -524,7 +573,61 @@ country_event = {
 		hidden_effect = {
 			add_popularity = {
 				ideology = fascism
-				popularity = 0.15
+				popularity = 0.12
+			}
+		}
+	}
+}
+country_event = {
+	id = btk.8
+	title = btk.1.t
+	desc = btk.1.d
+	picture = GFX_report_event_picture_BTK_5
+	fire_only_once = yes
+	major = no
+	trigger = {
+		focus_progress = {
+			focus = BTK_nach_89
+			progress > 0.9
+		}
+	}
+	option = {
+		name = btk.1.a
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.12
+			}
+		}
+	}
+	option = {
+		name = btk.1.b
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.12
+			}
+		}
+	}
+	option = {
+		name = btk.1.c
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.12
+			}
+		}
+	}
+	option = {
+		name = btk.1.e
+		
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.12
 			}
 		}
 	}
@@ -534,7 +637,7 @@ country_event = {
 	id = btk.9
 	title = btk.9.t
 	desc = btk.9.d
-	picture = GFX_report_event_svo_for_chb
+	picture = GFX_report_event_picture_BTK_3
 	
 	major = no
 	
