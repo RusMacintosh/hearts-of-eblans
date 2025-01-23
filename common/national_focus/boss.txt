@@ -7,7 +7,7 @@ focus_tree = {
 		factor = 0
 
 		modifier = {
-			add = 9
+			add = 10
 			tag = PYA
 		}
 	}
@@ -16,14 +16,94 @@ focus_tree = {
 	focus = {
 		id = PYA_vibory
 		icon = GFX_goal_PYA_vibory
-		cost = 5
+		cost = 2
 		x = 5
 		y = 0
-		completion_reward = {
-			custom_trigger_tooltip = {
-				tooltip = pya_dem_trg
-				has_country_flag = PYA_boss_vibory
-			}
+		available = {
+			has_country_flag = PYA_boss_vibory
 		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PYA_cacto
+		icon = GFX_goal_PYA_cacto
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = PYA_vibory
+		}
+		mutually_exclusive = {
+			focus = PYA_boss_president
+		}
+		mutually_exclusive = {
+			focus = PYA_mc_maks_vibory
+		}
+		completion_reward = { }
+	}
+
+	focus = {
+		id = PYA_boss_president
+		icon = GFX_goal_PYA_boss_president
+		cost = 2
+		x = 5
+		y = 1
+		prerequisite = {
+			focus = PYA_vibory
+		}
+		mutually_exclusive = {
+			focus = PYA_mc_maks_vibory
+		}
+		mutually_exclusive = {
+			focus = PYA_cacto
+		}
+		completion_reward = { }
+	}
+
+	focus = {
+		id = PYA_mc_maks_vibory
+		icon = GFX_goal_PYA_mc_maks_vibory
+		cost = 2
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = PYA_vibory
+		}
+		mutually_exclusive = {
+			focus = PYA_boss_president
+		}
+		mutually_exclusive = {
+			focus = PYA_cacto
+		}
+		completion_reward = { }
+	}
+	
+	focus = {
+		id = PYA_koronation
+		icon = GFX_goal_PYA_koronation
+		cost = 5
+		x = 1
+		y = 0
+		available = {
+			has_country_flag = PYA_boss_korol
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = PYA_zaxvat_vlasti
+		icon = GFX_goal_PYA_zaxvat_vlasti
+		cost = 5
+		x = 3
+		y = 0
+		available = {
+			has_country_flag = PYA_boss_dictator
+		}
+		completion_reward = { }
 	}
 }
