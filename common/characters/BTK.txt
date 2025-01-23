@@ -32,7 +32,7 @@ characters = {
 			}
 		}
 		country_leader = {
-            ideology = liberalism
+            ideology = conservatism
             traits = { # 
 			}
             desc = BTK_socialist  
