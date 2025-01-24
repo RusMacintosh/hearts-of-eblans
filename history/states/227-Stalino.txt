@@ -7,14 +7,14 @@ state={
 	state_category = city
 
 	history={
-		owner = CVD
+		owner = RAB
 		buildings = {
 			infrastructure = 3 #was: 5
 		}
 		victory_points = {
 			6474 10
 		}
-		add_core_of = CVD
+		add_core_of = RAB
 		add_core_of = UKR
 	}
 

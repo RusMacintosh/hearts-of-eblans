@@ -1,4 +1,4 @@
-capital = 137
+capital = 221
 
 oob = "CRI_khanate_soldiers"
 

@@ -89,6 +89,7 @@ country_event = {
 			transfer_state = 154
 			transfer_state = 974
 			transfer_state = 973
+			transfer_state = 83
 		}
 
 		CHB = {
@@ -339,20 +340,19 @@ country_event = {
 		ai_chance = {
 			factor = 40
 		}
-		
-		88 = {
-			transfer_state_to = DRE
+		DRE = {
+			transfer_state = 88
+			transfer_state = 72
 		}
-		72 = {
-			transfer_state_to = DRE
-		}
-
-		784 = {
-			transfer_state_to = SVI
-		}
-
-		96 = {
-			transfer_state_to = SVI
+		SVI = {
+			transfer_state = 809
+			transfer_state = 190
+			transfer_state = 189
+			transfer_state = 11
+			transfer_state = 815
+			transfer_state = 784
+			transfer_state = 96
+			transfer_state = 814
 		}
 	}
 }
@@ -371,7 +371,6 @@ country_event = {
 		ai_chance = {
 
 		}
-		
 		create_wargoal = {
 			target = LAG
 			type = annex_everything

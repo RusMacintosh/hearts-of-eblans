@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = SVI
+		owner = LAG
 		victory_points = {
 			9483 3
 		}
@@ -22,7 +22,7 @@ state={
 			}
 
 		}
-		add_core_of = SVI
+		add_core_of = LAG
 
 	}
 

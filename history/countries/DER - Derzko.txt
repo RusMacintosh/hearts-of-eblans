@@ -1,4 +1,4 @@
-capital = 277
+capital = 99
 set_research_slots = 3
 
 oob = "MEX_1936"

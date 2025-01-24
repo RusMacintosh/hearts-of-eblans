@@ -7,7 +7,7 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = GON
+		owner = ZUS
 		buildings = {
 			infrastructure = 2
 			12190 ={

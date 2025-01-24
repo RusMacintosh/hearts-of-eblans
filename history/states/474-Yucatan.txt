@@ -7,8 +7,8 @@ state = {
 
 	history = {
 
-		owner = DER
-		add_core_of = DER
+		owner = HSU
+		add_core_of = HSU
 		#add_core_of = YUC
 
 		buildings = {

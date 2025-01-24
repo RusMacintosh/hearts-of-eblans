@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = HAM
+		owner = KUS
 		victory_points = {
 			6380 50 
 		}
@@ -28,7 +28,7 @@ state={
                 }
             }
 		}
-		add_core_of = HAM
+		add_core_of = KUS
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

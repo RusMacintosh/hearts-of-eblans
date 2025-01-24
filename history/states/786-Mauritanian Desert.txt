@@ -7,7 +7,7 @@ state={
 	impassable = yes
 
 	history={
-		owner = ZUS
+		owner = PBU
 		add_core_of = MRT
 		buildings = {
 			infrastructure = 0

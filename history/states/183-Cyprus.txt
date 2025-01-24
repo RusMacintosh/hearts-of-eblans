@@ -10,8 +10,8 @@ state= {
 
 	history=
 	{
-		owner = ARA
-		add_core_of = ARA
+		owner = EVL
+		add_core_of = EVL
 		victory_points = {
 			11984 5
 		}

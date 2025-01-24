@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = DER
+		owner = HSU
 		buildings = {
 			infrastructure = 2
 			dockyard = 1
@@ -19,7 +19,7 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = DER
+		add_core_of = HSU
 		victory_points = {
 			12810 5
 		}

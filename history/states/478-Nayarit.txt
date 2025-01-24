@@ -11,12 +11,12 @@ state={
 	}
 
 	history={
-		owner = DER
+		owner = HSU
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = DER
+		add_core_of = HSU
 		victory_points = {
 			13089 10
 		}

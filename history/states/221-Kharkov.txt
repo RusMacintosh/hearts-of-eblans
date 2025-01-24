@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = HAM
+		owner = CVD
 		victory_points = {
 			418 10
 		}
@@ -21,7 +21,7 @@ state={
 			industrial_complex = 1
 			air_base = 5
 		}
-		add_core_of = HAM
+		add_core_of = CVD
 		add_core_of = UKR
 		1939.1.1 = {
 			buildings = {

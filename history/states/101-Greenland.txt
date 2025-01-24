@@ -9,14 +9,14 @@ state = {
 	state_category = wasteland
 	
 	history = {
-		owner = MPK
+		owner = HSU
 		buildings = {
 			infrastructure = 1
 			12512 ={
 				naval_base = 1
 			}
 		}
-		add_core_of = MPK
+		add_core_of = HSU
 		add_core_of = GRN
 
 		victory_points = { #Nuuk

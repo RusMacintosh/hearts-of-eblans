@@ -7,9 +7,8 @@ state = {
 	
 	history = {
 
-		owner = SVI
-		add_core_of = SVI
-		add_claim_by = PRE
+		owner = SHD
+		add_core_of = SHD
 
 		victory_points = {
 			3288 3 # Klaipeda/Memel

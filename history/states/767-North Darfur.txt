@@ -9,7 +9,7 @@ state=
 	
 	history= {
 		add_core_of = SUD
-		owner = ZUS
+		owner = PBU
 		buildings = {
 			infrastructure = 0
 		}

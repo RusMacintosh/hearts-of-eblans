@@ -6,7 +6,7 @@ state={
 	impassable = yes
 
 	history={
-		owner = ZUS
+		owner = PBU
 
 	}
 

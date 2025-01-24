@@ -7,7 +7,7 @@ state = {
 	history = {
 
 		owner = BAT
-		add_core_of = BAT
+		add_core_of = PAS
 		add_core_of = RAP
 
 		buildings = {

@@ -6,7 +6,7 @@ state={
 	state_category=rural
 
 	history={
-		owner = GON
+		owner = ZUS
 		buildings = {
 			infrastructure = 1
 			8248 = {

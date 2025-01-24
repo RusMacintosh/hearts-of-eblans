@@ -12,8 +12,8 @@ state = {
 
 	history = {
 
-		owner = BAT
-		add_core_of = BAT
+		owner = PAS
+		add_core_of = PAS
 		add_claim_by = BOL
 		add_claim_by = PAR
 

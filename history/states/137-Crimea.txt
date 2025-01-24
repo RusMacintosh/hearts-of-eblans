@@ -7,7 +7,7 @@ state = {
 
 	history = {
 
-		owner = CVD
+		owner = RAB
 
 		victory_points = {
 			3686 20 # Sevastopol
@@ -43,7 +43,7 @@ state = {
 			
 		}
 
-		add_core_of = CVD
+		add_core_of = RAB
 		add_core_of = CRI
 
 		1939.1.1 = {

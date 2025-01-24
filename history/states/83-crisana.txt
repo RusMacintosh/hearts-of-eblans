@@ -1,4 +1,3 @@
-
 state={
 	id=83
 	name="STATE_83"
@@ -7,7 +6,7 @@ state={
 	state_category = town
 
 	history={
-		owner = LOM
+		owner = CHB
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -16,13 +15,12 @@ state={
 		victory_points = {
 			6682 1 
 		}
-		add_core_of = HAM
-		add_core_of = LOM
+		add_core_of = CHB
 	}
-
 	provinces={
-		696 6682 6697 9640 
+		696 713 746 3696 3709 6682 6697 9640 9687 
 	}
-
-	local_supplies=0.0 
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

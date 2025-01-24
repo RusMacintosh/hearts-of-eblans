@@ -11,8 +11,8 @@ state = {
 
 	history = {
 
-		owner = BAT
-		add_core_of = BAT
+		owner = PAS
+		add_core_of = PAS
 
 		buildings = {
 			infrastructure = 2

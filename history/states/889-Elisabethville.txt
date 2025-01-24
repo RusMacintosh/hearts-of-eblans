@@ -10,14 +10,14 @@ state = {
 
 	history = {
 
-		owner = DPN
+		owner = ZUS
 
 
 		buildings = {
 			infrastructure = 1
 		}
 
-		add_core_of = DPN
+		add_core_of = ZUS
 
 		victory_points = {
 			191 2 # Elizabehville
