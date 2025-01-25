@@ -121,6 +121,22 @@ form_BTK_89_cat = {
 				ideology = fascism
 				portrait = GFX_BTK_89
 			}
+			set_country_leader_portrait = {
+				ideology = communism
+				portrait = GFX_BTK_89
+			}
+			set_country_leader_portrait = {
+				ideology = neutrality
+				portrait = GFX_BTK_89
+			}
+			set_country_leader_portrait = {
+				ideology = hypecratia
+				portrait = GFX_BTK_89
+			}
+			set_country_leader_portrait = {
+				ideology = democratic
+				portrait = GFX_BTK_89
+			}
 			# Chicken-Bekonia
 			#155 = { add_core_of = ROOT }
 			#43 = { add_core_of = ROOT }
@@ -150,10 +166,13 @@ form_BTK_89_cat = {
 	
 		allowed = {
 			original_tag = BTK
+			has_completed_focus = BTK_stasyan
 		}
 		visible = {
 			original_tag = BTK
-			has_completed_focus = BTK_stasyan
+			ST9 = {
+				exists = yes
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -179,7 +198,6 @@ form_BTK_89_cat = {
         }
 
 	}
-
 	Shadowkek_vernis = {
 		icon = generic_form_nation
 		#picture = GFX_decision_cat_picture_form_greater_greece
@@ -189,10 +207,13 @@ form_BTK_89_cat = {
 	
 		allowed = {
 			original_tag = BTK
+			has_completed_focus = BTK_shadowkek
 		}
 		visible = {
 			original_tag = BTK
-			has_completed_focus = BTK_shadowkek
+			SHD = {
+				exists = yes
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -239,6 +260,10 @@ form_BTK_89_cat = {
 			OR = {
 				owns_state = 54
 				owns_state = 50
+			}
+			NOT = {
+				owns_state = 52
+				owns_state = 53
 			}
 		}
 		ai_will_do = {
