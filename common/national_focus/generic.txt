@@ -2,7 +2,7 @@ focus_tree = {
 	id = eb_generic
 	
 	country = {
-		factor = 100
+		factor = 1
 	}
 	default = yes
 	reset_on_civilwar = no

@@ -9,6 +9,9 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 2850 y = 0 }
+	initial_show_position = {
+		focus = BTK_nach_89
+	}
 	focus = {
 		id = BTK_nach_89
 		icon = GFX_BTK_nach
