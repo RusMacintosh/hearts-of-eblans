@@ -17,7 +17,7 @@ ideas = {
 		
 		ARA_people_against_fascism = {
 			allowed = {
-				NOT = { ruling_party = fascism }
+				NOT = { has_government  = fascism }
 			}
 			
 			removal_cost = -1
@@ -32,7 +32,7 @@ ideas = {
 		
 		ARA_people_republick = {
 			allowed = {
-				ruling_party = communism
+				has_government  = communism
 			}
 			
 			removal_cost = -1

@@ -43,7 +43,7 @@
 
 leader_traits = {
 
-	42bratuxa = {
+	PYA_42bratuxa = {
 		random = no
 		hypecratia_drift = 0.1
 	
@@ -51,7 +51,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	42bratuxa_leader = {
+	PYA_42bratuxa_leader = {
 		random = no
 		justify_war_goal_time = -0.25
 		production_factory_efficiency_gain_factor = 0.1
@@ -61,7 +61,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	mс_chuma = {
+	mc_chuma = {
 		random = no
 		war_support_factor = 0.1
 		fascism_drift = 0.1

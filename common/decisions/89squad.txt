@@ -165,14 +165,14 @@ form_BTK_89_cat = {
 		cost = 100
 	
 		allowed = {
-			original_tag = BTK
 			has_completed_focus = BTK_stasyan
+			
 		}
 		visible = {
-			original_tag = BTK
-			ST9 = {
-				exists = yes
+			hidden_trigger = {
+				country_exists = ST9
 			}
+			has_completed_focus = BTK_stasyan
 		}
 		ai_will_do = {
 			factor = 200
@@ -206,14 +206,13 @@ form_BTK_89_cat = {
 		cost = 100
 	
 		allowed = {
-			original_tag = BTK
 			has_completed_focus = BTK_shadowkek
 		}
 		visible = {
-			original_tag = BTK
-			SHD = {
-				exists = yes
+			hidden_trigger = {
+				country_exists = SHD
 			}
+			has_completed_focus = BTK_shadowkek
 		}
 		ai_will_do = {
 			factor = 200

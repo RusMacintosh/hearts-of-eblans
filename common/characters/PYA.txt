@@ -11,7 +11,7 @@ characters = {
 			idea_token = dichlorid_oganeson
 			allowed = {
 				if = {
-					has_completed_focus = PYA_mc_maks
+					limit={has_completed_focus = PYA_mc_maks}
 					NOT = {
 						PYA = {
 							has_government = hypecratia
@@ -21,7 +21,7 @@ characters = {
 			}
 			
 			traits = {
-				42bratuxa
+				PYA_42bratuxa
 			}
 			cost = 100
 			ai_will_do = {
@@ -39,12 +39,12 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = 42ideology
+			ideology = hypetiktok
 			expire = "2042.1.1.1"
 			id = -1
 
 			traits = {
-				42bratuxa
+				PYA_42bratuxa_leader
 			}
 		}
 	}
@@ -61,7 +61,7 @@ characters = {
 			idea_token = mc_maks
 			allowed = {
 				if = {
-					has_completed_focus = PYA_42_party
+					limit = {has_completed_focus = PYA_42_party}
 					NOT = {
 						PYA = {
 							has_government = fascism
@@ -70,7 +70,7 @@ characters = {
 				}
 			}
 			traits = {
-				mс_chuma
+				mc_chuma
 			}
 			cost = 100
 			ai_will_do = {
@@ -89,10 +89,9 @@ characters = {
 		country_leader = {
 			ideology = fascism_ideology
 			expire = "2042.1.1.1"
-			id = -1
 
 			traits = {
-				mс_chuma
+				mc_chuma
 			}
 		}
 	}

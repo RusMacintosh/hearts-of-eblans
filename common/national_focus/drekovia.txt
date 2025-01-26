@@ -1401,24 +1401,7 @@ focus_tree = {
 				}
 			}
 
-			SNR = {
-				every_owned_state = {
-					limit = {
-						any_neighbor_state = { owner = CHB }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = {
-							all_provinces = yes
-							limit_to_border = yes
-						}
-					}
-				}
-			}
-
-			HNR = {
+			CHD = {
 				every_owned_state = {
 					limit = {
 						any_neighbor_state = { owner = CHB }
@@ -1556,7 +1539,7 @@ focus_tree = {
 
 		available = {
 			if = {
-				AND = {
+				limit = {
 					has_equipment = {
     					infantry_equipment > 4000
 					}
@@ -1586,45 +1569,45 @@ focus_tree = {
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 2000
-				target = SNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = support_equipment
 				amount = 300
-				target = SNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = artillery_equipment
 				amount = 250
-				target = SNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = motorized_equipment_1
 				amount = 250
-				target = SNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 2000
-				target = HNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = support_equipment
 				amount = 300
-				target = HNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = artillery_equipment
 				amount = 250
-				target = HNR
+				target = CHD
 			}
 			send_equipment = {
 				equipment = motorized_equipment_1
 				amount = 250
-				target = HNR
+				target = CHD
 			}
 
-			SNR = {
+			CHD = {
 				division_template = { 
 				name = "SNR_SDO_division"
 				division_names_group = SNR_SDO_01
@@ -1647,78 +1630,32 @@ focus_tree = {
 				random_owned_controlled_state = {
 					create_unit = { 
 						division = "name = \"1. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 					create_unit = { 
 						division = "name = \"2. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 					create_unit = { 
 						division = "name = \"3. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 					create_unit = { 
 						division = "name = \"4. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 					create_unit = { 
 						division = "name = \"5. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 					create_unit = { 
 						division = "name = \"6. Дивизия СНР\" division_template = \"SNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = SNR
+						owner = CHD
 					}
 			}
 			}
 
-			HNR = {
-				division_template = { 
-				name = "HNR_SDO_division"
-				division_names_group = SNR_SDO_01
-				is_locked = no
-				regiments = { 
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-
-					infantry = { x = 2 y = 0 }
-				}
-				support = {
-					recon = { x = 0 y = 0 }
-					artillery = { x = 0 y = 1}
-				}
-				}
-				random_owned_controlled_state = {
-					create_unit = { 
-						division = "name = \"1. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-					create_unit = { 
-						division = "name = \"2. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-					create_unit = { 
-						division = "name = \"3. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-					create_unit = { 
-						division = "name = \"4. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-					create_unit = { 
-						division = "name = \"5. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-					create_unit = { 
-						division = "name = \"6. Дивизия ВНР\" division_template = \"HNR_SDO_division\" start_experience_factor = 0.5" 
-						owner = HNR
-					}
-			}
-			}
+			
 		}
 	}
 
@@ -1932,13 +1869,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_manpower -5000
-			SNR = {
-				people_support_development_improvement = yes
-				add_manpower = 2500
-			}
-
-			HNR = {
+			add_manpower = -5000
+			CHD = {
 				people_support_development_improvement = yes
 				add_manpower = 2500
 			}

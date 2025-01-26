@@ -19,7 +19,7 @@ state={
 		add_core_of = SVI
 		set_demilitarized_zone = yes
 	}
-	manpower=0
+	manpower=12500
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
