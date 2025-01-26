@@ -132,7 +132,7 @@ country_event = {
 	option = {
 		name = btk.4.a
 		trigger = { 
-			communism > 0.5
+			communism > 0.44
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
@@ -201,7 +201,7 @@ country_event = {
 	option = {
 		name = btk.4.b
 		trigger = { 
-			democratic > 0.5
+			democratic > 0.44
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
@@ -257,7 +257,7 @@ country_event = {
 	option = {
 		name = btk.4.c
 		trigger = { 
-			neutrality > 0.5
+			neutrality > 0.44
 		}
 		
 		hidden_effect = {
@@ -328,7 +328,7 @@ country_event = {
 	option = {
 		name = btk.4.e
 		trigger = { 
-			fascism > 0.5
+			fascism > 0.44
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
@@ -385,7 +385,7 @@ country_event = {
 	option = {
 		name = btk.4.h
 		trigger = { 
-			debug = yes
+			hypecratia > 0.9
 		}
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
