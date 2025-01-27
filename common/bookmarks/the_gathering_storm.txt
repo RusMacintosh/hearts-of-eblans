@@ -70,7 +70,7 @@ bookmarks = {
 			history = ""
 			ideology = fascism
 			ideas = {
-				bad_government
+				BTK_bad_government
 				slay_2023_king
 				demografic_problems
 			}

@@ -165,5 +165,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/high_taxes.dds"
 	}
     ### Pyaterka
-    
+    spriteType = {
+        name = "GFX_idea_BTK_bad_government"
+        texturefile = "gfx/interface/ideas/bad_government.dds"
+    }  
 }

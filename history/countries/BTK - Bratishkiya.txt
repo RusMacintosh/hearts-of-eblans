@@ -5,11 +5,13 @@ starting_train_buffer = 2
 set_fuel_ratio = 0.8
 set_research_slots = 5
 recruit_character = BTK_Bratishkin
+recruit_character =kulina_advisor
 
 add_ideas = {
-	bad_government
+	BTK_bad_government
 	slay_2023_king
 	demografic_problems
+	BTK_parlament
 }
 
 # Starting tech

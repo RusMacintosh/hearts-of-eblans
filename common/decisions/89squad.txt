@@ -294,4 +294,130 @@ form_BTK_89_cat = {
 
 	}
 }
+BTK_council_cat = {
+	BTK_fas = {
+		icon = generic_form_nation
+		cost = 15
+		days_re_enable=14
+		days_remove = 10
+		allowed = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		visible = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = bad_government
+			}
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.07
+			}
+		}
+	}
+	BTK_dem = {
+		icon = generic_form_nation
+		cost = 15
+		days_re_enable=14
+		days_remove = 10
+		allowed = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		visible = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = bad_government
+			}
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			}
+		}
+	}
+	BTK_comm = {
+		icon = generic_form_nation
+		cost = 15
+		days_re_enable=14
+		days_remove = 10
+		allowed = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		visible = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = bad_government
+			}
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.07
+			}
+		}
+	}
+	BTK_neu = {
+		icon = generic_form_nation
+		cost = 15
+		days_re_enable=14
+		days_remove = 10
+		allowed = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		visible = {
+			focus_progress = {
+				focus = BTK_nach_89
+				progress > 0.01
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = bad_government
+			}
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.07
+			}
+		}
+	}
+}
 

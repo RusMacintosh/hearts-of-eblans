@@ -38,5 +38,27 @@ characters = {
             desc = BTK_socialist  
         }
 	}
+	kulina_advisor = {
+		name = "Алина 'Kulina666'"
+		portraits = {
+			civilian = {
+				small = GFX_mc_maks_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = mc_maks
+			allowed = {
+				tag=BTK
+			}
+			traits = {
+				mc_chuma
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }
 	

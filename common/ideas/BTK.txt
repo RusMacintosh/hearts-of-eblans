@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		BTK_parlament = {
+			removal_cost = -1
+
+			picture = GFX_idea_BTK_bad_government
+
+			modifier = {
+				democratic_drift = 0.05
+				neutrality_drift = 0.05
+				hypecratia_drift = 0.05
+				stability_weekly = 0.05
+			}
+		}
+		BTK_bad_government = {
+		
+			removal_cost = -1
+
+			picture = GFX_idea_BTK_bad_government
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.5
+			}
+		}
+		
+	}
+	
+}
