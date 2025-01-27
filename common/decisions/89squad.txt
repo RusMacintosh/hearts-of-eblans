@@ -305,11 +305,17 @@ BTK_council_cat = {
 				focus = BTK_nach_89
 				progress > 0.01
 			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
+			}
 		}
 		visible = {
 			focus_progress = {
 				focus = BTK_nach_89
 				progress > 0.01
+			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
 			}
 		}
 		ai_will_do = {
@@ -324,6 +330,7 @@ BTK_council_cat = {
 				ideology = fascism
 				popularity = 0.07
 			}
+			add_stability = -0.06
 		}
 	}
 	BTK_dem = {
@@ -336,11 +343,17 @@ BTK_council_cat = {
 				focus = BTK_nach_89
 				progress > 0.01
 			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
+			}
 		}
 		visible = {
 			focus_progress = {
 				focus = BTK_nach_89
 				progress > 0.01
+			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
 			}
 		}
 		ai_will_do = {
@@ -355,7 +368,9 @@ BTK_council_cat = {
 				ideology = democratic
 				popularity = 0.07
 			}
+			add_stability = -0.06
 		}
+		
 	}
 	BTK_comm = {
 		icon = generic_form_nation
@@ -367,11 +382,17 @@ BTK_council_cat = {
 				focus = BTK_nach_89
 				progress > 0.01
 			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
+			}
 		}
 		visible = {
 			focus_progress = {
 				focus = BTK_nach_89
 				progress > 0.01
+			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
 			}
 		}
 		ai_will_do = {
@@ -386,6 +407,7 @@ BTK_council_cat = {
 				ideology = communism
 				popularity = 0.07
 			}
+			add_stability = -0.06
 		}
 	}
 	BTK_neu = {
@@ -398,11 +420,17 @@ BTK_council_cat = {
 				focus = BTK_nach_89
 				progress > 0.01
 			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
+			}
 		}
 		visible = {
 			focus_progress = {
 				focus = BTK_nach_89
 				progress > 0.01
+			}
+			NOT = {
+				has_completed_focus = BTK_nach_89
 			}
 		}
 		ai_will_do = {
@@ -417,6 +445,7 @@ BTK_council_cat = {
 				ideology = neutrality
 				popularity = 0.07
 			}
+			add_stability = -0.06
 		}
 	}
 }
