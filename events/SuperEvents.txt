@@ -38,7 +38,9 @@ country_event = {
 		CHB = {
 		    has_war_with = DRE
 			NOT = {
-				controls_province = 9599
+				controls_province = 11586
+				is_puppet = yes
+				is_subject = yes
 			}
 		}
 	}
@@ -69,6 +71,8 @@ country_event = {
 		    has_war_with = CHB
 			NOT = {
 				controls_province = 11666
+				is_puppet = yes
+				is_subject = yes
 			}
 		}
 	}

@@ -10,7 +10,7 @@ state={
 	state_category = city
 
 	history={
-		owner = MOY
+		owner = KRY
 		victory_points = {
 			11834 10
 		}
@@ -26,7 +26,7 @@ state={
 				coastal_bunker = 1
 			}
 		}
-		add_core_of = MOY
+		add_core_of = KRY
 		1939.1.1 = {
 			buildings = {
 				dockyard = 2

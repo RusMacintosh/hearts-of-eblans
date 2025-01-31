@@ -20,6 +20,7 @@ form_DRE_EMPIRE_cat = {
 				controls_state = 154
 				controls_state = 973
 				controls_state = 974
+				controls_state = 83
 			}
 			custom_trigger_tooltip = {
 				tooltip = dre_control_terr_89		
@@ -68,6 +69,7 @@ form_DRE_EMPIRE_cat = {
 				state = 154
 				state = 973
 				state = 974
+				state = 83
 				
 				state = 52
 				state = 53
@@ -105,18 +107,35 @@ form_DRE_EMPIRE_cat = {
 			
 			custom_override_tooltip= {
 				tooltip = DRE_empire_nat_tt
-				# Chicken-Bekonia
-				155 = { add_core_of = ROOT }
-				43 = { add_core_of = ROOT }
-				154 = { add_core_of = ROOT }
-				973 = { add_core_of = ROOT }
-				974 = { add_core_of = ROOT }
-			
-				# Reich
-				52 = { add_core_of = ROOT }
-				53 = { add_core_of = ROOT }
-				88 = { add_core_of = ROOT }
-				72 = { add_core_of = ROOT }
+				155= { add_core_of = ROOT }
+				43= { add_core_of = ROOT }
+				154= { add_core_of = ROOT }
+				973= { add_core_of = ROOT }
+				974= { add_core_of = ROOT }
+				
+				52= { add_core_of = ROOT }
+				53= { add_core_of = ROOT }
+
+				848= { add_core_of = ROOT }
+				153= { add_core_of = ROOT }
+				152= { add_core_of = ROOT }
+				4= { add_core_of = ROOT }
+				70= { add_core_of = ROOT }
+				664= { add_core_of = ROOT }
+				72= { add_core_of = ROOT }
+				71= { add_core_of = ROOT }
+				73= { add_core_of = ROOT }
+				975= { add_core_of = ROOT }
+				976= { add_core_of = ROOT }
+				88= { add_core_of = ROOT }
+				
+
+				69= { add_core_of = ROOT }
+				9= { add_core_of = ROOT }
+				75= { add_core_of = ROOT }
+				74= { add_core_of = ROOT }
+				972= { add_core_of = ROOT }
+				83= { add_core_of = ROOT }
 			}
 			
 		}
