@@ -226,6 +226,13 @@ focus_tree = {
 
 		bypass = {
 		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = GON_hypecratia_celebration
+				has_completed_focus = GON_in_the_name_of_the_dictator
+				has_completed_focus = GON_peasants_and_workers
+			}
+		}
 
 		icon = GFX_goal_generic_build_tank
 		x = 17
@@ -556,6 +563,7 @@ focus_tree = {
             set_rule = {
                 can_create_factions = yes
             }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -747,6 +755,7 @@ focus_tree = {
             set_rule = {
                 can_create_factions = yes
             }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -987,6 +996,7 @@ focus_tree = {
             set_rule = {
                 can_create_factions = yes
             }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 

@@ -11,9 +11,8 @@ state = {
 			9793 1
 		}
 
-		owner = GON
-		add_core_of = GON
-		add_claim_by = CAT
+		owner = NEL
+		add_core_of = NEL
 
 		buildings = {
 			infrastructure = 3 #was: 6

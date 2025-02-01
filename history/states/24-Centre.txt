@@ -5,7 +5,7 @@ state={
 		3493 3671 6688 11611 11631 
 	}
 	history={
-		owner = NEL
+		owner = MOY
 		victory_points = {
 			6688 1
 		}
@@ -14,7 +14,7 @@ state={
 			industrial_complex = 1
 			air_base = 10
 		}
-		add_core_of = NEL
+		add_core_of = MOY
 	}
 	manpower=1546300
 	buildings_max_level_factor=1.000

@@ -1957,20 +1957,28 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			set_country_flag = SDO_started_chb
+			if = {
+				limit = {
+					CHD = {
+						exists = yes
+					}
+				}
+				puppet = {
+					target = CHD
+					end_wars = no
+				}
+				CHD = {
+					declare_war_on = {
+						target = CHB
+						type = annex_everything
+					}
+				}
+			}
 			declare_war_on = {
 				target = CHB
 				type = annex_everything
 			}
-			puppet = {
-				target = CHD
-				end_wars = no
-			}
-			CHD = {
-				declare_war_on = {
-					target = CHB
-					type = annex_everything
-				}
-			}
+			
 			#news_event = { id = svo.2 days = 1}
 			hidden_effect = {
 			every_country = { country_event = super.1 }

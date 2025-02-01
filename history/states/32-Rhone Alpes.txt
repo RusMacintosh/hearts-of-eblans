@@ -12,14 +12,14 @@ state={
 	}
 
 	history={
-		owner = MOY
+		owner = KRY
 		buildings = {
 			infrastructure = 2
 		}
 		victory_points = {
 			3768 1 
 		}
-		add_core_of = MOY
+		add_core_of = KRY
 	}
 
 	provinces={

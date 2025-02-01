@@ -6,7 +6,7 @@ state={
 	}
 
 	history={
-		owner = GON
+		owner = NEL
 		victory_points = {
 			3816 3 
 		}
@@ -22,7 +22,7 @@ state={
 			air_base = 3
 
 		}
-		add_core_of = GON
+		add_core_of = NEL
 
 	}
 

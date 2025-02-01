@@ -7,8 +7,7 @@ state={
 	state_category = large_city
 
 	history={
-		owner = GON
-		add_core_of = CAT
+		owner = NEL
 		victory_points = {
 			9764 30
 		}
@@ -27,7 +26,7 @@ state={
 				naval_base = 4
 			}
 		}
-		add_core_of = GON
+		add_core_of = NEL
 	}
 
 	provinces={

@@ -9,14 +9,14 @@ state={
 		641 3650 6613 6639 6668 6786 9590 9728 11593 11716 11794 
 	}
 	history={
-		owner = MOY
+		owner = KRY
 		buildings = {
 			infrastructure = 2
 		}
 		victory_points = {
 			6786 1 
 		}
-		add_core_of = MOY
+		add_core_of = KRY
 	}
 	manpower=2973200
 	buildings_max_level_factor=1.000

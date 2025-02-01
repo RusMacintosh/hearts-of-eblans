@@ -30,9 +30,9 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Наместник Ростовский"
+	name = "Товарищ Иоанн"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Baron.dds"
+	picture = "jojo_com.dds"
 	expire = "2000.1.1"
 	ideology = stalinism
 	traits = {
@@ -41,9 +41,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Наместник Ростовский"
+	name = "Великий ДжоДжо"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Baron.dds"
+	picture = "jojo_fasc.dds"
 	expire = "2000.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -63,9 +63,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Наместник Ростовский"
+	name = "Барон ДжоДжо"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Baron.dds"
+	picture = "jojo_dem.dds"
 	expire = "2000.1.1"
 	ideology = liberalism
 	traits = {
@@ -74,9 +74,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Царь всея Ростова"
+	name = "JojoHF"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Baron.dds"
+	picture = "jojo_hype.dds"
 	expire = "2000.1.1"
 	ideology = hypetiktok
 	traits = {

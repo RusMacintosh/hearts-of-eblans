@@ -13,7 +13,7 @@ state={
 	}
 
 	history={
-		owner = NEL
+		owner = MOY
 		victory_points = {
 			9898 1 
 		}
@@ -22,7 +22,7 @@ state={
 			industrial_complex = 2
 			air_base = 2
 		}
-		add_core_of = NEL
+		add_core_of = MOY
 	}
 
 	provinces={

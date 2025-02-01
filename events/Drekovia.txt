@@ -394,6 +394,26 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = drek.14
+	title = drek.14.t
+	desc = drek.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = drek.14.a #yes
+		ai_chance = {
+			factor = 100
+		}
+		DRE = {
+			annex_country = {
+				target = CHD
+			}
+		}
+	}
+}
 
 ##Vapers for hungary
 #country_event = {

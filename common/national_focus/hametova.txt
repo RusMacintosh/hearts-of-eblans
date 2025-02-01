@@ -2,6 +2,11 @@ focus_tree = {
 	id = hametova
 	country = {
 		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HAM
+		}
 	}
 	default = no
 	focus = {

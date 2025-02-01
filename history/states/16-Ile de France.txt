@@ -14,6 +14,7 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = DPN
+		add_claim_by = MOY
 		set_demilitarized_zone = yes
 	}
 	manpower=38500
