@@ -23,12 +23,12 @@ focus_tree = {
 			has_country_flag = PYA_boss_vibory
 		}
 		completion_reward = {
-			
+			country_event = pya_vibory.1
 		}
 	}
 
 	focus = {
-		id = PYA_cacto
+		id = PYA_cacto0o
 		icon = GFX_goal_PYA_cacto
 		cost = 2
 		x = 0
@@ -41,6 +41,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = PYA_mc_maks_vibory
+		}
+		available = {
+			has_country_flag = PYA_president_cacto0o
 		}
 		completion_reward = { }
 	}
@@ -58,7 +61,10 @@ focus_tree = {
 			focus = PYA_mc_maks_vibory
 		}
 		mutually_exclusive = {
-			focus = PYA_cacto
+			focus = PYA_cacto0o
+		}
+		available = {
+			has_country_flag = PYA_president_boss
 		}
 		completion_reward = { }
 	}
@@ -76,7 +82,10 @@ focus_tree = {
 			focus = PYA_boss_president
 		}
 		mutually_exclusive = {
-			focus = PYA_cacto
+			focus = PYA_cacto0o
+		}
+		available = {
+			has_country_flag = PYA_president_mc_maks
 		}
 		completion_reward = { }
 	}

@@ -1,3 +1,23 @@
+add_namespace = boss_start
+
+country_event = {
+	id = boss_start.1
+	title = boss_start.1.t
+	desc = boss_start.1.d
+	picture = GFX_event_boss_start
+	is_triggered_only = yes
+	trigger = {
+		tag = PYA
+		on_startup = yes
+	}
+	option = {
+		name = boss_start.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
 add_namespace = boss
 
 country_event = {
@@ -105,6 +125,50 @@ country_event = {
 			custom_effect_tooltip = {
 				localization_key = razvilka.1.c.tt
 				
+			}
+		}
+	}
+
+}
+add_namespace = pya_vibory
+
+country_event = {
+	id = pya_vibory.1
+	desc = pya_vibory.1.d
+	title = pya_vibory.1.t
+	desc = pya_vibory.1.d
+	picture = GFX_event_pya_vibory.1
+	is_triggered_only = yes
+	option = {
+		name = pya_vibory.1.a
+		ai_chance = {
+			factor = 34
+		}
+		PYA = {
+			hidden_effect = {
+				set_country_flag = PYA_president_cacto0o
+			}
+		}
+	}
+	option = {
+		name = pya_vibory.1.b
+		ai_chance = {
+			factor = 33
+		}
+		PYA = {
+			hidden_effect = {
+				set_country_flag = PYA_president_boss
+			}
+		}
+	}
+	option = {
+		name = pya_vibory.1.c
+		ai_chance = {
+			factor = 33
+		}
+		PYA = {
+			hidden_effect = {
+				set_country_flag = PYA_president_mc_maks
 			}
 		}
 	}
