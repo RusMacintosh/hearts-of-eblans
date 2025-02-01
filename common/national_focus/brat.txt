@@ -792,6 +792,9 @@ focus_tree = {
 			focus = BTK_strim_s_ham
 			focus = BTK_attack_tiktok_likee
 		}
+		completion_reward = {
+			country_event = btk.10
+		}
 		x = 23
 		y = 5
 
@@ -869,6 +872,13 @@ focus_tree = {
 			focus = BTK_anti_clown
 			focus = BTK_morale_preserve
 			focus = BTK_anti_evelone
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = improved_medium_tank_chassis
+			}
 		}
 		x = 25
 		y = 7
@@ -991,6 +1001,14 @@ focus_tree = {
 			focus = BTK_anti_clown
 			focus = BTK_antihesus
 		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BTK_Equipment_Modernisation 
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
 		x = 27
 		y = 7
 
@@ -1004,6 +1022,13 @@ focus_tree = {
 		}
 		x = 28
 		y = 8
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 10
+				category = land_doctrine
+			}
+		}
 
 	}
 	focus = {
@@ -1015,7 +1040,16 @@ focus_tree = {
 		}
 		x = 27
 		y = 9
-
+		completion_reward = {
+			set_technology = {
+				improved_infantry_weapons = 1
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				variant_name = "Винторез Братишкина"
+			}
+		}
 	}
 	focus = {
 		id = BTK_flot

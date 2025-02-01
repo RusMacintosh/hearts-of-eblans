@@ -647,3 +647,56 @@ country_event = {
 		custom_effect_tooltip = BTK_89_nach_tt
 	}
 }
+
+country_event = {
+	id = btk.11
+	title = btk.9.t
+	desc = btk.9.d
+	picture = GFX_report_event_picture_BTK_3
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.0.a
+		set_technology = {
+			improved_infantry_weapons = 1
+		}
+		
+	}
+}
+country_event = {
+	id = btk.10
+	title = btk.0.t
+	desc = btk.0.d
+	picture = GFX_report_event_picture_BTK_4
+	
+	major = no
+	
+	is_triggered_only = yes
+	option = {
+		name = btk.0.a
+		
+		hidden_effect = {
+			complete_national_focus = BTK_antihesus
+		}
+	}
+	option = {
+		name = btk.0.b
+		hidden_effect = {
+			complete_national_focus = BTK_anti_clown
+		}
+	}
+	option = {
+		name = btk.0.c
+		hidden_effect = {
+			complete_national_focus = BTK_morale_preserve
+		}
+	}
+	option = {
+		name = btk.0.e
+		hidden_effect = {
+			complete_national_focus = BTK_anti_evelone
+		}
+	}
+}
